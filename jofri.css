@@ -49,7 +49,27 @@ body {
     margin-top: 15%;
 }
 
+/* übernommen aus Bahn.css */
+
 .date {
     font-size: 10px;
     font-family: Arial;
+}
+
+.home {
+    text-align: end;
+}
+
+.linkKlein {
+    font-size: 13px;
+}
+
+.s88bild {
+    width: 45%;
+    height: auto;
+}
+
+table.stable {
+    border-collapse: collapse;
+    width: 100%;
 }
