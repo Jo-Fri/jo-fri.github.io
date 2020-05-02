@@ -1,0 +1,117 @@
+ProLok
+Programm zur Einstellung der Parameter in DCC-Lokdecodern
+Freeware/GNU General Public License
+Autor: Thomas Borrmann 2004-2005
+ 
+Versions-History:
+0.8.2
+- Die Baudrate kann jetzt auf 16457bps eingestellt werden, 
+  leider funktioniert das nicht mit allen seriellen Schnittstellen.
+  Das Signaltiming entspricht damit der NMRA-Spezifikation 
+  von 60µs Pulsdauer für eine 1
+   
+0.8.0
+- Ein Problem mit der Geräteerkennung beim Digitrax PR-1 
+  beseitigt
+- Das Programm ist nun mehrsprachig.
+  Dazu muß nur die gewünschte Sprachdatei <Sprache>.lng 
+  in das Programmverzeichnis von Prolok kopiert und im 
+  Setup-Dialog ausgewählt werden. 
+  Willem Smith hat die niederländische Version beigesteuert. 
+- der DECPROG kann nun auch über einen USB-Seriell-Adapter 
+  angeschlossen werden. Das Lesen und Prüfen liefert zu
+  90% das richtige Ergebnis oder keines - falsche Daten wurden
+  nicht mehr gelesen. Allerdings braucht das Programm doch
+  recht lange...
+
+0.7.4
+- Direktzugriffs-Tasten für die einzelnen Tabulatoren und 
+  Aktionstasten eingerichtet 
+  (Alt+<unterstrichener Buchstabe>)
+- die Drehfelder in der Seite 'einzelne CV' und im
+  Scan-Fenster können nun auch mit den Cursortasten bedient
+  werden.
+- Stapelmodus eingeführt: beim Abarbeiten einer Seite können
+  die Fehlermeldungen jetzt gesammelt werden, am Ende der
+  Seite werden sie als Liste angezeigt. Dieser Modus kann
+  so eingestellt werden, daß jede Operation 0..9 Mal 
+  wiederholt wird, bevor eine Fehlermeldung in der Liste
+  erscheint.
+
+0.7.3
+- Scan ist nur aktiviert, wenn ein Ackdetektor oder ein
+  Programmiergerät erkannt wird.
+- etwas Kosmetik
+- das Programm wird jetzt ordnungsgemäß beendet, auch wenn
+  es von CD gestartet wurde und die Dateien prolok.ini
+  und cvlist.bak nicht geschrieben werden konnten
+
+0.7.0
+- Lesen und Prüfen ist jetzt deaktiviert, wenn das 
+  Programmiergerät mit einem USB-Adapter angeschlossen ist
+- nach einem Abbruch im Registermodus waren alle CV=0
+- Beschreibung (prolok.pdf) und Hilfe aktualisiert
+- Thread-Priorität geändert für die Ack-Detektion
+
+0.6.3
+- Im Einstellungsdialog wurden die neuen Variablen der 
+  Datei prolok.ini berücksichtigt
+- nach einem Lese-Abbruch auf der Register-Seite wurden die
+  Aktionsknöpfe nicht korrekt zurückgesetzt
+
+0.6.2
+- Problem mit Märklin 6604 gefixt
+- Anzeigeproblem nach dem Laden beseitigt
+- neue Variablen in der prolok.ini eingeführt:
+  + ExtendedPowerOn=1 verlängert die Boot-Phase für 
+    den Dekoder
+  + Loop=x aktiviert eine Warteschleife für schnellere
+    Rechner, damit zwischen zwei abgeschickten Paketen
+    x ms Pause bleiben.
+    Loop=0 schaltet die Warteschleife ab, default=5ms
+- Pakete neu organisiert: im Binary-Paket sind die Hilfe
+  und die Lokdecoder-Beschreibungsdateien nicht mehr
+  enthalten, dafür gibt nun es die Pakete 
+  + prolok-hilfe.zip    und
+  + decoder.zip
+
+0.6.1
+- Fehlermanagement verbessert
+- 'sicheren' Modus eingeführt, bei dem im Direct Mode die
+  Bits sowohl auf 0 und 1 getestet werden
+
+0.6.0
+- benannte Bitmaps hinzugefügt, Seite 'weitere CV' aktiviert
+- zwei Fehler in der Bitmanipulation beseitigt
+
+0.5.6
+- Daniel Basler hat die Decoder-Dateien für Kuehn T145 und 
+  den ESU Lokpilot beigesteuert
+- die Berechnung der langen Adresse in CV17 und CV18 wurde 
+  berichtigt
+- der Paged Mode konnte inzwischen erfolgreich getestet
+  werden
+
+0.5.5
+- Fehler im Funktion-Mapping/Defaultwerte u. Bitzuordnung 
+  beseitigt
+
+0.5.4
+- Fehler in der Anzeige auf der Funktion-Seite beseitigt
+- Registermodus hinzugefuegt
+- Paged CV Adressing-Modus eingebaut, aber mangels passendem 
+  Dekoder nicht getestet 
+
+0.5.3
+- kleine Aenderung im Protokoll Decoder<->PC
+- Factory Reset von herstellerspezifischen Methoden
+  auf NMRA RP 9.2.3 umgestellt
+	
+0.5.2
+- Bug in der Anzeige auf Seite 1..1024 gefixt
+	
+0.5.1
+- Darstellungsfehler bei WinNT/256 Farben gefixt
+	
+0.5.0
+- erste Veröffentlichung 

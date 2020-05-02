@@ -1,0 +1,169 @@
+[Strings]
+ProgDev=PR1 or DECPROG connected
+noProgDev=No Programming Device detected
+Loco=Loco on track
+noLoco=No loco on track
+ProgTrk=Service Track connected
+noProgTrk=No Service Mode Track
+wait=be patient, please
+Simple=simple
+All=all
+Mini=Address Only
+Add=Add as
+mmEntryName=Set the name of the new entry
+Cancel=abort
+Read=read
+Write=write
+Verify=verify
+unknown=unknown
+HardErr=hardware error
+Error=error
+save=save
+noPort=no port
+IniWrErr=cannot write to prolok.ini
+WrDecErr=cannot write to decoder file
+WrLogErr=cannot write to logfile
+File=file
+noPortAccess=com-port not available
+OutOfMem=not enough memory
+BitmapDesc=for bitmap description
+InputValFormat=Only values from %d to %d allowed
+Numeric=only numeric values allowed
+Confirm=Confirm
+Success=Successfull
+FactoryReset=Do you really want to reset the decoder? All CV values, including the speed table at CV67-94 and the User ID at CV105 and 106, will reset to the factory default. The function is experimental, the result may be unpredictable. Reset anyway?
+Wrong=wrong
+Correct=correct
+NACK=No Ack
+Fail=Failure
+Value=Value
+Description=Description
+
+[mainForm]
+tsBasis=&Base CV
+tsFunction=Fu&nction Mapping
+tsSpeedTab=Speed &Table
+tsMore=&More CV
+tsSingleCV=s&ingle CV
+tsRegister=Re&gister
+pbRead=&Read
+pbVerify=&Verify
+pbWrite=&Write
+mmFile=&File
+mmLoad=&Load
+mmSave=&Save
+mmSaveAs=S&ave as
+mmExit=&Exit
+mmDecoder=De&coder
+mmSetup=Set&up
+mmHelp=&Help
+
+Caption=LokProgrammer
+lbCV8=CV8 Manufact.
+lbCV7=CV7 Version
+lbCV1=CV1 Short Address
+lbCV2=CV2 Vmin
+lbCV5=CV5 Vmax
+lbCV6=CV6 Vmiddle
+lbCV3=CV3 Acceleration
+lbCV4=CV4 Deceleration
+lbCV17_18=CV17+18 long Address
+lbCV9=CV9 PWM-Frequency
+lbCV19=CV19 Consist-Address
+lbCV105=CV105 UserID1
+lbCV106=CV106 UserID2
+gbCV29=CV29 Configuration
+lbCV29=CV29 decimal
+CV29b0=Bit0 Direction revers
+CV29b1=Bit1 28/128 Speed Steps
+CV29b2=Bit2 Power Conversion 
+CV29b3=Bit3 bidirectional Communication
+CV29b4=Bit4 Use indiv. Speed Table
+CV29b5=Bit5 Use long Address
+CV29b6=Bit6 reserved
+CV29b7=Bit7 Accessory Decoder
+CV19b7=CV19 Consist Direction revers
+pbDefaultFunctionMapping=Set Default Values
+lbCV65=CV65 Kickstart
+lbCV66=CV66 Forward trim
+lbCV95=CV95 Backward trim
+gbSpeed=Speed Table CV67=Step1..CV94=Step28
+pbCalculate=Calculate Speed Table
+pbDelSpeedTable=Delete Speed Table
+lbDesc=Description
+lbVal=Value
+rbDecimal=decimal
+rbBitmap=Bitmap
+gbCVval=Value
+lbDec=decimal
+lbHex=hex
+gbCVbin=binary
+pbHardReset=Factory Reset
+descR1=short Address (CV1), 1..127
+lbReg=Register
+lbRegVal=Value
+lbRegDesc=Description
+descR2=V Start (CV2), 0..255
+descR3=Acceleration (CV3), 0..255
+descR4=Decleration (CV4), 0..255
+descR5=Configuration (CV29)
+descR7=Version (CV7), R/O
+descR8=Manufacturer-ID (CV8), R/O
+mmNew=New
+mmNewMini=minimal
+mmNewExtended=simple
+mmNewAll=all
+mmChange=Change
+mmAdd=Add
+mmRemove=Remove
+mmScan=Scan
+mmHelpInhalt=Content
+mmHelpIndex=Index
+mmAbout=About ProLok
+
+
+[setupForm]
+Caption=Setup
+lbPort=Port
+lbWait=Wait Cycle
+lblBulk=Retry Count
+pbOK=Save
+pbCancel=Undo
+pbSetupHelp=Help
+gbSetupDecoderMode=Programming Mode
+cbDirectMode=direct
+cbPageMode=CV
+cbAutoMode=auto
+cbUSBserial=USB-Serial-Adaptor
+cbSafeMode=Verify after read and write
+cbTest0Bit=Check Bit for 1 and 0 
+cbIs6604=Extended Power-On Cycle
+cbBulk=Stack Mode
+gbSetupHardware=Device
+lbl_Lang=Language
+rbIsDDL=Booster + ACK detection circuit
+rbIsPR1=Digitrax PR-1 oder DECPROG
+
+
+[scanForm]
+Caption=Decoder Scan
+gbRange=CV-Ranges
+lbFrom=from
+lbTo=to
+pbClose=Close
+pbScan=Scan
+pbCancel=Cancel
+
+
+[formRemove]
+Caption=Remove Profiles
+pbRemove=Remove
+pbCancel=Cancel
+
+[aboutBox]
+Caption=About ProLok
+
+[faultListe]
+Caption=Error List
+lbHeadline=The requested Operation does not work correctly with the following CV:
+pbClose=&close Window

@@ -1,0 +1,169 @@
+[Strings]
+ProgDev=PR1 o DECPROG connesso
+noProgDev=Nessun apparato di programmazione rilevato
+Loco=Locomotiva su binario
+noLoco=Nessuna locomotiva su binario
+ProgTrk=Binario di servizio connesso
+noProgTrk=Nessun binario di programmazione connesso
+wait=attendere, prego
+Simple=semplice
+All=tutti
+Mini=solo indirizzi
+Add=Aggiungi come
+mmEntryName=Imposta il nome della nuova entry
+Cancel=Annulla
+Read=Leggi
+Write=Scrivi 
+Verify=verifica
+unknown=Sconosciuto
+HardErr=errore hardware
+Error=errore
+save=salva
+noPort=nessuna porta
+IniWrErr=impossibile scrivere su prolok.ini
+WrDecErr=impossibile scrivere sul fiel del decoder
+WrLogErr=impossibile scrivere su logfile
+File=file
+noPortAccess=porta seriale non disponibile
+OutOfMem=non c'e' abbastanza memoria
+BitmapDesc=Per l'immagine bitmap
+InputValFormat=solo ammessi solo valori tra %d e %d 
+Numeric=solo ammessi solo valori numerici
+Confirm=Conferma
+Success=Eseguito con successo
+FactoryReset=Desideri davvero resettare completamente il decoder? Tutte le CV, incluse la tabella di velocità CV67-94, l'user id CV105 e cv106, Questo riporterà il decoder ai valori di fabbrica! La funzione è sperimentale e il risultato non è certo, Procedere?
+Wrong=sbagliato
+Correct=corretto
+NACK=Nessun Ack
+Fail=Fallito
+Value=Valore
+Description=Descrizione
+
+[mainForm]
+tsBasis=CV &Base
+tsFunction=Mappatura Fu&nzioni
+tsSpeedTab=&Tabella Velocità
+tsMore=&Altre CV
+tsSingleCV=CV s&ingola
+tsRegister=Re&gistri
+pbRead=&Leggi
+pbVerify=&Verifica
+pbWrite=&Scrivi
+mmFile=&File
+mmLoad=&Carica
+mmSave=&Salva
+mmSaveAs=S&alva come
+mmExit=&Esci
+mmDecoder=De&coder
+mmSetup=Configura&zione
+mmHelp=A&iuto
+
+Caption=Programmatore
+lbCV8=CV8 Produttore
+lbCV7=CV7 Versione
+lbCV1=CV1 Indirizzo Corto
+lbCV2=CV2 Vminima
+lbCV5=CV5 Vmassima
+lbCV6=CV6 Vmedia
+lbCV3=CV3 Accelerazione
+lbCV4=CV4 Decelerazione
+lbCV17_18=CV17+18 Indirizzo Lungo
+lbCV9=CV9 Frequenza PWM
+lbCV19=CV19 Indirizzo Multitrazione
+lbCV105=CV105 UserID1
+lbCV106=CV106 UserID2
+gbCV29=CV29 Configurazione
+lbCV29=CV29 decimale
+CV29b0=Bit0 Direzione invertita
+CV29b1=Bit1 28/128 Velocità
+CV29b2=Bit2 Conversione Alimentazione 
+CV29b3=Bit3 Communicazione Bidirezionale
+CV29b4=Bit4 Usa Tabella Velocità
+CV29b5=Bit5 Usa indirizzo lungo
+CV29b6=Bit6 riservato
+CV29b7=Bit7 Decoder Accessori
+CV19b7=CV19 Direzione Multitrazione Inversa
+pbDefaultFunctionMapping=Imposta volori base
+lbCV65=CV65 Impulso di spunto
+lbCV66=CV66 Forward trim
+lbCV95=CV95 Backward trim
+gbSpeed=Tabella velocità CV67=Step1..CV94=Step28
+pbCalculate=Calcola Tabella velocità
+pbDelSpeedTable=Cancella Tabella velocità
+lbDesc=Descrizione
+lbVal=Valore
+rbDecimal=decimale
+rbBitmap=Bitmap
+gbCVval=Valore
+lbDec=decimale
+lbHex=esadecimale
+gbCVbin=binario
+pbHardReset=Reset di Fabbrica
+descR1=Indirizzo Corto (CV1), 1..127
+lbReg=Registro
+lbRegVal=Valore
+lbRegDesc=Descrizione
+descR2=V Start (CV2), 0..255
+descR3=Acceleration (CV3), 0..255
+descR4=Decleration (CV4), 0..255
+descR5=Configurazione (CV29)
+descR7=Versione (CV7), R/O
+descR8=Identificativo Produttore (CV8), R/O
+mmNew=Nuovo
+mmNewMini=minimale
+mmNewExtended=semplice
+mmNewAll=tutte
+mmChange=Cambia
+mmAdd=Aggiungi
+mmRemove=Rimuovi
+mmScan=Scansione
+mmHelpInhalt=Contenuti
+mmHelpIndex=Indice
+mmAbout=A riguardo di ProLok
+
+
+[setupForm]
+Caption=IMpostazioni
+lbPort=Porta
+lbWait=ciclo di attesa
+lblBulk=numero di tentativi
+pbOK=Salva
+pbCancel=Abbandona
+pbSetupHelp=Aiuto
+gbSetupDecoderMode=Modalità Programmazione
+cbDirectMode=diretta
+cbPageMode=CV
+cbAutoMode=auto
+cbUSBserial=Seriale-USB (PR-1 o DECPROG)
+cbSafeMode=Verifica in lettura e scrittura
+cbTest0Bit=Verifica Bit 1 e 0 
+cbIs6604=Ciclo di alimentazione esteso
+cbBulk=Modo Stack
+gbSetupHardware=Apparato
+lbl_Lang=Lingua
+rbIsDDL=Booster + Circuito di Ack
+rbIsPR1=Digitrax PR-1 o DECPROG
+
+
+[scanForm]
+Caption=Scansione Decoder
+gbRange=Intervallo CV
+lbFrom=da
+lbTo=a
+pbClose=Chiudi
+pbScan=Scansione
+pbCancel=Annulla
+
+
+[formRemove]
+Caption=Rimuovi Profili
+pbRemove=Rimuovi
+pbCancel=Annulla
+
+[aboutBox]
+Caption=A riguardo di ProLok
+
+[faultListe]
+Caption=Lista Errori
+lbHeadline=Loperazione richiesta non lavora correttamente con la seguente cv:
+pbClose=&chiudi finestra

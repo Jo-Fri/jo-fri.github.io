@@ -1,0 +1,169 @@
+[Strings]
+ProgDev=PR1 of DECPROG verbonden
+noProgDev=Geen Programmer gedetecteerd
+Loco=Loc op track
+noLoco=Geen loc op track
+ProgTrk=Service Track aangesloten
+noProgTrk=Geen Service Mode Track
+wait=even wachten a.u.b.
+Simple=simpel
+All=alle
+Mini=Alleen Addres
+Add=Toevoegen als
+mmEntryName=Geef de naam van de nieuwe entry
+Cancel=afbreken
+Read=lees
+Write=schrijf
+Verify=verify
+unknown=onbekend
+HardErr=hardware fout
+Error=fout
+save=opslaan
+noPort=geen poort
+IniWrErr=kan niet naar prolok.ini schrijven
+WrDecErr=kan niet naar decoder file schrijven
+WrLogErr=kan niet naar logfile schrijven
+File=file
+noPortAccess=com-poort niet beschikbaar
+OutOfMem=niet genoeg geheugen
+BitmapDesc=voor bitmap beschrijving
+InputValFormat=Aleen waarden van %d tot %d toegestaan
+Numeric=aleen numerieke waarden toegestaan
+Confirm=Bevestig
+Success=Success
+FactoryReset=Wilt U de decoder echt resetten? Alle CV waarden, inclusief the snelheid tabel in CV67-94 en het User ID in CV105 en 106, worden naar de factory-default waarden teruggezet. Deze functie is experimenteel, het resultaat kan onvoorspelbaar zijn. Weet u zeker dat u wil resetten?
+Wrong=verkeerd
+Correct=correct
+NACK=Geen Acknowledge (Ack)
+Fail=Failure
+Value=Waarde
+Description=Beschrijving
+
+[mainForm]
+tsBasis=&Basis CV
+tsFunction=Funct&ie Mapping
+tsSpeedTab=Snelheid &Tabel
+tsMore=&Meer CV's
+tsSingleCV=E&nkele CV
+tsRegister=Re&gister
+pbRead=&Lees
+pbVerify=&Verify
+pbWrite=&Scrijf
+mmFile=&File
+mmLoad=Laa&d
+mmSave=&Opslaan
+mmSaveAs=Opslaan &als
+mmExit=&Exit
+mmDecoder=De&coder
+mmSetup=Set&up
+mmHelp=&Help
+
+Caption=LokProgrammer
+lbCV8=CV8 Fabrikant
+lbCV7=CV7 Versie
+lbCV1=CV1 Kort Adres
+lbCV2=CV2 Vmin
+lbCV5=CV5 Vmax
+lbCV6=CV6 Vmiddel
+lbCV3=CV3 Optrekken
+lbCV4=CV4 Afremmen
+lbCV17_18=CV17+18 Lang Adres
+lbCV9=CV9 PWM-Frekwentie
+lbCV19=CV19 Consist-Adres
+lbCV105=CV105 UserID1
+lbCV106=CV106 UserID2
+gbCV29=CV29 Configuratie
+lbCV29=CV29 decimaal
+CV29b0=Bit0 Rijrichting omgekeerd
+CV29b1=Bit1 28/128 Snelheid Stappen
+CV29b2=Bit2 Analoog Bedrijf mogelijk
+CV29b3=Bit3 bidirectionele Communicatie
+CV29b4=Bit4 Gebruik indiv. SnelheidsTabel
+CV29b5=Bit5 Gebruik lang Adres
+CV29b6=Bit6 Gereserveerd
+CV29b7=Bit7 Accessory Decoder
+CV19b7=CV19 Consist Richting omgekeerd
+pbDefaultFunctionMapping=Zet Default Waarden
+lbCV65=CV65 Kickstart
+lbCV66=CV66 Vooruit trim
+lbCV95=CV95 Achteruit trim
+gbSpeed=SnelheidsTabel CV67=Stap1..CV94=Stap28
+pbCalculate=Bereken SnelheidsTabel
+pbDelSpeedTable=Wis SnelheidsTabel
+lbDesc=Beschrijving
+lbVal=Waarde
+rbDecimal=decimaal
+rbBitmap=Bitmap
+gbCVval=Waarde
+lbDec=decimaal
+lbHex=hex
+gbCVbin=binair
+pbHardReset=Factory Reset
+descR1=kort Adres (CV1), 1..127
+lbReg=Register
+lbRegVal=Waarde
+lbRegDesc=Beschrijving
+descR2=V Start (CV2), 0..255
+descR3=Optrekken (CV3), 0..255
+descR4=Afremmen (CV4), 0..255
+descR5=Configuratie (CV29)
+descR7=Versie (CV7), R/O
+descR8=Fabrikant-ID (CV8), R/O
+mmNew=Nieuw
+mmNewMini=minimaal
+mmNewExtended=simpel
+mmNewAll=alle
+mmChange=Verander
+mmAdd=Toevoegen
+mmRemove=Verwijderen
+mmScan=Scan
+mmHelpInhalt=Inhoud
+mmHelpIndex=Index
+mmAbout=Over ProLok
+
+
+[setupForm]
+Caption=Setup
+lbPort=Port
+lbWait=Wait Cycle
+lblBulk=Aantal Retry's
+pbOK=Opslaan
+pbCancel=Undo
+pbSetupHelp=Help
+gbSetupDecoderMode=Programmeer Mode
+cbDirectMode=direct
+cbPageMode=CV
+cbAutoMode=auto
+cbUSBserial=USB-Serieel-Adapter
+cbSafeMode=Verify na lezen en schrijven
+cbTest0Bit=Check Bit op 1 en 0 
+cbIs6604=Extended Power-On Cycle
+cbBulk=Batch Mode
+gbSetupHardware=Device
+lbl_Lang=Taal
+rbIsDDL=Booster + ACK detectie circuit
+rbIsPR1=Digitrax PR-1 of DECPROG
+
+
+[scanForm]
+Caption=Decoder Scan
+gbRange=CV-Ranges
+lbFrom=van
+lbTo=tot
+pbClose=Sluit
+pbScan=Scan
+pbCancel=Afbreken
+
+
+[formRemove]
+Caption=Verwijder Profielen
+pbRemove=Verwijder
+pbCancel=Opheffen
+
+[aboutBox]
+Caption=Over ProLok
+
+[faultListe]
+Caption=Fouten Lijst
+lbHeadLine=De gevraagde opdracht werkt niet correct met de volgende CV:
+pbClose=&sluit Window

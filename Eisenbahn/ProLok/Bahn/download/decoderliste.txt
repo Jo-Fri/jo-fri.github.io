@@ -1,0 +1,26 @@
+ESU Lokpilot	LokPilot	M&auml;rklin 6604	Daniel Basler
+ESU Lokpilot V2	LokPilot_&shy;V2_&shy;0	-	-
+ESU Lokpilot V3	LokPilot_&shy;V3_&shy;0	-	Marc H&ouml;ner
+K&uuml;hn F050	Kuehn_&shy;F050	DECPROG, (nur Schreiben)	T.Borrmann
+K&uuml;hn N020	Kuehn_&shy;N020	DECPROG	T.Borrmann
+K&uuml;hn N025	Kuehn_&shy;N025	DECPROG, Roco 10761, Tams-Booster	T.Borrmann
+K&uuml;hn T125	Kuehn_&shy;T125	DECPROG, Roco 10761, Tams-Booster	T.Borrmann
+K&uuml;hn T145	Kuehn_&shy;T145	DECPROG, Roco 10761, Tams-Booster	T.Borrmann
+K&uuml;hn T145	T145	M&auml;rklin 6604	Daniel Basler
+K&uuml;hn T140<br />dutch version<br />by P. Limpens	Kuehn_&shy;T140-dutch	<a href="http://members.home.nl/pamali/treinmenu/treinmenuNL.htm" title="Paul Limpens Web, Booster Project">Pauls<br />Eigenbau-Booster</a>	Paul Limpens
+Lenz LE010XF	Lenz_&shy;LE010XF	-	
+Lenz LE0521A	Lenz_&shy;LE0521A	-	
+Lenz Gold Dec.	lenz_&shy;gold	-	Roland Weber
+Tams LD-G-5	Tams_&shy;LDG5	DECPROG	Hans-Peter Grade
+Tams LD-G-7	Tams_&shy;LDG7	Roco 10761	T.Borrmann
+Tams LD-G-8	Tams_&shy;LDG8	DECPROG	Hans-Peter Grade
+Tams LD-G-21	Tams_&shy;LDG21	DECPROG	Hans-Peter Grade
+Tams LD-G-31	Tams-LD-G-21	Roco 10761	Rolf Schmidt
+Tams LD-G-32	Tams-LD-G-32	Roco 10761	Rolf Schmidt
+Tran DCX73	Tran_&shy;DCX73	DECPROG, Roco 10761, Tams-Booster	T.Borrmann
+Tran DCX74	Tran_&shy;DCX74DN	DECPROG, Roco 10761, Tams-Booster	T.Borrmann
+Tran DCX74<br />Update	Tran_&shy;DCX74DN-upd	-	Michael Lachmann
+Tran DCX74Z	Tran_&shy;DCX74Z	-	Michael Lachmann
+<abbr title="Gebr&uuml;der Fleischmann N&uuml;rnberg">GFN</abbr> 6857	Fleischmann_&shy;6857	-	Michael Lachmann
+Signaldecoder<br />(Darius GmbH)<br />WDECN-TN Version 2.1	WDECN-TN	DECPROG	Hans-Peter Grade
+Uhlenbrock 76200	uhlenbrock_&shy;76200	-	Marc H&ouml;ner

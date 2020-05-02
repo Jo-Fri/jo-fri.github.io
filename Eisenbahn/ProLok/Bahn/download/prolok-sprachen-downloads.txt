@@ -1,0 +1,6 @@
+english.lng	englisch / english
+francais.lng	franz&ouml;sisch / francais<br />&Uuml;bersetzung / translation:Jean-Michel THUOT
+dutch.lng	niederl&auml;ndisch / dutch<br />&Uuml;bersetzung / translation: Willem Smith
+hungarian.lng	ungarisch / hungarian<br />&Uuml;bersetzung / translation: T&ouml;r&ouml;k Istv&aacute;n
+italiano.lng	italienisch / italiano<br />&Uuml;bersetzung / translation: Yuri Pini
+spain.lng	spanisch / spain<br />&Uuml;bersetzung / translation: Salus Moreno

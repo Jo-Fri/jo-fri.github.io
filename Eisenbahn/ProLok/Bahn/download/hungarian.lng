@@ -1,0 +1,169 @@
+[Strings]
+ProgDev=PR1 vagy DECPROG csatlakoztatva
+noProgDev=Programozó eszköz nem található
+Loco=Mozdony a sínen
+noLoco=Nincs mozdony a sínen
+ProgTrk=Beállító sín csatlakoztatva
+noProgTrk=Nincs Beállító sín
+wait=Kérem, várjon!
+Simple=egyszerû
+All=mind
+Mini=csak cím
+Add=hozzáad mint
+mmEntryName=Adja meg az új bejegyzést
+Cancel=leállít
+Read=olvas
+Write=beír
+Verify=ellenõriz
+unknown=ismeretlen
+HardErr=hardware hiba
+Error=hiba
+Save=Ment
+No por=Nincs port
+IniWrErr=nem írható: prolok.ini
+WrDecErr=nem írható: decoder file
+WrLogErr=nem írható: logfile
+File=fájl
+noPortAccess=com-port nem elérhetõ
+OutOfMem=nincs elég memória
+BitmapDesc=bitkép kiterjesztés
+InputValFormat=Only values from %d to %d allowed
+Numeric=csak szám-változó engedélyezett
+Confirm=Megerõsít
+Success=Sikeres
+FactoryReset=Valóban reseteli a dekódert? Valamennyi érték, beleértve a CV67-94 sebességtáblázatot és a CV105 and 106 változókat, vissza fog állni a gyári értékre. Ez a funkcció kisérleti és nem tudható következményekkel járhat. Mindenképpen resetel?
+Wrong=Hiba
+Correct=Korrekt
+NACK=Nincs ACK
+Fail=Téves
+Value=Érték
+Description=Kiterjesztés
+
+[mainForm]
+tsBasis=&Bázis CV
+tsFunction=Fu&nkció tábla
+tsSpeedTab=Sebesség &Tábla
+tsMore=&Több CV
+tsSingleCV=egyszerû CV
+tsRegister=Re&giszter
+pbRead=&Olvas
+pbVerify=&Ellenõriz
+pbWrite=&Ír
+mmFile=&Fájl
+mmLoad=&Betölt
+mmSave=&Ment
+mmSaveAs=M&entés mint
+mmExit=&Kilép
+mmDecoder=De&kóder
+mmSetup=Beállít&ás
+mmHelp=&Súgó
+
+Caption=LokProgrammer
+lbCV8=CV8 Gyártó
+lbCV7=CV7 Verzió
+lbCV1=CV1 Rövid cím
+lbCV2=CV2 Vmin
+lbCV5=CV5 Vmax
+lbCV6=CV6 Vközép
+lbCV3=CV3 Gyorsulás
+lbCV4=CV4 Lassulás
+lbCV17_18=CV17+18 hosszú cím
+lbCV9=CV9 PWM-Frekvencia
+lbCV19=CV19 Állandó-cím
+lbCV105=CV105 UserID1
+lbCV106=CV106 UserID2
+gbCV29=CV29 konfiguráció
+lbCV29=CV29 decimális
+CV29b0=Bit0 Irányváltás
+CV29b1=Bit1 28/128 sebesség lépés
+CV29b2=Bit2 Power konverzió
+CV29b3=Bit3 kétirányú kommunikáció
+CV29b4=Bit4 egyéni sebességtábla használata
+CV29b5=Bit5 hosszú cím használata
+CV29b6=Bit6 foglalt
+CV29b7=Bit7 Kellékdekóder
+CV19b7=CV19 konziszt. ellenkezõ irány
+pbDefaultFunctionMapping=alapérték beállítás
+lbCV65=CV65 indítás
+lbCV66=CV66 elõre trim
+lbCV95=CV95 hátra trim
+gbSpeed=Sebességtábla CV67=lépés1..CV94=lépés28
+pbCalculate=Sebességtábla számítása
+pbDelSpeedTable=Sebesség tábla törlése
+lbDesc=Kiterjesztés
+lbVal=Érték
+rbDecimal=decimális
+rbBitmap=Bitkép
+gbCVval=érték
+lbDec=decimális
+lbHex=hex
+gbCVbin=bináris
+pbHardReset=Gyári érték vissza
+descR1=rövid cím (CV1), 1..127
+lbReg=Register
+lbRegVal=Érték
+lbRegDesc=Kiterjesztés
+descR2=Kezdõ seb. (CV2), 0..255
+descR3=Gyorsítás (CV3), 0..255
+descR4=Lassítás (CV4), 0..255
+descR5=Konfig. (CV29)
+descR7=Verzió (CV7), R/O
+descR8=Gyártó-ID (CV8), R/O
+mmNew=Új
+mmNewMini=miniális
+mmNewExtended=szimpla
+mmNewAll=minden
+mmChange=Cserél
+mmAdd=Hozzáad
+mmRemove=Eltávolít
+mmScan=Scan
+mmHelpInhalt=Tartalom
+mmHelpIndex=Index
+mmAbout=a ProLok névjegye
+
+
+[setupForm]
+Caption=Beállítás
+lbPort=Port
+lbWait=Várakozási ciklus
+lblBulk=Újraszámolás
+pbOK=Ment
+pbCancel=Mégsem
+pbSetupHelp=Súgó
+gbSetupDecoderMode=Programozási mód
+cbDirectMode=direkt
+cbPageMode=CV
+cbAutoMode=auto
+cbUSBserial=USB-soros adapter
+cbSafeMode=Ellenõrzés az olvasás/írás után
+cbTest0Bit=1 és 0 bit ellenõrzése
+cbIs6604=Kiterjesztett Power-On ciklus
+cbBulk=Verem mód
+gbSetupHardware=Eszköz
+lbl_Lang=nyelv
+rbIsDDL=Booster + ACK érzékelõ 
+rbIsPR1=Digitrax PR-1 vagy DECPROG
+
+
+[scanForm]
+Caption=Dekóder Keresés
+gbRange=CV-sorozat
+lbFrom=ból
+lbTo=ba
+pbClose=Bezár
+pbScan=Keres
+pbCancel=Mégsem
+
+
+[formRemove]
+Caption=Profil eltávolítás
+pbRemove=Eltávolít
+pbCancel=Mégsem
+
+[aboutBox]
+Caption=ProLok névjegye
+
+[faultListe]
+Caption=Hibaüzenet
+lbHeadline=A végrehajtott változtatás nem mûködik együtt a következõ CV-vel:
+pbClose=&bezárja az ablakot

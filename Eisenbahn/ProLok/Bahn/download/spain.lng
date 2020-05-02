@@ -1,0 +1,172 @@
+[Strings]
+ProgDev=PR1 o DECPROG connectado
+noProgDev=No se encuentra HW
+Loco=Locomotora en la vía
+noLoco=No se detecta locomotora
+ProgTrk=Vía de programación conectada
+noProgTrk=Vía de programación NO conectada
+wait=Espere, por favor
+Simple=Simple
+All=Todo
+Mini=Solo dirección
+Add=Añadir como
+mmEntryName=Defina el nombre de la nueva entrada
+Cancel=calcelar
+Read=Leer
+Write=Escribir
+Verify=Verificar
+unknown=Desconocido
+HardErr=Rrror de hardware
+Error=Error
+save=Salvar
+noPort=No se encuentra puerto
+IniWrErr=No se puede escribir en prolok.ini
+WrDecErr=No se puede escribir en fichero decodificador
+WrLogErr=No se puede escribir en fichero log
+File=Fichero
+noPortAccess=Puerto COM no disponible
+OutOfMem=Memoria insificiente
+BitmapDesc=Descripción bitmap
+InputValFormat=Solo se permiten valores entre %d y %d 
+Numeric=Solo se permiten valotes numéricos
+Confirm=Confirma
+Success=Realizado
+FactoryReset=Realmente ¿Quiere realizar reset al decodificador?  Todas las CV, incluyendo la tabla de velocidades CV67-94 y las CV de usuario CV105 y CV106, serán inicializadas con los valores de fábrica. Esta función es esperimental, el resultado puede ser impredecible. ¿Desea Continuar?
+Wrong=Erroneo
+Correct=Dorrecto
+NACK=No se detecta ACK
+Fail=Fallo
+Value=Valor
+Description=Descripción
+
+[mainForm]
+tsBasis=&Principales CV
+tsFunction=&Mapeo de Funciones
+tsSpeedTab=Tabla de &Velocidades
+tsMore=&Otras CV
+tsSingleCV=&Editar CV
+tsRegister=&Registro
+pbRead=&Leer
+pbVerify=&Verificar
+pbWrite=E&scribir
+mmFile=&Archivo
+mmLoad=&Abrir
+mmSave=&Guardar
+mmSaveAs=G&uardar Como
+mmExit=&Cerrar
+mmDecoder=&Decodificador
+mmSetup=Con&figuración
+mmHelp=A&yuda
+
+Caption=LokProgrammer
+lbCV8=CV8 Fabricante
+lbCV7=CV7 Versión
+lbCV1=CV1 Dirección corta
+lbCV2=CV2 Vel.arranque
+lbCV5=CV5 Vel.máxima
+lbCV6=CV6 Vel.Media
+lbCV3=CV3 Acceleración
+lbCV4=CV4 Deceleración
+lbCV17_18=CV17+18 Dirección extendida
+lbCV9=CV9 PWM-Frequencia impulsos motor
+lbCV19=CV19 Dirección de multitracción
+lbCV105=CV105 Usuario 1
+lbCV106=CV106 Usuario 2
+gbCV29=CV29 Registro de configuración
+lbCV29=Valor decimal
+CV29b0=Bit0 Inversión marcha
+CV29b1=Bit1 28/128 Pasos de velocidad
+CV29b2=Bit2 Operación en modo analógico
+CV29b3=Bit3 Communicación bidireccional
+CV29b4=Bit4 Tabla Velocidad CV67 a CV94
+CV29b5=Bit5 Dirección corta/extendida
+CV29b6=Bit6 Reservado
+CV29b7=Bit7 Decodificador de accesórios
+CV19b7=CV19 Inversión de multitracción
+pbDefaultFunctionMapping=Valores por defecto
+lbCV65=CV65 Umbral de referencia
+lbCV66=CV66 Vel.maniobra adelante
+lbCV95=CV95 Vel.maniobra atras
+gbSpeed=Tabla de velocidades CV67=Paso1..CV94=Paso28
+pbCalculate=Calcular tabla velocidades
+pbDelSpeedTable=Borrar tabla velocidades
+lbDesc=Descripción
+lbVal=Valor
+rbDecimal=Decimal
+rbBitmap=Mapa de bits
+gbCVval=Valor
+lbDec=Decimal
+lbHex=Hexadecimal
+gbCVbin=Binario
+pbHardReset=Valores de fábrica
+descR1=Dirección corta (CV1), 1..127
+lbReg=Registro
+lbRegVal=Valor
+lbRegDesc=Descripción
+descR2=Vel.arranque (CV2), 0..255
+descR3=Acceleración (CV3), 0..255
+descR4=Decleración (CV4), 0..255
+descR5=Configuración (CV29)
+descR7=Versión (CV7), solo lectura
+descR8=Fabricante (CV8), solo lectura
+mmNew=Nuevo
+mmNewMini=Mínimo
+mmNewExtended=Simple
+mmNewAll=Todo
+mmChange=Cambio
+mmAdd=Añadir
+mmRemove=Borrar
+mmScan=Buscar
+mmHelpInhalt=Contenido
+mmHelpIndex=Indice
+mmAbout=Acerca de ProLok
+
+
+[setupForm]
+Caption=Preferencias
+lbPort=Puerto
+lbWait=Wait cicle
+lblBulk=Reintentos
+pbOK=Guardar
+pbCancel=Cancelar
+pbSetupHelp=Ayuda
+gbSetupDecoderMode=Modo de programación
+cbDirectMode=Directo
+cbPageMode=CV
+cbAutoMode=Auto
+cbUSBserial=Adaptador USB-Serie
+cbSafeMode=Verificar tras leer y escribir
+cbTest0Bit=Verificar bit 1 y 0 
+cbIs6604=Extended Power-On Cycle
+cbBulk=Stack Mode
+gbSetupHardware=Hardware
+lbl_Lang=Lenguaje
+rbIsDDL=Booster + detector ACK
+rbIsPR1=Digitrax PR-1 oder DECPROG
+
+
+[scanForm]
+Caption=Buscando decodificador
+gbRange=Rangos CV
+lbFrom=Desde
+lbTo=Hasta
+pbClose=Cerrar
+pbScan=Buscar
+pbCancel=Cancelar
+
+
+[formRemove]
+Caption=Borrar perfil
+pbRemove=Borrar
+pbCancel=Cancelar
+
+[aboutBox]
+Caption=Acerca de ProLok
+
+[faultListe]
+Caption=Lista de errores
+lbHeadline=La operación requerida no es correcta para las siguientes CV:
+pbClose=&Cerrar Vantana
+
+
+

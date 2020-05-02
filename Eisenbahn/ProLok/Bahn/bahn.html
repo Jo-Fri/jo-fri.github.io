@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/bahn.css" />
+	<meta name="robots" content="index, follow" />
+	<title>ProLok DCC Software für Lokdecoder - DCC-Programmierung | Thomas Borrmann</title>
+</head>
+
+<body>
+	<div>
+		<a id="top" class="invisible">Seitenanfang</a>
+	</div>
+
+	<div class="layout">
+		<a href="#start_of_content" class="invisible" title="Navigation &uuml;berspringen">direkt zum Inhalt</a>
+		<div class="titel">
+			Modellbahn - Software
+		</div>
+
+		<span class="home">
+			<a href="../../">home...</a>
+		</span>
+
+		<div class="artikel">
+			<div class="content">
+				<a class="invisible" id="start_of_content">Inhalt</a>
+				<!-- Inhalt, Text, Bilder -->
+				<h1>ProLok - DCC Lokdecoder CV einfach programmieren</h1>
+				<h2>f&uuml;r Windows ab 95, XP, bis Windows 10</h2>
+				<p class="left einsp">
+					Auf der Suche nach einer komfortablen und preisg&uuml;nstigen M&ouml;glichkeit zum Programmieren meiner Lokdekoder war ich
+					zun&auml;chst auf den
+					<a href="http://members.iinet.net.au/~backway/OzDcc/decprog.htm" target="_blank"
+						title="Link zum Internet-Angebot von Bob Backway">DECPROG</a> von Bob Backway und das DOS-Programm PR1DOS von John E. Kabat gesto&szlig;en. Sp&auml;ter fand ich auch
+					noch die Software PR-1 von Hans Tanner, f&uuml;r Windows3.1 und Win95.
+					<br />Ein Programm, das unter Windows NT oder 2000 nutzbar ist, fand ich nicht. Also war Selbermachen angezeigt..
+					<br /> ProLok l&auml;uft - ohne zus&auml;tzliche Treiber - unter allen Windows-Versionen ab '95 aufw&auml;rts, wie mir Nutzer berichtet haben. Ich selbst hatte es zuletzt mit Windows XP in Benutzung.
+					<br />
+				</p>
+				<div class="image">
+					<img class="imgtop" src="img/software/screenshot-prolok_1.jpg" width="381" height="280"
+						alt="Screenshot der ProLok1-Bedienoberfl&auml;che"
+						title="Screenshot der ProLok1-Bedienoberfl&auml;che" />
+				</div>
+				<p class="left einsp">
+					Da mir der Umweg &uuml;ber eine Software-Zentrale zu umst&auml;ndlich war, ist das Programm
+					<strong>ProLok</strong> entstanden.
+					<br> Dank einiger engagierter Modellbahner existiert das
+					<a href="http://www.der-moba.de/" target="_blank"
+						title="Link zum DER_MOBA Wiki">DER_MOBA</a>-Digitalprojekt, dessen Konvertierungsfunktion von
+					DCC-Daten zu der erforderlichen kontinuierlichen Impulsfolge an der seriellen Schnittstelle in ProLok Verwendung fand.
+				</p>
+				<h3>Lizenz</h3>
+				<p class="left einsp">
+					Das Programm unterliegt der
+					<strong>G</strong>NU General
+					<strong>P</strong>ublic
+					<strong>L</strong>icense (
+					<abbr title="GNU General Public License">GPL</abbr>) der Free Software Foundation. Zum Inhalt der
+					GPL lest bitte deren Originaltext
+					<a href="http://www.gnu.org/licenses/" target="_blank"
+						title="Link zur Lizenz-Seite des GNU-Projektes">http://www.gnu.org/licenses/</a>
+					oder eine der deutschen &Uuml;bersetzungen, z.B. auf
+					<a href="http://www.gnu.de/gpl-ger.html" target="_blank"
+						title="Deutsche &Uuml;bersetzung der GNU General Public License">http://www.gnu.de/gpl-ger.html</a>.
+					<br> Um mit
+					<span class="fett">ProLok</span> Lokdekoder zu programmieren, ist au&szlig;er dem PC (mindestens
+					486/133MHz) noch ein Booster mit Ackdetektor, ein
+					<span class="nobr">PR-1</span> oder ein Nachbau (siehe unten) oder wie der weiter oben erw&auml;hnte
+					DECPROG erforderlich.
+				</p>
+				<div class="image">
+					<img class="imgtop" src="img/software/screenshot-prolok_2.jpg" width="365" height="299"
+						alt="Screenshot der ProLok1-Bedienoberfl&auml;che:Setup-Dialog"
+						title="Screenshot der ProLok1-Bedienoberfl&auml;che:Setup-Dialog" />
+				</div>
+				<p class="einsp">
+					Welches Programmierger&auml;t bevorzugt wird, kann im Einstellungen-Dialog des Programms ausgew&auml;hlt werden.
+					<br> Wenn das Programm im
+					<abbr title="Digital Direct for Linux">DDL</abbr>-Modus (also mit Booster und Quittungs-Detektor) verwendet wird,kann der
+					<a href="http://vogt-it.com/OpenSource/DDL/index.php3?connections" target="_blank"
+						title="Link zur Beschreibung des Ack-Detectors von Torsten Voigt">Ackdetector</a>
+					verwendet werden, wie ihn Torsten Voigt auf seiner Webseite beschreibt.
+					<br /> Ich habe die Schaltung noch ein wenig modifiziert (schraffierter Teil der Schaltung).
+				</p>
+				<div class="image">
+					<img class="imgtop" src="img/software/ackdetector.gif" width="386" height="275"
+						alt="Schaltung des erweiterten Ack-Detektors" title="Schaltung des erweiterten Ack-Detektors" />
+				</div>
+				<p class="einsp">
+					Dadurch ist es m&ouml;glich, die Reaktion des Dekoders zu beobachten: Die LED blinkt schwach, wenn die Lok auf dem Gleis
+					steht, ein Quittungsimpuls wird durch ein kurzes Aufblitzen angezeigt. Wenn die LED bei auf dem Programmiergleis stehender
+					Lok nicht schwach blinkt, gibt es wohl ein Kontaktproblem...
+				</p>
+
+				<h3>Anschlu&szlig; des Roco Verst&auml;rker 10761/10764 und Ackdetektornachbau an den PC</h3>
+				<p class="left einsp">
+					F&uuml;r diejenigen, die das Programm mit dem Roco Lokmaus-II-Verst&auml;rker (Roco 10761/10764) einsetzen, auf der Skizze ist das Anschlu&szlig;schema dargestellt.
+					<h3>
+						<strong>Schlie&szlig;en Sie niemals Lokmaus und Computer zeitgleich an den Verst&auml;rker
+							an!</strong>
+					</h3>
+
+					<div>
+						<a href="img/software/ProLok_RocRail_DCC_Prog.png" target="_blank"
+							title="Bild+verg%26ouml%3B%26szlig%3Bern%3A+Anschlu%26szlig%3Bschema+f%26uuml%3Br+den+Roco-10761">
+							<div class="image">
+								<img class="imgtop" src="img/software/ProLok_RocRail_DCC_Prog_small.png"
+									alt="Anschlu&szlig;schema f&uuml;r den Roco-10761"
+									title="Anschlu&szlig;schema f&uuml;r den Roco-10761" />
+							</div>
+						</a>
+						<a href="img/software/ProLok_RocRail_DCC_Prog.png" target="_blank"
+							title="Bild+verg%26ouml%3B%26szlig%3Bern%3A+Anschlu%26szlig%3Bschema+f%26uuml%3Br+den+Roco-10761">aktueller
+							Plan,</a>
+						<a href="img/software/ACK_Decoder.JPG" target="_blank" title="Foto ACK_Decoder.">Foto,</a>
+						<a href="img/software/10761.gif" target="_blank" title="alter Plan">alter Plan</a>
+					</div>
+
+					<h3>Info zu Ack Detektor mit Rocrail</h3>
+					<p class="left einsp">
+						Dieser Ack Decoder Nachbau funktioniert auch mit der freien Software Rocrail, mit der DDX Zentrale siehe Rocrail:
+						<a href="http://wiki.rocrail.net/doku.php?id=roco-booster-de" target="_blank"
+							title="Roco Digitalverstärker 10761 an RS232 Port">Rocrail Roco Digitalverstärker</a>
+						<br> weitere Dokumentation:
+						<!--					<a href="http://wiki.rocrail.net/lib/exe/fetch.php?id=roco-booster-de&cache=cache&media=roco:rocrail_roco_ack_decoder_x.odt"
+						 target="_blank" title="Rocrail Roco Ack Dekoder doc">Rocrail Roco Ack Dekoder doc (odt) Open Office</a> -->
+						<a href="img/Rocrail_Roco_ACK_Decoder_x.rtf" target="_blank"
+							title="Rocrail Roco Ack Dekoder.rtf">Rocrail Roco Ack Dekoder</a>
+
+					</p>
+
+					<h3>ProLok und weiter...</h3>
+					<p class="left einsp">
+						...geht es im Moment erst einmal nicht. Mangels eigenem Rechner mit Windows-Betriebssystem, passender Entwicklungsumgebung
+						und Zeit ruht die Weiterentwicklung des Programmes. Anfragen jeder Art versuche ich nach bestem Wissen zu beantworten,
+						aber habt bitte Verst&auml;ndnis daf&uuml;r, da&szlig; ich mir nicht jeden Dekoder, jeden
+						m&ouml;glichen Digitalverst&auml;rker
+						und jeden nur denkbaren USB-auf-seriell-Wandler kaufen kann, um Fragen der Art &quot;Ich habe den Dekoder xyz, warum
+						bekomme beim Lesen nur Nullen zur&uuml;ck?&quot;" ersch&ouml;pfend zu beantworten. In allen F&auml;llen des Nichtfunktionierens
+						waren es entweder falsch aufgebaute Ack-Detektoren oder serielle Schnittstellen, die keine saubere Gleichspannung liefern.
+						Die besten Ergebnisse werden mit dem oben angef&uuml;hrten DECPROG an einer nativen seriellen Schnittstelle erzielt.
+						<strong>Vielleicht findet sich ja jemand, der das Programm gerne weiterentwickeln
+							möchte?</strong>
+					</p>
+
+					<h3>Erg&auml;nzungen von Benutzern</h3>
+					<ul>
+						<li>
+							<h3>Loksound-Dekoder</h3>
+							<p class="left einsp">
+								Herbert Janssen hat den
+								<abbr title="Decoder Programmer von Bob Backway">DECPROG</abbr> modifizert, um die
+								Loksound-Dekoder mit Prolok bearbeiten zu k&ouml;nnen.
+								<br /> In der Datei
+								<a href="download/loksound.zip" target="_blank" title="Download">loksound.zip</a> finden
+								sich einige Dekoderdateien und der modifizierte Schaltplan des DECPROG
+								<a href="download/dpcct32.JPG" target="_blank" title="Download">dpcct32.JPG</a>. Die
+								&Auml;nderungen sind im Schaltplan farbig hinterlegt.
+							</p>
+						</li>
+						<li>
+							<h3>Pinbelegung der RS232-Schnittstelle</h3>
+							<p class="einsp">
+								Von Gerald Rehm stammt die Datei
+								<a href="download/RS232Pinbelegung.pdf" target="_blank"
+									title="Download">RS232Pinbelegung.pdf</a>, in der die Anschl&uuml;sse der seriellen
+								Schnittstelle beschrieben sind.
+								<br />
+							</p>
+						</li>
+					</ul>
+
+					<small>Alle PDF-Dateien wurden mit der PDF-Exportfunktion von
+						<a href="http://www.openoffice.org" target="_blank"
+							title="Link zur Website des OpenOffice.org-Projekts">OpenOffice.org</a> erstellt.</small>
+
+					<table class="download">
+						<caption class="download">Decoder-Beschreibungsdateien in decoder.zip
+							<br>
+						</caption>
+						<thead class="download">
+							<tr>
+								<th class="file">Decoder</th>
+								<th class="file">Datei (.txt)</th>
+								<th class="description">getestet mit</th>
+								<th class="description">von</th>
+							</tr>
+						</thead>
+						<tbody class="download">
+							<tr class="download">
+								<td class="file">ESU Lokpilot</td>
+								<td class="file">LokPilot</td>
+								<td class="description">M&auml;rklin 6604</td>
+								<td class="description">Daniel Basler</td>
+							</tr>
+							<tr class="download">
+								<td class="file">ESU Lokpilot V2</td>
+								<td class="file">LokPilot_&shy;V2_&shy;0</td>
+								<td class="description">-</td>
+								<td class="description">-</td>
+							</tr>
+							<tr class="download">
+								<td class="file">ESU Lokpilot V3</td>
+								<td class="file">LokPilot_&shy;V3_&shy;0</td>
+								<td class="description">-</td>
+								<td class="description">Marc H&ouml;ner</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn F050</td>
+								<td class="file">Kuehn_&shy;F050</td>
+								<td class="description">DECPROG, (nur Schreiben)</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn N020</td>
+								<td class="file">Kuehn_&shy;N020</td>
+								<td class="description">DECPROG</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn N025</td>
+								<td class="file">Kuehn_&shy;N025</td>
+								<td class="description">DECPROG, Roco 10761, Tams-Booster</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn T125</td>
+								<td class="file">Kuehn_&shy;T125</td>
+								<td class="description">DECPROG, Roco 10761, Tams-Booster</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn T145</td>
+								<td class="file">Kuehn_&shy;T145</td>
+								<td class="description">DECPROG, Roco 10761, Tams-Booster</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn T145</td>
+								<td class="file">T145</td>
+								<td class="description">M&auml;rklin 6604</td>
+								<td class="description">Daniel Basler</td>
+							</tr>
+							<tr class="download">
+								<td class="file">K&uuml;hn T140
+									<br />dutch version
+									<br />by P. Limpens</td>
+								<td class="file">Kuehn_&shy;T140-dutch</td>
+								<td class="description">
+									<a href="http://members.home.nl/pamali/treinmenu/treinmenuNL.htm" target="_blank"
+										title="Paul Limpens Web, Booster Project">Pauls
+										<br />Eigenbau-Booster</a>
+								</td>
+								<td class="description">Paul Limpens</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Lenz LE010XF</td>
+								<td class="file">Lenz_&shy;LE010XF</td>
+								<td class="description">-</td>
+								<td class="description"></td>
+							</tr>
+							<tr class="download">
+								<td class="file">Lenz LE0521A</td>
+								<td class="file">Lenz_&shy;LE0521A</td>
+								<td class="description">-</td>
+								<td class="description"></td>
+							</tr>
+							<tr class="download">
+								<td class="file">Lenz Gold Dec.</td>
+								<td class="file">lenz_&shy;gold</td>
+								<td class="description">-</td>
+								<td class="description">Roland Weber</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-5</td>
+								<td class="file">Tams_&shy;LDG5</td>
+								<td class="description">DECPROG</td>
+								<td class="description">Hans-Peter Grade</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-7</td>
+								<td class="file">Tams_&shy;LDG7</td>
+								<td class="description">Roco 10761</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-8</td>
+								<td class="file">Tams_&shy;LDG8</td>
+								<td class="description">DECPROG</td>
+								<td class="description">Hans-Peter Grade</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-21</td>
+								<td class="file">Tams_&shy;LDG21</td>
+								<td class="description">DECPROG</td>
+								<td class="description">Hans-Peter Grade</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-31</td>
+								<td class="file">Tams-LD-G-21</td>
+								<td class="description">Roco 10761</td>
+								<td class="description">Rolf Schmidt</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tams LD-G-32</td>
+								<td class="file">Tams-LD-G-32</td>
+								<td class="description">Roco 10761</td>
+								<td class="description">Rolf Schmidt</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tran DCX73</td>
+								<td class="file">Tran_&shy;DCX73</td>
+								<td class="description">DECPROG, Roco 10761, Tams-Booster</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tran DCX74</td>
+								<td class="file">Tran_&shy;DCX74DN</td>
+								<td class="description">DECPROG, Roco 10761, Tams-Booster</td>
+								<td class="description">T.Borrmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tran DCX74
+									<br />Update</td>
+								<td class="file">Tran_&shy;DCX74DN-upd</td>
+								<td class="description">-</td>
+								<td class="description">Michael Lachmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Tran DCX74Z</td>
+								<td class="file">Tran_&shy;DCX74Z</td>
+								<td class="description">-</td>
+								<td class="description">Michael Lachmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">
+									<abbr title="Gebr&uuml;der Fleischmann N&uuml;rnberg">GFN</abbr> 6857</td>
+								<td class="file">Fleischmann_&shy;6857</td>
+								<td class="description">-</td>
+								<td class="description">Michael Lachmann</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Signaldecoder
+									<br />(Darius GmbH)
+									<br />WDECN-TN Version 2.1</td>
+								<td class="file">WDECN-TN</td>
+								<td class="description">DECPROG</td>
+								<td class="description">Hans-Peter Grade</td>
+							</tr>
+							<tr class="download">
+								<td class="file">Uhlenbrock 76200</td>
+								<td class="file">uhlenbrock_&shy;76200</td>
+								<td class="description">-</td>
+								<td class="description">Marc H&ouml;ner</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="download">
+						<caption class="download">Download
+							<br>
+						</caption>
+						<thead class="download">
+							<tr class="download">
+								<th class="left">Datei</th>
+								<th class="left">Beschreibung</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="download">
+									<a href="download/prolok.zip" target="_blank"
+										title="Download prolok.zip">prolok.zip</a>
+									<!-- download/prolok.zip -->
+									<br />547.9 kB</td>
+								<td class="description">Das ausf&uuml;hrbare Programm prolok.exe.
+									<br />Die Hilfedatei und die Dekoder-Beschreibungsdateien sind in diesem Paket
+									<em>nicht</em> enthalten
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/decoder.zip" target="_blank"
+										title="Download decoder.zip">decoder.zip</a>
+									<!-- download/decoder.zip -->
+									<br />41.0 kB</td>
+								<td class="description">Die Dekoderbeschreibungsdateien
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/prolok-hilfe.zip" target="_blank"
+										title="Download prolok-hilfe.zip">prolok-hilfe.zip</a>
+									<!-- download/prolok-hilfe.zip -->
+									<br />596.4 kB</td>
+								<td class="description">Die Hilfedateien zum Programm. Bitte entpacken Sie die
+									enthaltenen Dateien in das Unterverzeichnis &quot;help&quot;
+									des Programmverzeichnisses
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/prolok.pdf" target="_blank"
+										title="Download prolok.pdf">prolok.pdf</a>
+									<!-- download/prolok.pdf -->
+									<br />804.5 kB</td>
+								<td class="description">Die Programmbeschreibung im
+									<abbr title="Portable Document Format">PDF</abbr>-Format
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/prolok_src.zip" target="_blank"
+										title="Download prolok_src.zip">prolok_src.zip</a>
+									<!-- download/prolok_src.zip -->
+									<br />627.6 kB</td>
+								<td class="description">Die Quelltext-Dateien (f&uuml;r Borland C++Builder Version 6)
+									Zur Compilation wird zus&auml;tzlich das Programm-Modul
+									<a href="http://sourceforge.net/projects/comport/"
+										title="Link zum Projekt CPort von Dejan Cnrila">&quot;Cport 2.64&quot;</a> von
+									Dejan Crnila ben&ouml;tigt. Neuere Versionen haben bei mir nicht funktioniert.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="download">
+						<caption class="download">andere Sprachen/other languages
+							<br>
+						</caption>
+						<thead class="download">
+							<tr class="download">
+								<th class="left">Datei</th>
+								<th class="left">Beschreibung</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="download">
+									<a href="download/english.lng" target="_blank"
+										title="Download english.lng">english.lng</a>
+									<!-- download/english.lng -->
+									<br />3.8 kB</td>
+								<td class="description">englisch / english
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/francais.lng" target="_blank"
+										title="Download francais.lng">francais.lng</a>
+									<!-- download/francais.lng -->
+									<br />4.1 kB</td>
+								<td class="description">franz&ouml;sisch / francais
+									<br />&Uuml;bersetzung / translation:Jean-Michel THUOT
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/dutch.lng" target="_blank"
+										title="Download dutch.lng">dutch.lng</a>
+									<!-- download/dutch.lng -->
+									<br />3.9 kB</td>
+								<td class="description">niederl&auml;ndisch / dutch
+									<br />&Uuml;bersetzung / translation: Willem Smith
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/hungarian.lng" target="_blank"
+										title="Download hungarian.lng">hungarian.lng</a>
+									<!-- download/hungarian.lng -->
+									<br />3.7 kB</td>
+								<td class="description">ungarisch / hungarian
+									<br />&Uuml;bersetzung / translation: T&ouml;r&ouml;k Istv&aacute;n
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/italiano.lng" target="_blank"
+										title="Download italiano.lng">italiano.lng</a>
+									<!-- download/italiano.lng -->
+									<br />4.2 kB</td>
+								<td class="description">italienisch / italiano
+									<br />&Uuml;bersetzung / translation: Yuri Pini
+								</td>
+							</tr>
+							<tr>
+								<td class="download">
+									<a href="download/spain.lng" target="_blank"
+										title="Download spain.lng">spain.lng</a>
+									<!-- download/spain.lng -->
+									<br />4.1 kB</td>
+								<td class="description">spanisch / spain
+									<br />&Uuml;bersetzung / translation: Salus Moreno
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Andere Sprachen/other languages HOWTO</h3>
+					<p class="left einsp">
+						Kopieren Sie die Datei &#8250;xx.lng&#8249; in das gleiche Verzeichnis wie Prolok.exe, sie
+						k&ouml;nnen dann im Dialog &#8250;Einstellungen&#8249;
+						die gew&uuml;nschte Sprache ausw&auml;hlen.
+						<br /> Save the file &#8250;xx.lng&#8249; to the same directory as Prolok.exe resides, then open
+						the &#8250;Einstellungen&#8249;
+						dialog and choose your preferred language.
+					</p>
+					<div class="history">
+						<h3>Versions Details Prolok</h3>
+						<p class="pre einsp">ProLok
+							<br /> Programm zur Einstellung der Parameter in DCC-Lokdecodern
+							<br /> Freeware/GNU General Public License
+							<br /> Autor: Thomas Borrmann 2004-2005
+							<br />
+							<br /> Versions-History:
+							<br /> 0.8.2
+							<br /> - Die Baudrate kann jetzt auf 16457bps eingestellt werden, leider funktioniert das nicht mit allen seriellen Schnittstellen. Das Signaltiming entspricht damit der NMRA-Spezifikation von 60&micro;s Pulsdauer f&uuml;r eine 1
+							<br />
+							<br /> 0.8.0
+							<br /> - Ein Problem mit der Ger&auml;teerkennung beim Digitrax PR-1 beseitigt
+							<br /> - Das Programm ist nun mehrsprachig. Dazu mu&szlig; nur die gew&uuml;nschte Sprachdatei &lt;Sprache&gt;.lng in das Programmverzeichnis von Prolok kopiert und im Setup-Dialog ausgew&auml;hlt werden. Willem Smith hat die niederl&auml;ndische Version beigesteuert.
+							<br /> - der DECPROG kann nun auch &uuml;ber einen USB-Seriell-Adapter angeschlossen werden. Das Lesen und Pr&uuml;fen liefert zu 90% das richtige Ergebnis oder keines - falsche Daten wurden nicht mehr gelesen. Allerdings braucht das Programm doch recht lange...
+							<br />
+							<br /> 0.7.4
+							<br /> - Direktzugriffs-Tasten f&uuml;r die einzelnen Tabulatoren und Aktionstasten eingerichtet (Alt+&lt;unterstrichener Buchstabe&gt;)
+							<br /> - die Drehfelder in der Seite 'einzelne CV' und im Scan-Fenster k&ouml;nnen nun auch mit den Cursortasten bedient werden.
+							<br /> - Stapelmodus eingef&uuml;hrt: beim Abarbeiten einer Seite k&ouml;nnen die Fehlermeldungen jetzt gesammelt werden, am Ende der Seite werden sie als Liste angezeigt. Dieser Modus kann so eingestellt werden, da&szlig; jede Operation 0..9 Mal wiederholt wird, bevor eine Fehlermeldung in der Liste erscheint.
+							<br />
+							<br /> 0.7.3
+							<br /> - Scan ist nur aktiviert, wenn ein Ackdetektor oder ein Programmierger&auml;t erkannt wird.
+							<br /> - etwas Kosmetik
+							<br /> - das Programm wird jetzt ordnungsgem&auml;&szlig; beendet, auch wenn es von CD gestartet wurde und die Dateien prolok.ini und cvlist.bak nicht geschrieben werden konnten
+							<br />
+							<br /> 0.7.0
+							<br /> - Lesen und Pr&uuml;fen ist jetzt deaktiviert, wenn das Programmierger&auml;t mit einem USB-Adapter angeschlossen ist
+							<br /> - nach einem Abbruch im Registermodus waren alle CV=0
+							<br /> - Beschreibung (prolok.pdf) und Hilfe aktualisiert
+							<br /> - Thread-Priorit&auml;t ge&auml;ndert f&uuml;r die Ack-Detektion
+							<br />
+							<br /> 0.6.3
+							<br /> - Im Einstellungsdialog wurden die neuen Variablen der Datei prolok.ini ber&uuml;cksichtigt
+							<br /> - nach einem Lese-Abbruch auf der Register-Seite wurden die Aktionskn&ouml;pfe nicht korrekt zur&uuml;ckgesetzt
+							<br />
+							<br /> 0.6.2
+							<br /> - Problem mit M&auml;rklin 6604 gefixt
+							<br /> - Anzeigeproblem nach dem Laden beseitigt
+							<br /> - neue Variablen in der prolok.ini eingef&uuml;hrt:
+							<br /> + ExtendedPowerOn=1 verl&auml;ngert die Boot-Phase f&uuml;r den Dekoder
+							<br /> + Loop=x aktiviert eine Warteschleife f&uuml;r schnellere Rechner, damit zwischen zwei abgeschickten Paketen x ms Pause bleiben. Loop=0 schaltet die Warteschleife ab, default=5ms
+							<br /> - Pakete neu organisiert: im Binary-Paket sind die Hilfe und die Lokdecoder-Beschreibungsdateien nicht mehr enthalten, daf&uuml;r gibt nun es die Pakete
+							<br /> + prolok-hilfe.zip und
+							<br /> + decoder.zip
+							<br />
+							<br /> 0.6.1
+							<br /> - Fehlermanagement verbessert
+							<br /> - 'sicheren' Modus eingef&uuml;hrt, bei dem im Direct Mode die Bits sowohl auf 0 und 1 getestet werden
+							<br />
+							<br /> 0.6.0
+							<br /> - benannte Bitmaps hinzugef&uuml;gt, Seite 'weitere CV' aktiviert
+							<br /> - zwei Fehler in der Bitmanipulation beseitigt
+							<br />
+							<br /> 0.5.6
+							<br /> - Daniel Basler hat die Decoder-Dateien f&uuml;r Kuehn T145 und den ESU Lokpilot beigesteuert
+							<br /> - die Berechnung der langen Adresse in CV17 und CV18 wurde berichtigt
+							<br /> - der Paged Mode konnte inzwischen erfolgreich getestet werden
+							<br />
+							<br /> 0.5.5
+							<br /> - Fehler im Funktion-Mapping/Defaultwerte u. Bitzuordnung beseitigt
+							<br />
+							<br /> 0.5.4
+							<br /> - Fehler in der Anzeige auf der Funktion-Seite beseitigt
+							<br /> - Registermodus hinzugefuegt
+							<br /> - Paged CV Adressing-Modus eingebaut, aber mangels passendem Dekoder nicht getestet
+							<br />
+							<br /> 0.5.3
+							<br /> - kleine Aenderung im Protokoll Decoder&lt;-&gt;PC
+							<br /> - Factory Reset von herstellerspezifischen Methoden auf NMRA RP 9.2.3 umgestellt
+							<br />
+							<br /> 0.5.2
+							<br /> - Bug in der Anzeige auf Seite 1..1024 gefixt
+							<br />
+							<br /> 0.5.1
+							<br /> - Darstellungsfehler bei WinNT/256 Farben gefixt
+							<br />
+							<br /> 0.5.0
+							<br /> - erste Ver&ouml;ffentlichung </p>
+					</div>
+					<div class="uplink">
+						<a href="#top" class="uplink" title="zum Seitenanfang">nach oben...</a>
+					</div>
+			</div>
+			<!-- content -->
+			<div class="impress">
+				<ul>
+					<li>&copy; Thomas Borrmann</li>
+					<li>&uuml;bergeben an Josef Fritsch</li>
+					<li>
+						<a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a>
+					</li>
+					<li>Stand: 10.2017</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- layout -->
+</body>
+
+</html>

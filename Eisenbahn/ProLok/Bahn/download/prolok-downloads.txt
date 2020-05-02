@@ -1,0 +1,5 @@
+prolok.zip	Das ausf&uuml;hrbare Programm prolok.exe.<br />Die Hilfedatei und die Dekoder-Beschreibungsdateien sind in diesem Paket <em>nicht</em> enthalten
+decoder.zip	Die Dekoderbeschreibungsdateien
+prolok-hilfe.zip	Die Hilfedateien zum Programm. Bitte entpacken Sie die enthaltenen Dateien in das Unterverzeichnis &quot;help&quot; des Programmverzeichnisses 
+prolok.pdf	Die Programmbeschreibung im <abbr title="Portable Document Format">PDF</abbr>-Format
+prolok_src.zip	Die Quelltext-Dateien (f&uuml;r Borland C++Builder Version 6) Zur Compilation wird zus&auml;tzlich das Programm-Modul <a href="http://sourceforge.net/projects/comport/" title="Link zum Projekt CPort von Dejan Cnrila">&quot;Cport 2.64&quot;</a> von Dejan Crnila ben&ouml;tigt. Neuere Versionen haben bei mir nicht funktioniert.
