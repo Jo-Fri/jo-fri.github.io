@@ -1,0 +1,21 @@
+.big {
+    font-size: 20px;
+}
+
+li {
+    margin-bottom: 40px;
+}
+
+.ulist {
+    list-style-type: unset;
+}
+
+.bild45 {
+    width: 45%;
+    height: auto;
+}
+	
+.bild90 {
+    width: 90%;
+    height: auto;
+}	
