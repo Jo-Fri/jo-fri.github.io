@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+
+/* Handy */
+
+@media screen and (max-width: 50em) {
+    main {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 2fr 4fr 1fr;
+        grid-template-areas: "header" "navi" "article" "footer";
+    }
+}
+
+
+/* Normal */
+
+@media screen and (min-width: 50em) {
+    main {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 8fr .5fr;
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: "header header" "navi article" "footer footer";
+    }
+}
+
+header {
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+footer {
+    grid-area: footer;
+    background-color: blanchedalmond;
+}
+
+navi {
+    grid-area: navi;
+    background-color: rgb(66, 200, 240);
+}
+
+object {
+    height: 100%;
+    width: 100%;
+    min-width: 400px;
+}
+
+article {
+    grid-area: article;
+    background-color: rgb(200, 200, 120);
+}
