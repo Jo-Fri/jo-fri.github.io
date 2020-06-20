@@ -21,34 +21,58 @@ body {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 1fr 8fr .5fr;
-        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr 50fr 1fr;
+        /* grid-template-rows: 10% 80% 10%; */
+        grid-template-columns: 20% 80%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
 }
 
 header {
     grid-area: header;
-    background-color: aquamarine;
 }
 
 footer {
     grid-area: footer;
-    background-color: blanchedalmond;
 }
 
 navi {
     grid-area: navi;
-    background-color: rgb(66, 200, 240);
+    background-color: blueviolet;
+    border: solid 1px black;
+}
+
+iframe {
+    margin: 0;
 }
 
 object {
+    margin: 0;
+}
+
+.navlist {
     height: 100%;
-    width: 100%;
-    min-width: 400px;
+    /* width: 200px; */
+    margin: 0;
 }
 
 article {
     grid-area: article;
-    background-color: rgb(200, 200, 120);
+}
+
+.menuelistUl {
+    list-style-type: none;
+    padding: 0px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.menuelist {
+    /* width: max-content; */
+}
+
+.menueentry {
+    background-color: rgb(192, 192, 192);
+    margin-top: 10px;
+    border: solid 1px black;
 }

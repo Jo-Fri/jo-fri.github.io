@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Faller, Nachbau, Wilde Maus, DCC, Steuerung " />
+    <link rel="stylesheet" type="text/css" href="../ProLok/Bahn/css/bahn.css" />
+    <link rel="stylesheet" type="text/css" href="wildemaus.css" />
+    <link rel="stylesheet" href="../../Menue/menue.css">
+    <title>Faller "WildeMaus" mit Arduino DCC Steuerung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+        <header><object data="../../Menue/header.html"></object></header>
+        <article>
+
+            <div class="layout">
+                <h1 class="titel">Faller "WildeMaus" mit Arduino DCC Steuerung</h1>
+                <span class="home"><a href="../../index.html">home...</a>
+                </span>
+
+                <div><em>Arduino</em> sketch für
+                    <em>FALLER 140425 - Jubiläumsmodell „WildeMaus“</em><br><br>
+                </div>
+
+                <div>
+                    <div>Zur Steuerung über eine DCC Eisenbahn Zentrale, die Steuerung übernimmt ein Arduino Nano mit einer DCC Lok Adresse (hier 7), über die Funktionen F1 bis F9 kann die WildeMaus gesteuert werden.
+                        <br>
+                        <br> - F1 Aufzugs Motor für Autos ein/aus
+                        <br> - F2 LED Anzeige "WILDE MAUS" ein/aus, F5 Anzeige blinken
+                        <br> - F3 Laternen ein/aus
+                        <br> - F4 Lichter der Häuschen ein/aus
+                        <br> - F6, F7, F8, F9 LED Lauflichtband ein/aus und verschiedene Lauflichtmuster
+                        <br><br>
+                    </div>
+                    <div>Diese Steuerung habe ich entwickelt weil das original IC auf der kleinen Lauflichtsteuerung defekt war, dieses <em> IC muss entfernt</em> werden, anstelle tritt diese Steuerung.</div>
+                    <br>
+                    <a class="bild45" href="WildeMaus_.jpg" target="_blank" title="Foto WildeMaus"><img src="WildeMaus_.jpg" class="bild45" alt="Foto WildeMaus"></a>
+                    <a class="bild45" href="WildeMaus_2.jpg" target="_blank" title="Foto WildeMaus 2"><img src="WildeMaus_2.jpg" class="bild45" alt="Foto WildeMaus 2"></a>
+                </div>
+
+                <h2>Schaltplan</h2>
+                <div class="image">
+                    <a href="https://github.com/ToWipf/Arduino-DCC-WildeMaus/raw/master/WildeMaus_3.pdf"><img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus_Plan.PNG" alt="Bild" />
+                    </a>
+                </div>
+
+                <p>
+                    <a href="https://github.com/ToWipf/Arduino-DCC-WildeMaus">WildeMaus Projekt in GitHub öffen</a>
+                </p>
+                <div class="linkKlein">
+                    <a href="https://raw.githubusercontent.com/ToWipf/Arduino-DCC-WildeMaus/master/WildeMaus.ino">WildeMaus.ino</a><br>
+                    <br><a href="https://github.com/MynaBay/DCC_Decoder">DCC_Decoder library</a>
+
+                    <br><br>Quelle: Basis war die "RB_DCC_Decoder_Function" aus der "Arduino_DCC_S88.zip" von
+                    <a target="_blank" href="https://rudysmodelrailway.wordpress.com/software/">rudysmodelrailway </a> - Arduino DCC, S88, and more Download link <span style="font-size:7pt">(externer Link)</span>
+
+
+                </div>
+
+                <h2>Aufbau der Wilden Maus Steuerung</h2>
+                Lauflichtsteuerung (wo das IC defekt war)
+                <a href="Lauflicht_oben.jpg" target="_blank" title="Lauflicht_oben"><img src="Lauflicht_oben.jpg" class="bild45" alt="Lauflicht_oben"></a>
+                meine Ersatz DCC Steuerung
+                <a href="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus%20(3).jpg" target="_blank" title="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus%20(3).jpg"><img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus%20(3).jpg" class="bild45" alt="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus%20(3).jpg"></a>
+                Faller Wilde Maus
+                <a href="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" target="_blank" title="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg"><img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" class="bild90" alt="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg"></a>
+
+
+
+                <div class="uplink"><a href="#top" class="uplink" title="zum Seitenanfang">nach oben...</a></div>
+                <div class="impress">
+                    <ul>
+                        <li>JoFri</li>
+                        <li><a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a></li>
+                        <li>Stand: 06.2020</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <navi><iframe class="navlist" src="../../Menue/navi.html"></iframe ></navi>
+        <footer><object data="../../Menue/footer.html"></object></footer>
+    </main>
+
+</body>
