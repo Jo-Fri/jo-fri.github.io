@@ -60,10 +60,19 @@ body {
 }
 
 
-/* .s88bild */
+/* .s88bild aus Bahn.css */
+
+.layout {
+    text-align: left;
+}
 
 .bild45 {
     width: 45%;
+    height: auto;
+}
+	
+.bild95 {
+    width: 95%;
     height: auto;
 }
 
@@ -71,3 +80,6 @@ table.stable {
     border-collapse: collapse;
     width: 100%;
 }
+
+
+
