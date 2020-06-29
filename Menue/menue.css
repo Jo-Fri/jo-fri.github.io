@@ -9,7 +9,7 @@ body {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 1fr 2fr 4fr 1fr;
+        grid-template-rows: 10% 15% 70% 5%;
         grid-template-areas: "header" "navi" "article" "footer";
     }
 }
@@ -22,7 +22,7 @@ body {
         height: 100vh;
         display: grid;
         grid-template-rows: 1fr 50fr 1fr;
-        /* grid-template-rows: 10% 80% 10%; */
+        /* grid-template-rows: 10% 95% 5%; */
         grid-template-columns: 20% 80%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
@@ -44,10 +44,8 @@ navi {
 
 iframe {
     margin: 0;
-}
-
-object {
-    margin: 0;
+    border: 0;
+    width: 100%;
 }
 
 .navlist {
@@ -64,7 +62,12 @@ article {
     list-style-type: none;
     padding: 0px;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 20px;
+}
+
+li {
+    word-break: break-all; 
 }
 
 .menuelist {
@@ -75,4 +78,8 @@ article {
     background-color: rgb(192, 192, 192);
     margin-top: 10px;
     border: solid 1px black;
+}
+
+.center {
+    text-align: center;
 }

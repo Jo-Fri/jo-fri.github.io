@@ -31,7 +31,7 @@ body {
 }
 
 .layout {
-    width: 46em;
+    /* width: 46em; */
     max-width: 95%;
     font-size: 100%;
     display: -webkit-flex;
