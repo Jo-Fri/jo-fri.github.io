@@ -93,3 +93,7 @@ li {
 .ohtmlHidden {
     overflow: hidden;
 }
+
+h1 {
+    font-family: sans-serif;
+}
