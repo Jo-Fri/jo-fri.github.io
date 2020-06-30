@@ -2,9 +2,7 @@ body {
     margin: 0;
 }
 
-
 /* Handy */
-
 @media screen and (max-width: 50em) {
     main {
         height: 100vh;
@@ -16,13 +14,12 @@ body {
 
 
 /* Normal */
-
 @media screen and (min-width: 50em) {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 1fr 50fr 1fr;
-        /* grid-template-rows: 10% 95% 5%; */
+        /* grid-template-rows: 1fr 50fr 1fr; */
+        grid-template-rows: 10% 83% 6%;
         grid-template-columns: 20% 80%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
@@ -38,24 +35,25 @@ footer {
 
 navi {
     grid-area: navi;
-    background-color: yellowgreen;
+    background-color: hsl(28, 40%, 68%);
     border: solid 1px black;
+}
+
+article {
+    grid-area: article;
 }
 
 iframe {
     margin: 0;
     border: 0;
     width: 100%;
+    height: 100%;
 }
 
 .navlist {
     height: 100%;
     /* width: 200px; */
     margin: 0;
-}
-
-article {
-    grid-area: article;
 }
 
 .menuelistUl {
@@ -70,10 +68,6 @@ li {
     word-break: break-all; 
 }
 
-.menuelist {
-    /* width: max-content; */
-}
-
 .menueentry {
     background-color: rgb(192, 192, 192);
     margin-top: 10px;
@@ -82,4 +76,24 @@ li {
 
 .center {
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menueH2 {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.date {
+    font-size: 10px;
+    font-family: Arial;
+}
+
+.ohtmlHidden {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: sans-serif;
 }
