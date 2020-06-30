@@ -64,14 +64,11 @@ iframe {
     font-size: 20px;
 }
 
-li {
-    word-break: break-all; 
-}
-
 .menueentry {
     background-color: rgb(192, 192, 192);
     margin-top: 10px;
     border: solid 1px black;
+	padding: 5px;
 }
 
 .center {
