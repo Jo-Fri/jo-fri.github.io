@@ -2,18 +2,21 @@ body {
     margin: 0;
 }
 
+
 /* Handy */
+
 @media screen and (max-width: 50em) {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 10% 15% 70% 5%;
+        grid-template-rows: 10% 15% 69% 5%;
         grid-template-areas: "header" "navi" "article" "footer";
     }
 }
 
 
 /* Normal */
+
 @media screen and (min-width: 50em) {
     main {
         height: 100vh;
@@ -68,7 +71,7 @@ iframe {
     background-color: rgb(192, 192, 192);
     margin-top: 10px;
     border: solid 1px black;
-	padding: 5px;
+    padding: 5px;
 }
 
 .center {
