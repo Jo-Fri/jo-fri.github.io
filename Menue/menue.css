@@ -26,7 +26,21 @@ body {
         grid-template-columns: 20% 80%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
+    /* .menuelistUl {
+        background-color: teal;
+        display: inline;
+        margin-right: 10px;
+    } */
 }
+
+
+/* @media screen and (min-width: 20em) {
+    .menuelistUl {
+        background-color: red;
+        display: inline;
+        margin-right: 10px;
+    }
+} */
 
 header {
     grid-area: header;
@@ -79,6 +93,7 @@ iframe {
     text-align: center;
     margin: 0;
     padding: 0;
+    display: block ruby;
 }
 
 .menueH2 {
@@ -91,15 +106,18 @@ iframe {
     font-family: Arial;
 }
 
-.ohtmlHidden {
-    overflow: hidden;
-    font-size: 35px;
-}
-
-.uhtmlHidden {
+.scrollhidden {
     overflow: hidden;
 }
 
 h1 {
     font-family: sans-serif;
+    font-size: 34px;
+    vertical-align: middle;
+    display: inline;
+}
+
+td {
+    vertical-align: middle;
+    margin: 0;
 }
