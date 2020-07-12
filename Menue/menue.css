@@ -32,23 +32,27 @@ body {
 }
 
 
-/* Menue kl */
+/* Menue Handy */
 
 @media screen and (min-width: 355px) {
     .navilist {
         display: flex;
+        height: 120px;
     }
     .menuelistUl {
         display: flex;
+        margin: 5px;
     }
     .menueentry {
         margin-right: 10px;
+        height: 69px;
+        /* entspr. 3 Zeilen Text */
         width: 200px;
     }
 }
 
 
-/* Menue  gr*/
+/* Menue  Normal*/
 
 @media screen and (max-width: 355px) {
     .navilist {
