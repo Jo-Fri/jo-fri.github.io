@@ -11,7 +11,8 @@ body {
     height: 100%;
 }
 
-.button_std {
+
+/* .button_std {
     background: #3498db;
     background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
     background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -28,12 +29,21 @@ body {
     display: inline-block;
     margin-top: 10px;
     /* width: 70%; */
-    font-size: 110%;
-    /* height: 35px; */
-    margin-bottom: 20px;
-}
 
-.button_std:hover {
+
+/* font-size: 110%; */
+
+
+/* height: 35px; */
+
+
+/* margin-bottom: 20px; */
+
+
+/* } */
+
+
+/* .button_std:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
     background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
@@ -41,7 +51,7 @@ body {
     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
-}
+} */
 
 
 /* übernommen aus Bahn.css */
