@@ -26,7 +26,7 @@ body {
         display: grid;
         /* grid-template-rows: 1fr 50fr 1fr; */
         grid-template-rows: 10% 86% 3%;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 17% 83%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
 }
@@ -34,7 +34,7 @@ body {
 
 /* Menue kl */
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 355px) {
     .navilist {
         display: inline;
         margin-right: 10px;
@@ -61,7 +61,7 @@ body {
 
 /* Menue  gr*/
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 355px) {
     .navilist {
         display: inline;
         margin-right: 10px;
