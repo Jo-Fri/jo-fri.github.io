@@ -82,6 +82,29 @@ body {
     }
 }
 
+.menueentry:hover {
+    background: #e7e2d3;
+    background-image: -webkit-linear-gradient(top, #e4e3e0, #e7e2d3);
+    background-image: -moz-linear-gradient(top, #e4e3e0, #e7e2d3);
+    background-image: -ms-linear-gradient(top, #e4e3e0, #e7e2d3);
+    background-image: -o-linear-gradient(top, #e4e3e0, #e7e2d3);
+    background-image: linear-gradient(to bottom, #e4e3e0, #e7e2d3);
+}
+
+.menueentry {
+    background: #fffaeb;
+    background-image: -webkit-linear-gradient(top, #fffaeb, #dfd5b8);
+    background-image: -moz-linear-gradient(top, #fffaeb, #dfd5b8);
+    background-image: -ms-linear-gradient(top, #fffaeb, #dfd5b8);
+    background-image: -o-linear-gradient(top, #fffaeb, #dfd5b8);
+    background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
 header {
     grid-area: header;
 }
