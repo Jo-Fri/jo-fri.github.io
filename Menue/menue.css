@@ -9,7 +9,7 @@ body {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 10% 15% 71% 3%;
+        grid-template-rows: 10% 12% 74% 3%;
         grid-template-areas: "header" "navi" "article" "footer";
     }
     h1 {
@@ -32,23 +32,28 @@ body {
 }
 
 
-/* Menue kl */
+/* Menue Handy */
 
 @media screen and (min-width: 355px) {
     .navilist {
         display: flex;
+        height: 95px;
     }
     .menuelistUl {
         display: flex;
+        margin: 5px;
+        height: 9px;
     }
     .menueentry {
         margin-right: 10px;
+        height: 69px;
+        /* entspr. 3 Zeilen Text */
         width: 200px;
     }
 }
 
 
-/* Menue  gr*/
+/* Menue  Normal*/
 
 @media screen and (max-width: 355px) {
     .navilist {
@@ -73,11 +78,11 @@ body {
 
 .menueentry:hover {
     background: #e7e2d3;
-    background-image: -webkit-linear-gradient(top, #e4e3e0, #e7e2d3);
-    background-image: -moz-linear-gradient(top, #e4e3e0, #e7e2d3);
-    background-image: -ms-linear-gradient(top, #e4e3e0, #e7e2d3);
-    background-image: -o-linear-gradient(top, #e4e3e0, #e7e2d3);
-    background-image: linear-gradient(to bottom, #e4e3e0, #e7e2d3);
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #d3d3d3);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #d3d3d3);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #d3d3d3);
+    background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
+    background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
 }
 
 .menueentry {
@@ -96,20 +101,23 @@ body {
 a {
     color: #000000;
     text-decoration: none;
+    height: 9px;
 }
 
 header {
     grid-area: header;
+    height: 85px;
 }
 
 footer {
     grid-area: footer;
+    height: 20px;
 }
 
 navi {
     grid-area: navi;
     background-color: hsl(28, 40%, 68%);
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 
 article {
