@@ -37,7 +37,7 @@ body {
 @media screen and (min-width: 355px) {
     .navilist {
         display: flex;
-        height: 95px;
+        height: 70px;
     }
     .menuelistUl {
         display: flex;
@@ -46,7 +46,7 @@ body {
     }
     .menueentry {
         margin-right: 10px;
-        height: 69px;
+        height: 62px;
         /* entspr. 3 Zeilen Text */
         width: 200px;
     }
@@ -66,6 +66,7 @@ body {
 
 .navilist {
     margin-right: 10px;
+    font-family: Arial;
 }
 
 .menuelistUl {
@@ -73,7 +74,7 @@ body {
     padding: 0px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .menueentry:hover {
@@ -96,6 +97,7 @@ body {
     background-image: -ms-linear-gradient(top, #fffaeb, #dfd5b8);
     background-image: -o-linear-gradient(top, #fffaeb, #dfd5b8);
     background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
+    text-align: center;
 }
 
 a {
