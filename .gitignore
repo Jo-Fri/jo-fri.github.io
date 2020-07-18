@@ -1,5 +1,6 @@
 # meine Sicherungen
 *.css_
+*.html_
 
 # Backup-Dateien
 *~
