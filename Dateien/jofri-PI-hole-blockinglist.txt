@@ -1,4 +1,4 @@
-#  PI Blockliste   aus hosts_blockinglist for CHESS_2.0.txt   für PI Blacklist  Stand: 2020-06-06
+#  PI Blockliste für PI Blacklist  Stand: 2020-06-06
 #  JoFri
 alpha.telemetry.microsoft.com
 asimov-win.settings.data.microsoft.com.akadns.net
