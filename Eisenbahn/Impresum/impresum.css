@@ -1,21 +1,3 @@
-.big {
-    font-size: 20px;
+h3 {
+    margin-top: 30px;
 }
-
-li {
-    margin-bottom: 40px;
-}
-
-.ulist {
-    list-style-type: unset;
-}
-
-.bild45 {
-    width: 45%;
-    height: auto;
-}
-	
-.bild95 {
-    width: 95%;
-    height: auto;
-}	
