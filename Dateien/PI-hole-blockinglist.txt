@@ -1,5 +1,4 @@
-#  PI Blockliste für PI Blacklist  Stand: 2020-06-06
-#  JoFri
+#  PI Blockliste für PI Blacklist  Stand: 2020-07
 alpha.telemetry.microsoft.com
 asimov-win.settings.data.microsoft.com.akadns.net
 ceuswatcab01.blob.core.windows.net
@@ -19,7 +18,12 @@ nexus.officeapps.live.com
 nexusrules.officeapps.live.com
 oca.telemetry.microsoft.com
 settings-win.data.microsoft.com
+telemetry.microsoft.com
+telemetry.remoteapp.windowsazure.com
+telemetry.urs.microsoft.com
 umwatsonc.events.data.microsoft.com
+urs.microsoft.com.nsatc.net
+us-v10.events.data.microsoft.com
 us.vortex-win.data.microsoft.com
 v10-win.vortex.data.microsoft.com.akadns.net
 v10.events.data.microsoft.com
@@ -29,6 +33,11 @@ v20.vortex-win.data.microsoft.com
 vortex-win-sandbox.data.microsoft.com
 vortex-win.data.microsoft.com
 vortex.data.microsoft.com
+vsgallery.com
+watson.live.com
+watson.microsoft.com
+watson.ppe.telemetry.microsoft.com
 watson.telemetry.microsoft.com
 weus2watcab01.blob.core.windows.net
 weus2watcab02.blob.core.windows.net
+wns.notify.windows.com.akadns.net
