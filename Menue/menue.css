@@ -9,7 +9,7 @@ body {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 10% 12% 74% 3%;
+        grid-template-rows: 10% 12% 74% 1%;
         grid-template-areas: "header" "navi" "article" "footer";
     }
     h1 {
@@ -25,7 +25,7 @@ body {
         height: 100vh;
         display: grid;
         /* grid-template-rows: 1fr 50fr 1fr; */
-        grid-template-rows: 10% 86% 3%;
+        grid-template-rows: 10% 86% 1%;
         grid-template-columns: 17% 83%;
         grid-template-areas: "header header" "navi article" "footer footer";
     }
@@ -166,4 +166,5 @@ h1 {
 
 .footerInfo {
     margin: 0px;
+    padding: 0px;
 }
