@@ -91,3 +91,7 @@ table.stable {
 .dnone {
     display: none;
 }
+
+.ulist {
+    list-style-type: none;
+}

@@ -9,8 +9,8 @@ body {
     main {
         height: 100vh;
         display: grid;
-        grid-template-rows: 10% 12% 74% 3%;
-        grid-template-areas: "header" "navi" "article" "footer";
+        grid-template-rows: 10% 12% 77%;
+        grid-template-areas: "header" "navi" "article";
     }
     h1 {
         font-size: 24px !important;
@@ -25,9 +25,10 @@ body {
         height: 100vh;
         display: grid;
         /* grid-template-rows: 1fr 50fr 1fr; */
-        grid-template-rows: 10% 86% 3%;
+        /* grid-template-rows: 1fr 50fr; */
+        grid-template-rows: 10% 89%;
         grid-template-columns: 17% 83%;
-        grid-template-areas: "header header" "navi article" "footer footer";
+        grid-template-areas: "header header" "navi article";
     }
 }
 
@@ -111,11 +112,6 @@ header {
     height: 85px;
 }
 
-footer {
-    grid-area: footer;
-    height: 20px;
-}
-
 navi {
     grid-area: navi;
     background-color: hsl(28, 40%, 68%);
@@ -162,9 +158,4 @@ h1 {
     display: inline;
     margin-right: 10px;
     margin-left: 10px;
-}
-
-.footerInfo {
-    margin: 0px;
-    padding: 0px;
 }
