@@ -159,3 +159,8 @@ h1 {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.brInfo {
+    color: red;
+    font-size: 30px;
+}

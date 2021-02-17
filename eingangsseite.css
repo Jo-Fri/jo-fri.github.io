@@ -1,0 +1,55 @@
+body {
+    text-align: center;
+    background-image: url("Bilder/hintergrund.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    font-size: 150%;
+    margin-top: 5%;
+    height: 100%;
+}
+
+
+/* übernommen aus Bahn.css */
+
+.date {
+    font-size: 10px;
+    font-family: Arial;
+}
+
+.home {
+    text-align: end;
+}
+
+.linkKlein {
+    font-size: 13px;
+}
+
+.layout {
+    text-align: left;
+}
+
+.bild45 {
+    width: 45%;
+    height: auto;
+}
+
+.bild95 {
+    width: 95%;
+    height: auto;
+}
+
+table.stable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dnone {
+    display: none;
+}
+
+.ulist {
+    list-style-type: none;
+}
