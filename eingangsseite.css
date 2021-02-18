@@ -9,6 +9,12 @@ body {
     font-size: 150%;
     margin-top: 5%;
     height: 100%;
+
+    /* font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: hsl(90, 0%, 0%);
+    background-color: hsl(28, 50%, 38%); */
 }
 
 /* übernommen aus Bahn.css */
