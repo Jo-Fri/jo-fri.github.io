@@ -11,10 +11,6 @@ a:hover {
     color: hsl(90, 0%, 40%)
 }
 
-html {
-    /* font-size: 82.5% */
-}
-
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     /* font-size: 13px; */
