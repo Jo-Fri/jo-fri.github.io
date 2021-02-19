@@ -19,3 +19,7 @@ li {
   width: 95%;
   height: auto;
 }
+
+.linkKlein {
+  font-size: 13px;
+}

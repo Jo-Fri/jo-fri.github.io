@@ -19,3 +19,16 @@ body {
   column-count: 1;
   column-gap: 21px;
 }
+
+.nobr {
+  white-space: normalno;
+}
+
+.fett {
+  font-weight: bold;
+}
+
+.artikel {
+  width: 100%;
+  margin-top: 0.1em;
+}
