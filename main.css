@@ -101,20 +101,6 @@ h1 {
   margin-left: 10px;
 }
 
-.brInfo {
-  color: red;
-  font-size: 30px;
-}
-
-.titelleistenbody {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: hsl(90, 0%, 0%);
-  background-color: hsl(28, 50%, 38%);
-  overflow: hidden;
-}
-
 .pagecontent {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
@@ -207,25 +193,13 @@ ul.normal {
   list-style-type: disc;
 }
 
-.ablauf {
-  list-style-type: disc;
-}
-
 p.left {
   text-align: left;
   vertical-align: middle;
   margin-top: 0.5em;
 }
 
-.einsp {
-  column-count: 1;
-  column-gap: 21px;
-}
 
-.zweisp {
-  column-count: 2;
-  column-gap: 21px;
-}
 
 div.history {
   display: flex;
@@ -244,8 +218,6 @@ div.history p {
     column-count: 1;
   }
 }
-
-
 
 div.formular p.center {
   clear: both;

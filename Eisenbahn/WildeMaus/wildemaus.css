@@ -1,21 +1,21 @@
 .big {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 li {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .ulist {
-    list-style-type: disc;
+  list-style-type: disc;
 }
 
 .bild45 {
-    width: 45%;
-    height: auto;
+  width: 45%;
+  height: auto;
 }
 
 .bild95 {
-    width: 95%;
-    height: auto;
+  width: 95%;
+  height: auto;
 }
