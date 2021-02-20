@@ -208,14 +208,6 @@ div.formular p.center {
   clear: both;
 }
 
-p.kapital:first-letter {
-  font-size: 130%;
-}
-
-kapital {
-  font-size: 130%;
-}
-
 div.image {
   column-span: 2;
   max-width: 100%;
@@ -230,41 +222,6 @@ div.image img {
   margin: 0.5rem auto;
   border: 1px solid hsl(90, 0%, 0%);
   max-width: 100%;
-}
-
-table.bruch {
-  font-size: 110%;
-  border: 1px solid hsl(90, 0%, 0%);
-  padding: 0.5em;
-  vertical-align: top;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-td.zaehler {
-  text-align: center;
-  border-bottom: 1px solid hsl(90, 0%, 0%);
-  vertical-align: bottom;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-td.nenner {
-  text-align: center;
-  vertical-align: top;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-table.directory {
-  white-space: normal;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-right: 3px;
-  font-size: 90%;
-  font-weight: bolder;
 }
 
 p.invisible {
@@ -351,10 +308,6 @@ td.sl {
   hyphens: none;
 }
 
-ul.minus {
-  list-style-type: square;
-}
-
 table.decoder {
   caption-side: bottom;
   border-collapse: collapse;
@@ -387,7 +340,7 @@ caption.decoder {
 }
 
 .bild45 {
-  width: 47%;
+  width: 45%;
   height: auto;
   text-decoration: none;
 }
@@ -416,24 +369,6 @@ table.stable {
   padding: 8px 13px;
 }
 
-@media print {
-  .invisible {
-    display: none;
-  }
-  .navigation {
-    display: none;
-  }
-  .titel {
-    display: none;
-  }
-  span.hier {
-    display: none;
-  }
-  .uplink {
-    display: none;
-  }
-}
-
 @media screen {
   .invisible {
     position: absolute;
@@ -457,28 +392,12 @@ table.stable {
     margin-top: 0.5em;
     /* text-decoration: none */
   }
-}
-
-@media screen {
   .content {
     font-size: 90%;
     color: hsl(90, 0%, 0%);
     background-color: inherit;
     padding-right: 0.5em;
     width: 100%;
-    vertical-align: top;
-    overflow: visible;
-  }
-}
-
-@media print {
-  .content {
-    font-size: 90%;
-    color: hsl(90, 0%, 0%);
-    background-color: inherit;
-    padding-right: 0.5em;
-    margin-top: 0px;
-    width: 90%;
     vertical-align: top;
     overflow: visible;
   }
