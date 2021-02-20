@@ -391,6 +391,11 @@ caption.decoder {
   height: auto;
 }
 
+.bild95 {
+    width: 95%;
+    height: auto;
+}	
+
 table.stable {
   border-collapse: collapse;
   width: 100%;
