@@ -387,14 +387,16 @@ caption.decoder {
 }
 
 .bild45 {
-  width: 48%;
+  width: 47%;
   height: auto;
+  text-decoration: none;
 }
 
 .bild95 {
-    width: 95%;
-    height: auto;
-}	
+  width: 95%;
+  height: auto;
+  text-decoration: none;
+}
 
 table.stable {
   border-collapse: collapse;
