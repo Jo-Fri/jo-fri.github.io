@@ -32,3 +32,138 @@ body {
   width: 100%;
   margin-top: 0.1em;
 }
+
+p.left {
+  text-align: left;
+  vertical-align: middle;
+  margin-top: 0.5em;
+}
+
+div.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+div.history p {
+  column-count: 1;
+  text-align: left;
+}
+
+table.download {
+  text-align: left;
+  vertical-align: middle;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid hsl(90, 0%, 0%);
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  width: 96%;
+  max-width: 96%;
+  border-collapse: collapse;
+  caption-side: top;
+  overflow: scroll;
+}
+
+caption.download {
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 100%;
+  font-weight: bold;
+  margin-top: 1.2rem 0 1rem 0;
+}
+
+thead.download {
+  background-color: hsl(45, 0%, 85%);
+}
+
+td.file {
+  text-align: left;
+  vertical-align: middle;
+  border-top: 1px solid hsl(90, 0%, 0%);
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  padding: 0.3em;
+}
+
+td.size {
+  text-align: right;
+  vertical-align: middle;
+  border-top: 1px solid hsl(90, 0%, 0%);
+  padding: 0.3em;
+  white-space: normal;
+}
+
+td.description {
+  text-align: left;
+  vertical-align: middle;
+  border-top: 1px solid hsl(90, 0%, 0%);
+  padding: 0.3em;
+}
+
+td.download {
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid hsl(90, 0%, 0%);
+  padding: 0.3em;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+td.sl {
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid hsl(90, 0%, 0%);
+  padding: 0.3em;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+table.decoder {
+  caption-side: bottom;
+  border-collapse: collapse;
+  font-size: 100%;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  border: 1px solid #aaaa89;
+  text-align: left;
+  width: 95%;
+}
+
+thead.decoder {
+  background-color: #dddddd;
+}
+
+tbody.decoder {
+  border-top: 1px solid #aaaa89;
+}
+
+caption.decoder {
+  text-align: left;
+  vertical-align: top;
+  font-size: 90%;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+table.stable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.content {
+  font-size: 90%;
+  color: hsl(90, 0%, 0%);
+  background-color: inherit;
+  padding-right: 0.5em;
+  width: 100%;
+  vertical-align: top;
+  overflow: visible;
+}

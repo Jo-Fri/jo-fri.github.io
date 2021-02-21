@@ -40,7 +40,8 @@ a {
   height: 9px;
 }
 
-.menueH2 {
-  margin-left: 10px;
+.menueNavi {
   margin-top: 10px;
+  margin-bottom: -30px;
+  text-align: center;
 }
