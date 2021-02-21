@@ -9,7 +9,7 @@ body {
   main {
     height: 100vh;
     display: grid;
-    grid-template-rows: 10% 12% 77%;
+    grid-template-rows: 10% 13% 76%;
     grid-template-areas: "header" "navi" "article";
   }
   h1 {
