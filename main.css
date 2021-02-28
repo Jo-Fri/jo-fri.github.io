@@ -11,8 +11,10 @@ body {
     display: grid;
     grid-template-rows: 10% 13% 76%;
     grid-template-areas: "header" "navi" "article";
-	font-family: Verdana, Arial, Helvetica, sans-serif;
   }
+  boby (
+  	font-family: Arial;
+  )
   h1 {
     font-size: 24px !important;
   }
