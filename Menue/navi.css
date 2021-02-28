@@ -43,11 +43,3 @@ a {
   margin-bottom: -30px;
   text-align: center;
 }
-
-/* Menue Handy */
-@media screen and (max-width: 200px) {
-  body {
-    font-family: serif;
-    color: black;
-  }
-}

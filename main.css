@@ -46,6 +46,7 @@ body {
     height: 62px;
     /* entspr. 3 Zeilen Text */
     width: 200px;
+    font-family: serif;
   }
 }
 
