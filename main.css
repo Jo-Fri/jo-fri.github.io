@@ -12,9 +12,6 @@ body {
     grid-template-rows: 10% 13% 76%;
     grid-template-areas: "header" "navi" "article";
   }
-  body {
-    font-family: inherit;
-  }
   h1 {
     font-size: 24px !important;
   }
