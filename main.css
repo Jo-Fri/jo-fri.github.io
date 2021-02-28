@@ -13,7 +13,7 @@ body {
     grid-template-areas: "header" "navi" "article";
   }
   body {
-  	font-family: Arial;
+    font-family: inherit;
   }
   h1 {
     font-size: 24px !important;
@@ -34,8 +34,7 @@ body {
 
 /* Menue Handy */
 @media screen and (min-width: 355px) {
- 
- .navilist {
+  .navilist {
     display: flex;
     height: 70px;
   }
