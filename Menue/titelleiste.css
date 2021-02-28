@@ -27,3 +27,10 @@
   margin: 0.3rem;
   padding: 1.3rem;
 }
+
+/* Menue Handy */
+@media screen and (max-width: 450px) {
+  .titelbilder {
+    display: none;
+  }
+}

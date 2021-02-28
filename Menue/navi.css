@@ -7,7 +7,6 @@
   padding: 0px;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 18px;
 }
 
 .menueentry:hover {
@@ -43,4 +42,8 @@ a {
   margin-top: 10px;
   margin-bottom: -30px;
   text-align: center;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
