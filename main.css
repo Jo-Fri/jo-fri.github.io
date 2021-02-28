@@ -80,7 +80,7 @@ iframe {
 }
 
 .pagecontent {
-  font-size: 1.2rem;
+  /* font-size: large; */
   font-weight: lighter;
   color: hsl(90, 0%, 0%);
   background-color: hsl(28, 50%, 38%);
