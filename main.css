@@ -10,8 +10,12 @@ body {
   main {
     height: 100vh;
     display: grid;
-    grid-template-rows: 10% 13% 76%;
-    grid-template-areas: "header" "navi" "article";
+    grid-template-rows: 13% 86%;
+    grid-template-areas: "navi" "article";
+  }
+
+  header {
+    display: none;
   }
 }
 
@@ -43,6 +47,9 @@ body {
     height: 62px;
     /* entspr. 3 Zeilen Text */
     width: 200px;
+    font-family: serif;
+  }
+  .pagecontent {
     font-family: serif;
   }
 }
