@@ -10,24 +10,35 @@
     </head>
     <body class="pagecontent">
         <div class="layout">
-            <h1 class="titel">mein z21 Eisenbahn DCC Zentrale Nachbau mit s88-N Bus</h1>
+            <h1 class="titel">
+                mein z21 Eisenbahn DCC Zentrale Nachbau mit s88-N Bus
+            </h1>
             <p>
-                kostengünstiger Nachbau einer <em>z21 Eisenbahn DCC Zentrale</em> mit s88-N Bus,
-                <br>auf Basis von Arduino Mega, für jene die gerne löten und die Steuerung selbst nachbauen.
+                kostengünstiger Nachbau einer
+                <em>z21 Eisenbahn DCC Zentrale</em>
+                mit s88-N Bus,
+                <br>
+                auf Basis von Arduino Mega, für jene die gerne löten und die Steuerung selbst nachbauen.
             </p>
-            <h2>Original Infos Quelle:</h3>
+            <h2>Original Infos Quelle:</h2>
             <div>
                 <p>
-                    <a href="http://pgahtow.de/wiki/index.php?title=Zentrale" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">z21_Arduino_Zentrale_(Atmega2560) Nachbau</a><span style="font-size:7pt">(externer Link)</span>
+                    <a href="http://pgahtow.de/wiki/index.php?title=Zentrale" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">
+                        z21_Arduino_Zentrale_(Atmega2560) Nachbau
+                    </a>
+                    <span style="font-size: 7pt">(externer Link)</span>
                 </p>
                 <p>
-                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:Arduino_MEGA_Zentrale.png" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">z21 Arduino Mega Nachbau Zentrale Schaltplan Schaltplan z21_Arduino_Zentrale_Mega (Atmega2560) Nachbau</a>
-                    <span style="font-size:7pt">(externer Link)</span>
+                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:Arduino_MEGA_Zentrale.png" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">
+                        z21 Arduino Mega Nachbau Zentrale Schaltplan Schaltplan
+            z21_Arduino_Zentrale_Mega (Atmega2560) Nachbau
+                    </a>
+                    <span style="font-size: 7pt">(externer Link)</span>
                 </p>
             </div>
             <div>
-                <h2>mein z21 Nachbau:</h3>
-                 <a
+                <h2>mein z21 Nachbau:</h2>
+                <a
                     class="bild45"
                     href="My_Arduino_MEGA_Zentrale.png"
                     target="_blank"
@@ -43,7 +54,7 @@
                 >
                     <img src="z21_Mega_TLE5206.png" class="bild45" alt="Schaltplan My Arduino MEGA Zentrale in Kicad">
                 </a>
-               <a
+                <a
                     class="bild45"
                     href="Arduino_Mega_Prototype_Shield_V3.jpg"
                     target="_blank"
@@ -51,7 +62,7 @@
                 >
                     <img src="Arduino_Mega_Prototype_Shield_V3.jpg" class="bild45" alt="Arduino Mega Prototype Shield V3">
                 </a>
-               <a
+                <a
                     class="bild45"
                     href="Arduino_Mega_Z21_Booster_V2.jpg"
                     target="_blank"
@@ -76,59 +87,91 @@
                     <img src="Foto_Z21_Ardruino4_.jpg" class="bild45" alt="Foto z21 Arduino Mega Nachbau">
                 </a>
             </div>
-            <h2>Funktionsumfang meiner Nachbau Variante:</h3>
+            <h2>Funktionsumfang meiner Nachbau Variante:</h2>
             <div>
                 <ul class="normal">
-                    <li>XpressNet Bus zur Steuerung gleichzeitig mit mehreren Roco Lokmäusen.</li>
-                    <li>s88-N Bus zur Rückmeldung der Rückmelder und Steuerung der Weichen.</li>
-                    <li>Durch Verwendung dieser Rückmeldetechnik, sind <em>keine Unterbrechungen in den Gleisen</em> notwendig.</li>
-                    <li>interner Booster (TLE5206) zum Programmiergleis, zum Lesen und Schreiben der Lokdecoder CV's.</li>
+                    <li>
+                        XpressNet Bus zur Steuerung gleichzeitig mit mehreren Roco
+            Lokmäusen.
+                    </li>
+                    <li>
+                        s88-N Bus zur Rückmeldung der Rückmelder und Steuerung der Weichen.
+                    </li>
+                    <li>
+                        Durch Verwendung dieser Rückmeldetechnik, sind
+                        <em>keine Unterbrechungen in den Gleisen</em>
+                        notwendig.
+                    </li>
+                    <li>
+                        interner Booster (TLE5206) zum Programmiergleis, zum Lesen und
+            Schreiben der Lokdecoder CV's.
+                    </li>
                     <li>LAN-Interface (W5100) zur Steuerung über LAN, PC mit Rocrail.</li>
-                    <li>mehrere externe Booster Roco 10761 oder 10764 zum Fahren der Lokomotiven möglich.</li>
+                    <li>
+                        mehrere externe Booster Roco 10761 oder 10764 zum Fahren der
+            Lokomotiven möglich.
+                    </li>
                 </ul>
-            <h2>nicht verwendete Funkionen in meiner Variante:</h3>
+            </div>
+            <h2>nicht verwendete Funkionen in meiner Variante:</h2>
             <div>
                 <ul class="normal">
                     <li>WLAN Modul, ich bevorzuge LAN Anschluss</li>
-                    <li>Relais für Programmiergleis, den TLE5206 verwende ich nur für das Programmiergleis zum Lesen oder Schreiben von CV's</li>
+                    <li>
+                        Relais für Programmiergleis, den TLE5206 verwende ich nur für das
+            Programmiergleis zum Lesen oder Schreiben von CV's
+                    </li>
                     <li>LocoNet verwende ich nicht.</li>
-                    <li>RailCom Detektor Rückmeldung, verwende ich nicht, alle meine Lokdecoder sind zu alt.</li>
-               </ul>
+                    <li>
+                        RailCom Detektor Rückmeldung, verwende ich nicht, alle meine
+            Lokdecoder sind zu alt.
+                    </li>
+                </ul>
             </div>
             <div>
                 <p>
-				<br><br>
+                    <br>
+                    <br>
                     <a href="My_Arduino_MEGA_Zentrale.png" target="_blank" title="My z21 Schaltplan">
                         z21 Schaltplan
                     </a>
                     mein abgeänderter z21 gesamt Schaltplan
-                    <span style="font-size:7pt">(aktualisiert 08.2020)</span>
+                    <span style="font-size: 7pt">(aktualisiert 08.2020)</span>
                 </p>
                 <p>
-                    <a href="Arduino_Mega_Z21_Booster_V2.pdf" target="_blank" title="My z21 Schaltplan Booster">z21 Schaltplan Booster</a>
+                    <a href="Arduino_Mega_Z21_Booster_V2.pdf" target="_blank" title="My z21 Schaltplan Booster">
+                        z21 Schaltplan Booster
+                    </a>
                     grün Teilschaltplan: Stromversorgung und Booster
-                    <span style="font-size:7pt">(aktualisiert 05.2020)</span>
+                    <span style="font-size: 7pt">(aktualisiert 05.2020)</span>
                 </p>
                 <p>
                     <a href="z21_Mega_TLE5206.svg" target="_blank" title="My z21 Schaltplan KiCad">
-                        z21 Schaltplan in KiCad 
+                        z21 Schaltplan in KiCad
                     </a>
-                    mein nachträglich erstellter z21 gesamt Schaltplan in KiCad (als .svg) Datei 
-                    <span style="font-size:7pt">(aktualisiert 04.2021)</span>
+                    mein nachträglich erstellter z21 gesamt Schaltplan in KiCad (als .svg) Datei
+                    <span style="font-size: 7pt">(aktualisiert 04.2021)</span>
                 </p>
                 <p>
-                    <a href="My_Z21_Arduino_Zentrale.docx" target="_blank" title="My z21 Arduino Zentrale">z21 Arduino Mega Zentrale (.doc)</a>
+                    <a href="My_Z21_Arduino_Zentrale.docx" target="_blank" title="My z21 Arduino Zentrale">
+                        z21 Arduino Mega Zentrale (.doc)
+                    </a>
                     meine z21 Nachbau Dokumentation
-                    <span style="font-size:7pt">(V4.87 aktualisiert 01.2021)</span>
+                    <span style="font-size: 7pt">(V4.87 aktualisiert 01.2021)</span>
                 </p>
                 <p>
-                    <a href="../Rocrail/My_Rocrail_Z21_Konfig.docx" target="_blank" title="My Rocrail z21 Konfig">Rocrail Konfiguration (.doc)</a>
+                    <a href="../Rocrail/My_Rocrail_Z21_Konfig.docx" target="_blank" title="My Rocrail z21 Konfig">
+                        Rocrail Konfiguration (.doc)
+                    </a>
                     meine Dokumentation/Konfiguration zum Einsatz mit Rocrail
-                    <span style="font-size:7pt">(aktualisiert 08.2020)</span>
+                    <span style="font-size: 7pt">(aktualisiert 08.2020)</span>
                 </p>
                 <p>
-                    <a href="https://stummiforum.de/viewtopic.php?p=2193160#p2193160" target="_blank" title="Link zu Stummis Modelbahnforum">Da der TLE5205/TLE5206 schwer erhältlich ist, hier eine Teilschaltplan mit L6203</a>
-                    <span style="font-size:7pt">(externer Link)</span>
+                    <a href="https://stummiforum.de/viewtopic.php?p=2193160#p2193160" target="_blank" title="Link zu Stummis Modelbahnforum">
+                        Da der TLE5205/TLE5206 schwer erhältlich ist, hier eine
+            Teilschaltplan mit L6203
+                    </a>
+                    <span style="font-size: 7pt">(externer Link)</span>
                 </p>
             </div>
             <div class="uplink">
