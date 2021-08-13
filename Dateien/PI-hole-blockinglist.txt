@@ -1,6 +1,8 @@
-#  PI Blockliste für PI Blacklist, Telemetriedienste von Windows 10 einschränken  Stand: 2020-07
+#  PI Blockliste für PI Blacklist, Telemetriedienste von Windows 10 einschränken  Stand: 2021-07
+#
 alpha.telemetry.microsoft.com
 asimov-win.settings.data.microsoft.com.akadns.net
+browser.pipe.aria.microsoft.com
 ceuswatcab01.blob.core.windows.net
 ceuswatcab02.blob.core.windows.net
 db5-eap.settings-win.data.microsoft.com.akadns.net
@@ -16,7 +18,10 @@ kmwatsonc.events.data.microsoft.com
 mobile.pipe.aria.microsoft.com
 nexus.officeapps.live.com
 nexusrules.officeapps.live.com
+northeuroper-notifyp.svc.ms
 oca.telemetry.microsoft.com
+office.pipe.aria.microsoft.com
+self.events.data.microsoft.com  
 settings-win.data.microsoft.com
 telemetry.microsoft.com
 telemetry.remoteapp.windowsazure.com
@@ -38,6 +43,7 @@ watson.live.com
 watson.microsoft.com
 watson.ppe.telemetry.microsoft.com
 watson.telemetry.microsoft.com
+web.vortex.data.microsoft.com
 weus2watcab01.blob.core.windows.net
 weus2watcab02.blob.core.windows.net
 wns.notify.windows.com.akadns.net
