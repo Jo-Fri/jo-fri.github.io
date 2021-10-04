@@ -17,6 +17,9 @@
   background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
   background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
 }
+.menueentry:active {
+  transform: translateY(2px);
+}
 
 .menueentry {
   padding: 5px;
@@ -31,7 +34,6 @@
   background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
   text-align: center;
 }
-
 a {
   color: #000000;
   text-decoration: none;
