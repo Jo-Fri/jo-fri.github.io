@@ -16,9 +16,10 @@
   background-image: -ms-linear-gradient(top, #f0f0f0, #d3d3d3);
   background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
   background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+  transform: translateY(2px);
 }
 .menueentry:active {
-  transform: translateY(2px);
+  transform: translateY(4px);
 }
 
 .menueentry {
