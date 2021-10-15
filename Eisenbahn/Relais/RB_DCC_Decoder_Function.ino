@@ -11,8 +11,6 @@
 // Funktions Decoder fuer 12 Relais mit DCC Adresse 8                                                       14.10.2021
 // Die Funktion F13 ok,    F14, F15 reagiert invers ???
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// IMPORTANT: GOTO lines 15 - 42 to configure some data!
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int decoderAddress = 8; // DCC Decoder Adresse,
 #define F0_pin 13   // F0 LED auf dem Arduino
@@ -129,7 +127,7 @@ boolean RawPacket_Handler(byte pktByteCount, byte* dccPacket) {
 void setup() {
   Serial.begin(38400);
   DCC.SetRawPacketHandler(RawPacket_Handler); // Comment for Test
-  DCC.SetupMonitor( kDCC_INTERRUPT );         // Comment for Test
+  DCC.SetupMonitor( kDCC_INTERRUPT );  
 
   pinMode(F0_pin, OUTPUT);
 
