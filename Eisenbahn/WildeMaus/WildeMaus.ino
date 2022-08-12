@@ -1,6 +1,6 @@
 /*
   Wilde Maus Lauflicht Wipf                 27.01.2018 bis 24.02.2018
-  Überarbeitet - Erweiterung F10                           2022-08-08
+  Überarbeitet - Erweiterung F10                           2022-08-12
 
   DCC Function Decoder
   Orginal Author: Ruud Boer - September 2015
@@ -9,21 +9,22 @@
   The DCC signal is optically separated and fed to pin 2 (=Interrupt 0).
 */
 
-int decoderAddress = 7; // Decoder Adresse, Pin Definition
+int decoderAddress = 7; // DCC Decoder Adresse
+// Pin Definition
 #define F0_pin 13       //      LED auf Arduino NANO
 #define PIN_MOTOR 14    // A0 / F1 Motor
 #define PIN_LOGO 15     // A1 / F2 WildeMaus Dauerlicht, F5 Blinken WildeMaus
 #define PIN_HAUS 16     // A2 / F3 Licht 1 Häuschen
 #define PIN_LATERNEN 17 // A3 / F4 Licht 2 Laternen
-#define PIN_BAND_A 3    // D3 / F7 Lauflicht, F6,F7,F8,F9 verschiedene Modi   nach links 
-#define PIN_BAND_B 4    // D4 / F8 Lauflicht, F6,F7,F8,F9 verschiedene Modi   nach recht
-#define PIN_BAND_C 5    // D5 / F9 Lauflicht, F6,F7,F8,F9 verschiedene Modi
+#define PIN_BAND_A 3    // D3 / F6, F7, F8, F9, F10 Lauflicht verschiedene Modi  
+#define PIN_BAND_B 4    // D4 / F6, F7, F8, F9, F10 Lauflicht verschiedene Modi  
+#define PIN_BAND_C 5    // D5 / F6, F7, F8, F9, F10 Lauflicht verschiedene Modi
 
 
 #include <DCC_Decoder.h>
-#define kDCC_INTERRUPT 0  // ?
+#define kDCC_INTERRUPT 0  // 
 
-byte Func[4]; // 0=L F4-F1, 1=F9-F5, 2=F12-F9, 3=F20-F13, 4=F28-F21
+byte Func[4];           // 0=L F4-F1, 1=F9-F5, 2=F12-F9
 byte instrByte1;
 boolean bF0 = false;
 boolean bF1 = false;
@@ -57,36 +58,36 @@ boolean RawPacket_Handler(byte pktByteCount, byte* dccPacket) {
     byte instructionType = instrByte1 >> 5;
     switch (instructionType)
     {
-    case 4: // Loc Function L-4-3-2-1
-      Func[0] = instrByte1 & B00011111;
-      break;
-    case 5: // Loc Function 8-7-6-5
-      if (bitRead(instrByte1, 4))
-      {
-        Func[1] = instrByte1 & B00001111;
-      } else
-      { // Loc Function 12-11-10-9
-        Func[2] = instrByte1 & B00001111;
-      }
-      break;
+      case 4: // Loc Function L-4-3-2-1
+        Func[0] = instrByte1 & B00011111;
+        break;
+      case 5: // Loc Function 8-7-6-5
+        if (bitRead(instrByte1, 4))
+        {
+          Func[1] = instrByte1 & B00001111;
+        } else
+        { // Loc Function 12-11-10-9
+          Func[2] = instrByte1 & B00001111;
+        }
+        break;
     }
-    
+
     bF0 = (Func[0] & B00010000);  // F0  LED auf Arduino NANO
     bF1 = (Func[0] & B00000001);  // F1  Motor ein/aus
     bF2 = (Func[0] & B00000010);  // F2  WildeMaus Anzeige
     bF3 = (Func[0] & B00000100);  // F3  Licht 1 Häuschen
     bF4 = (Func[0] & B00001000);  // F4  Licht 2 Laternen
     bF5 = (Func[1] & B00000001);  // F5  blinken von Wilde Maus
-    bF6 = (Func[1] & B00000010);  // F6  animation1 schnell / langsam
-    bF7 = (Func[1] & B00000100);  // F7  animation2
-    bF8 = (Func[1] & B00001000);  // F8  animation3
-    bF9 = (Func[2] & B00000001);  // F9  animation4
+    bF6 = (Func[1] & B00000010);  // F6  animation1 schnelles Lauflicht
+    bF7 = (Func[1] & B00000100);  // F7  animation2 einfach nach links
+    bF8 = (Func[1] & B00001000);  // F8  animation3 einfach nach rechts
+    bF9 = (Func[2] & B00000001);  // F9  animation4 doppelt nach links
     bF10 = (Func[2] & B00000010); // F10 Lauflicht alle Leuchtpunkte ein/aus
 
-    //  von 0 bis 8 Steps
-    if (nTimerBlink < 9){
+    
+    if (nTimerBlink < 12) {       // von 0 bis 11 Steps - Blink Frequenz
       nTimerBlink++;
-    } else{
+    } else {
       nTimerBlink = 0;
     }
   }
@@ -113,80 +114,43 @@ void doLichtband() {
 }
 
 
-
-void animation1() {    // F6  schnelles Lauflicht
-  if (nTimerBlink == 0 || nTimerBlink == 3 || nTimerBlink == 6)
-    lichtband110();
-  if (nTimerBlink == 1 || nTimerBlink == 4 || nTimerBlink == 7)
+void animation1() {    // F6 schnelles Lauflicht
+  if (nTimerBlink == 0 || nTimerBlink == 3 || nTimerBlink == 6 || nTimerBlink == 9)
+    lichtband001();
+  if (nTimerBlink == 1 || nTimerBlink == 4 || nTimerBlink == 7 || nTimerBlink == 10)
+    lichtband010();
+  if (nTimerBlink == 2 || nTimerBlink == 5 || nTimerBlink == 8 || nTimerBlink == 11)
     lichtband101();
-  if (nTimerBlink == 2 || nTimerBlink == 5 || nTimerBlink == 8)
-    lichtband011();
 }
 
- void animation2() {    // F7 nach links, Werte mehrfach damit es langsamer wird
+void animation2() {    // F7 einfach nach links
   if (nTimerBlink == 0)
     lichtband100();
-  if (nTimerBlink == 1)
-    lichtband100();
-  if (nTimerBlink == 2)
-    lichtband100();
-  if (nTimerBlink == 3)
-    lichtband010();
   if (nTimerBlink == 4)
     lichtband010();
-  if (nTimerBlink == 5)
-    lichtband010();
-  if (nTimerBlink == 6)
-    lichtband001();
-  if (nTimerBlink == 7)
-    lichtband001();
   if (nTimerBlink == 8)
     lichtband001();
 }
 
-void animation3() {    // F8 nach rechts, Werte mehrfach damit es langsamer wird
+void animation3() {    // F8 einfach nach rechts
   if (nTimerBlink == 0)
     lichtband001();
-  if (nTimerBlink == 1)
-    lichtband001();
-  if (nTimerBlink == 2)
-    lichtband001();
-  if (nTimerBlink == 3)
-    lichtband010();
   if (nTimerBlink == 4)
     lichtband010();
-  if (nTimerBlink == 5)
-    lichtband010();
-  if (nTimerBlink == 6)
-    lichtband100();
-  if (nTimerBlink == 7)
-    lichtband100();
   if (nTimerBlink == 8)
     lichtband100();
 }
 
-void animation4() {    // F9 
+void animation4() {    // F9 doppelt nach links
   if (nTimerBlink == 0)
     lichtband110();
-  if (nTimerBlink == 1)
-    lichtband110();
-  if (nTimerBlink == 2)
-    lichtband110();
-  if (nTimerBlink == 3)
-    lichtband011();
   if (nTimerBlink == 4)
     lichtband011();
-  if (nTimerBlink == 5)
-    lichtband011();
-  if (nTimerBlink == 6)
-    lichtband101();
-  if (nTimerBlink == 7)
-    lichtband101();
   if (nTimerBlink == 8)
     lichtband101();
 }
 
-void lichtband000() {              // HIGH aus, LOW aktiv, alle aus 
+void lichtband000() {              // HIGH aus, LOW aktiv, alle aus
   digitalWrite(PIN_BAND_A, HIGH);
   digitalWrite(PIN_BAND_B, HIGH);
   digitalWrite(PIN_BAND_C, HIGH);
@@ -240,7 +204,7 @@ void doHausLichter() {             // HausLichter
   digitalWrite(PIN_LATERNEN, bF4);
 }
 
-void doWildeMausLogo() {           // WildeMausLogo, F2 immer an 
+void doWildeMausLogo() {           // WildeMausLogo, F2 immer an
   if (bF2) {
     digitalWrite(PIN_LOGO, HIGH);
   } else {                         // Wenn kein F2, prüfe auf F5
