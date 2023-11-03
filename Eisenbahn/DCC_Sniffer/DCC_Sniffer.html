@@ -12,10 +12,9 @@
         <div class="layout">
             <h1 class="titel">Arduino DCC Sniffer</h1>
             <div>
-                <h2>DCC Sniffer zum Mitlesen der DCC Befehle "RailData" auf dem s88-N Bus</h2>
-                für den DCC Sniffer verwende ich einen Arduino Nano, welcher die Daten über USB zum Mitlesen mit PuTTY oder den Arduino-IDE Monitor auf dem PC bereitstellt, 
-                einfach an das letzte s88-N Modul anstecken.
-				Mit 115200 Baud gab es sporadische Übertragungsfehler, deshalb ich eine Übertragungsgeschwindigkeit von 57600 Baud verwende.
+                <h2>DCC Sniffer zum Mitlesen der DCC Befehle "RailData" auf dem s88-N Bus oder direkt von Gleis</h2>
+                für den DCC Sniffer verwende ich einen Arduino Nano, welcher die DCC-Daten über USB zum Mitlesen mittels PuTTY (oder den Arduino-IDE Monitor) auf dem PC bereitstellt, 
+                einfach an das letzte s88-N Modul anstecken oder zum Gleis
 				<br>
                 <br>
                 Quelle:
@@ -39,7 +38,6 @@
                     - RB_DCC_Sniffer.ino,
                 <br>- RB_DCC_Sniffer_V2.ino
                 </p>
-
                 <br>
                 <a
                     class="bild45"
@@ -57,15 +55,10 @@
                 >
                     <img src="s88-N_DCC_Sniffer.jpg" class="bild45" alt="s88-N_DCC_Sniffer.jpg">
                 </a>
-<!--                 <a
-                    class="bild45"
-                    href="Gleis_DCC_Sniffer_Plan.jpg"
-                    target="_blank"
-                    title="Gleis_DCC_Sniffer_Plan.jpg"
-                >
-                    <img src="Gleis_DCC_Sniffer_Plan.jpg" class="bild45" alt="Gleis_DCC_Sniffer_Plan.jpg">
-                </a>
- -->            </div>
+				<p>
+                    ! Nicht gleichzeitig am Gleis <em>und</em> s88-N betreiben, sonst wird (nur) der Transistor zerstört.
+                </p>	
+            </div>
             <br>
             <br>
         </div>
@@ -75,7 +68,7 @@
                 <li>
                     <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a>
                 </li>
-                <li>Stand: 10.2023</li>
+                <li>Stand: 11.2023</li>
             </ul>
         </div>
     </body>
