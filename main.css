@@ -182,6 +182,18 @@ div.image img {
   text-align: end;
 }
 
+.bild15 {
+  width: 15%;
+  height: auto;
+  text-decoration: none;
+}
+
+.bild25 {
+  width: 25%;
+  height: auto;
+  text-decoration: none;
+}
+
 .bild45 {
   width: 45%;
   height: auto;
