@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <meta name="robots" content="index, follow">
-        <meta name="keywords" content="DCC, Decoder, Faller, Wilde Maus, Steuerung">
+        <meta name="keywords" content="DCC, Decoder, Faller, Wilde Maus, Steuerung, DS0008-1-16">
         <link rel="stylesheet" href="../../main.css">
         <link rel="stylesheet" type="text/css" href="wildemaus.css">
         <title>Faller "WildeMaus" mit Arduino DCC Steuerung</title>
@@ -18,75 +18,48 @@
             <div>
                 <div>
                     Zur Steuerung mit einer DCC Eisenbahn Zentrale, die Licht-Steuerung der „WildeMaus“ übernimmt ein Arduino Nano mit einer DCC Lok Adresse,
-					<br> über die Funktionstasten F1 bis F9 wird die WildeMaus gesteuert.
+                    <br>   über die Funktionstasten F1 bis F9 wird die WildeMaus gesteuert.
                     <br>
-                    <br>
-                    - F0 zum Test, LED auf dem Arduino Nano
-                    <br>
-                    - F1 Aufzugs Motor für Autos ein/aus
-                    <br>
-                    - F2 Neon Anzeige "WILDE MAUS" ein/aus, F5 Anzeige blinken
-                    <br>
-                    - F3 Laternen ein/aus
-                    <br>
-                    - F4 Lichter der Häuschen ein/aus
-                    <br>
-                    - F6, F7, F8, F9 Neon Lauflichtband ein/aus und verschiedene Lauflichtmuster
-                    <br>
-                    - F10 Neon Lauflichtband alle Pixels ein/aus
+                    <br> - F0 zum Test, LED auf dem Arduino Nano
+                    <br> - F1 Aufzugs Motor für Autos ein/aus
+                    <br> - F2 Neon Anzeige "WILDE MAUS" ein/aus, F5 Anzeige blinken
+                    <br> - F3 Laternen ein/aus
+                    <br> - F4 Lichter der Häuschen ein/aus
+                    <br> - F6, F7, F8, F9 Neon Lauflichtband ein/aus und verschiedene Lauflichtmuster
+                    <br> - F10 Neon Lauflichtband alle Pixels ein/aus
                     <br>
                     <br>
                 </div>
                 <div>
-                    Diese Steuerung habe ich entwickelt weil das original IC auf der kleinen Neon Lauflichtsteuerung "DS0008-1-16" defekt war, dieses <em> IC muss entfernt</em>
-                    werden, anstelle tritt diese Steuerung.
+                    Diese Steuerung habe ich entwickelt weil das original IC auf der kleinen Neon Lauflichtsteuerung "DS0008-1-16" defekt war, dieses <em> IC muss nun entfernt</em> werden, anstelle tritt diese Steuerung.
                 </div>
-                <br>
-                <a
-                    class="bild45"
-                    href="WildeMaus_.jpg"
-                    target="_blank"
-                    title="Foto WildeMaus"
-                >
-                    <img src="WildeMaus_.jpg" class="bild45" alt="Foto WildeMaus">
-                </a>
-                <a
-                    class="bild45"
-                    href="WildeMaus_2.jpg"
-                    target="_blank"
-                    title="Foto WildeMaus 2"
-                >
-                    <img src="WildeMaus_2.jpg" class="bild45" alt="Foto WildeMaus 2">
-                </a>
+                <br> <a class="bild45" href="WildeMaus_.jpg" target="_blank" title="Foto WildeMaus" > <img src="WildeMaus_.jpg" class="bild45" alt="Foto WildeMaus"> </a>
+                     <a class="bild45" href="WildeMaus_2.jpg" target="_blank" title="Foto WildeMaus 2" > <img src="WildeMaus_2.jpg" class="bild45" alt="Foto WildeMaus 2"> </a>
             </div>
             <h2>Schaltplan</h2>
             <div class="image">
-                <a href="WildeMaus_4.jpg" target="_blank" title="Foto WildeMaus 4">
-                    <img src="WildeMaus_4.jpg" alt="Foto WildeMaus 3">
-                </a>
-                <!-- <a href="https://github.com/ToWipf/Arduino-DCC-WildeMaus/raw/master/WildeMaus_3.pdf" target="_blank"><img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus_Plan.PNG" alt="Bild" /></a> -->
+                <a href="WildeMaus_4.jpg" target="_blank" title="Foto WildeMaus 4"> <img src="WildeMaus_4.jpg" alt="Foto WildeMaus 3"> </a>
             </div>
             <div>
-                 <h2>Arduino Sketch</h2>
-               <p><span style="font-size:10pt">
-                 bis Z21PG V4.96 funktionierte dieses Sketch: "WildeMaus.ino" mit Bibliothek: <em> "DCC_Decoder.h"</em> am externen ROCO 10764/10761 und internen TLE5206 Verstärker problemlos.
-                 <br>Quelle war die "RB_DCC_Decoder_Function" aus der "Arduino_DCC_S88.zip" von 2016-08-14
-                 <a target="_blank" href="https://rudysmodelrailway.wordpress.com/software/">rudysmodelrailway</a> - Arduino DCC, S88, and more Download link
-                 <span style="font-size:7pt">(externer Link)</span>
-                 <br> altes <a target="_blank" href="https://github.com/ToWipf/Arduino-DCC-WildeMaus">WildeMaus Projekt in GitHub öffnen</a> 
-				 <span style="font-size:7pt">(bis 08.2022)</span> meine angepasste <a target="_blank" href="WildeMaus.ino">WildeMaus.ino</a> <span style="font-size:7pt">(13.08.2022)</span>
-				 <br> Link zu verwenden DCC_Decoder.h library:  <a target="_blank" href="https://github.com/MynaBay/DCC_Decoder">DCC_Decoder.h</a> <span style="font-size:7pt">(externer Link)</span>
- 				 </span>
-				 </p>
-				<p>
-				<br>ab Z21PG V4.98 wurde auf ein Decoder Sketch mit <em> NmraDcc.h</em>  Bibliothek gewechselt, zu beziehen von github.com  <a target="_blank" href="https://github.com/mrrwa/NmraDcc"> NmraDcc.h</a>
-				<span style="font-size:7pt">(externer Link)</span>
-				<br> oder andere Quelle:  
-				<a target="_blank" href="https://reference.arduino.cc/reference/en/libraries/nmradcc/"><em>DCC_Decoder.h</em> </a> in der Version 1.4.2, oder 2.0.16 aktuelle Version getestet.
-				<span style="font-size:7pt">(externer Link)</span>
-				<br> dieses Sketch funktioniert nun mit allen Z21PG Versionen.
-				<a href="Wmaus_Dec_17LED_1Ftn.zip" target="_blank" title="Wmaus_Dec_17LED_1Ftn.zip">Wmaus_Dec_17LED_1Ftn.zip</a> <span style="font-size:7pt">(aktualisiert 11.2023)</span>
-				</p>
+                <h2>Arduino Sketch</h2>
+                <p>
+                    <span style="font-size:10pt">
+                        bis Z21PG V4.96 funktionierte dieses Sketch: "WildeMaus.ino" mit Bibliothek: <em> "DCC_Decoder.h"</em> am externen ROCO 10764/10761 oder internen TLE5206 Verstärker problemlos.
+                        <br> Ursprüngliche Quelle war die "RB_DCC_Decoder_Function" aus der "Arduino_DCC_S88.zip" von 2016-08-14 <a target="_blank" href="https://rudysmodelrailway.wordpress.com/software/">rudysmodelrailway</a>
+                        - Arduino DCC, S88, and more Download link <span style="font-size:7pt">(externer Link)</span>
+                        <br> altes <a target="_blank" href="https://github.com/ToWipf/Arduino-DCC-WildeMaus">WildeMaus Projekt in GitHub öffnen</a>
+                        <span style="font-size:7pt">(bis 08.2022)</span> meine angepasste <a target="_blank" href="WildeMaus.ino">WildeMaus.ino</a>
+                        <span style="font-size:7pt">(13.08.2022)</span>
+                        <br> Link zu verwenden DCC_Decoder.h library: <a target="_blank" href="https://github.com/MynaBay/DCC_Decoder">DCC_Decoder.h</a> <span style="font-size:7pt">(externer Link)</span>
+                    </span>
+                </p>
+                <p>
+                    <br> ab Z21PG V4.98 wurde auf ein Decoder Sketch mit <em> NmraDcc.h</em>  Bibliothek gewechselt, zu beziehen von github.com <a target="_blank" href="https://github.com/mrrwa/NmraDcc"> NmraDcc.h</a>
+                    <span style="font-size:7pt">(externer Link)</span>
+                    <br> oder andere Quelle: <a target="_blank" href="https://reference.arduino.cc/reference/en/libraries/nmradcc/"> <em>DCC_Decoder.h</em> </a> in der Version 1.4.2, oder 2.0.16 aktuelle Version getestet.
+                    <span style="font-size:7pt">(externer Link)</span>
+                    <br> dieses Sketch funktioniert nun mit allen Z21PG Versionen. <a href="Wmaus_Dec_17LED_1Ftn.zip" target="_blank" title="Wmaus_Dec_17LED_1Ftn.zip">Wmaus_Dec_17LED_1Ftn.zip</a> <span style="font-size:7pt">(aktualisiert 11.2023)</span>
+                </p>
             </div>
             <div>
                 <h2>Aufbau der Wilden Maus Steuerung</h2>
@@ -94,41 +67,33 @@
                     Faller Lauflichtsteuerung DS0008-1-16 (das IC entfernen) anstelle Drähte zum Ersatz DCC Decoder
                 </p>
                 <p>
-                    <a href="Lauflicht_oben.jpg" target="_blank" title="Lauflicht_oben">
-                        <img src="Lauflicht_oben.jpg" class="bild45" alt="Lauflicht_oben">
-                    </a>
-                    <a href="NachbauPlan_DS0008-1-16.JPG" target="_blank" title="NachbauPlan DS0008-1-16">
- 						<img src="NachbauPlan_DS0008-1-16.JPG" class="bild45" alt="NachbauPlan_DS0008-1-16.JPG">
-                    </a>
+                    <a href="Lauflicht_oben.jpg" target="_blank" title="Lauflicht_oben"> <img src="Lauflicht_oben.jpg" class="bild45" alt="Lauflicht_oben"> </a>
+                    <a href="NachbauPlan_DS0008-1-16.JPG" target="_blank" title="NachbauPlan DS0008-1-16"> <img src="NachbauPlan_DS0008-1-16.JPG" class="bild45" alt="NachbauPlan_DS0008-1-16.JPG"> </a>
                 </p>
                 <p>
-                    meine Ersatz DCC Decoder, mit der Faller Lauflichtsteuerung DS0008-1-16<br>
-                     <a href="WildeMaus_3_.jpg" target="_blank" title="WildeMaus_3_.jpg">
-                        <img src="WildeMaus_3_.jpg" class="bild45" alt="WildeMaus_3_.jpg">
-					</a>
-                     <a href="WildeMaus_Lauflicht.jpg" target="_blank" title="WildeMaus_Lauflicht.jpg">
-                        <img src="WildeMaus_Lauflicht.jpg" class="bild45" alt="WildeMaus_Lauflicht.jpg">
-                    </a>
-				</p>
+                    <br> meine DCC Decoder und Steuerung, mit der Faller Lauflichtsteuerung DS0008-1-16
+                    <br> <a href="WildeMaus_3_.jpg" target="_blank" title="WildeMaus_3_.jpg"> <img src="WildeMaus_3_.jpg" class="bild45" alt="WildeMaus_3_.jpg"> </a>
+                    <a href="WildeMaus_Lauflicht.jpg" target="_blank" title="WildeMaus_Lauflicht.jpg"> <img src="WildeMaus_Lauflicht.jpg" class="bild45" alt="WildeMaus_Lauflicht.jpg"> </a>
+                </p>
             </div>
             <div>
-                Faller Wilde Maus Steuerung im Versuchsaufbau <br><br>
-                <a href="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" target="_blank" title="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg">
-                    <img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" class="bild95" alt="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg">
-                </a>
+                Faller Wilde Maus Steuerung im Versuchsaufbau
+                <br>
+                <br> <a href="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" target="_blank" title="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg">
+                    <img src="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg" class="bild95" alt="https://raw.githubusercontent.com/ToWipf/DCC-WildeMaus-Arduino/master/WildeMaus.jpg"> </a>
             </div>
-			</div>
-			<div class="uplink">
-                <a href="#top" class="uplink" title="zum Seitenanfang">nach oben...</a>
-            </div>
-            <div class="impress">
-                <ul>
-                    <li>JoFri</li>
-                    <li>
-                        <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a>
-                    </li>
-                    <li>Stand: 11.2023</li>
-                </ul>
-            </div>
+        </div>
+        <div class="uplink">
+            <a href="#top" class="uplink" title="zum Seitenanfang">nach oben...</a>
+        </div>
+        <div class="impress">
+            <ul>
+                <li>JoFri</li>
+                <li>
+                    <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a>
+                </li>
+                <li>Stand: 03.2024</li>
+            </ul>
+        </div>
     </body>
 </html>
