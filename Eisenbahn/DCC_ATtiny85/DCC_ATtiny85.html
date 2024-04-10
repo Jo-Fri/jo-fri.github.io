@@ -35,33 +35,32 @@
 			<br> Hier mein DCC Funktionsdecoder Sketch für den ATtiny85   
             <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 04.2024)</span>
 			<br> dieses kann auch im eingelöteten Zustand mit der Arduino IDE programmiert werden.
-			<br> ich verwende (noch) den Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em>, dieser benötigt ca. 6 Sec. Bootloaderzeit. 
+			<br> ich verwendete den Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em>, dieser benötigt ca. 6 Sec. Bootloaderzeit. 
 			<br><br> getestet mit diesen Digispark ATtiny85 Varianten: 
 			<br><br>
 			<a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
 			<a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
 			</p>
 			<p>
-			<br><em>Update der ATiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. <span style="font-size:7pt">(externer Link)</span>
-			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> Datei Inhalt: <em>micronucleus-firmware-2.6.0.zip</em> entpacken. 
+			<br><em>Update der ATiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
+			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken. <span style="font-size:7pt">(externer Link)</span>
             <br> In das Verzeichnis nach <em>...\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen, 
 			<br> nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, 
-			<br> anschließend wird die Bootloader Firmware mit <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
-			<br> und mein DCC Funktionsdecoder Sketch für den ATtiny85 muss muss mit der Arduino IDE programmiert werden.
+			<br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert,
+			<br> nun muss wieder mein DCC Funktionsdecoder Sketch (siehe oben) auf den ATtiny85 mit der Arduino IDE programmiert werden.
 			</p>
 			<p>			
 			<!-- <br> falls ein ATiny85 plötzlich nicht mehr reagieren sollte, muss der Bootlader und anschließend dieses Sketch erneut aufgespielt werden. (bis jetzt hatte hatte ich noch nie einen defekten Tiny85) -->
 			</p>
 			<p>
-            <br>weitere gute Information zu Digispark ATtiny85 unter: 
-            <br><a target="_blank" class="big" href="https://wolles-elektronikkiste.de/attiny-mit-arduino-code-programmieren ">Wolles-Elektronikkiste.de </a> ATtiny mit Arduino Code programmieren <span style="font-size:7pt">(externer Link)</span>
-            <br><a target="_blank" class="big" href="https://wolles-elektronikkiste.de/digispark-die-bequeme-attiny85-alternative ">Wolles-Elektronikkiste.de </a> Digispark – die bequeme ATtiny85 Alternative <span style="font-size:7pt">(externer Link)</span>
-            <br><a target="_blank" class="big" href="https://www.robokalle.de/elektronik%20dcc-lichtsignal%20decoder.htm" >Robokalle </a> ATtiny85 DCC-Lichtsignaldecoder für LED-Lichtsignale<span style="font-size:7pt">(externer Link)</span>
-			<br><a target="_blank" class="big" href="https://github.com/ArminJo/DigistumpArduino">"https://github.com/ArminJo/DigistumpArduino</a> Bootloader Infos <span style="font-size:7pt">(externer Link)</span>
-			<br><a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader releases</a> aktuelle micronucleus-firmware Bootloader Versionen <span style="font-size:7pt">(externer Link)</span>
-			<br><a target="_blank" class="big" href="https://www.youtube.com/watch?v=fRroyd8sVsE"> Bootloader </a> Methode 1 Video von Anfang an bis 4:20 Minuten, fertig <span style="font-size:7pt">(externer Link)</span>
-			
-			
+            <br>Hier weitere Information zu Digispark ATtiny85 <span style="font-size:7pt">(externe Links)</span>
+            <br><a target="_blank" class="big" href="https://wolles-elektronikkiste.de/attiny-mit-arduino-code-programmieren ">Wolles-Elektronikkiste.de </a> ATtiny mit Arduino Code programmieren
+            <br><a target="_blank" class="big" href="https://wolles-elektronikkiste.de/digispark-die-bequeme-attiny85-alternative ">Wolles-Elektronikkiste.de </a> Digispark – die bequeme ATtiny85 Alternative
+            <br><a target="_blank" class="big" href="https://www.robokalle.de/elektronik%20dcc-lichtsignal%20decoder.htm" >Robokalle </a> ATtiny85 DCC-Lichtsignaldecoder für LED-Lichtsignale
+			<br><a target="_blank" class="big" href="https://github.com/ArminJo/DigistumpArduino">"https://github.com/ArminJo/DigistumpArduino</a> Bootloader Infos
+			<br><a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware">"https://github.com/ArminJo/micronucleus-firmware</a> Micronucleus USB Bootloader for ATtinies / Digisparks
+			<br><a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader releases</a> aktuelle micronucleus-firmware Bootloader Versionen
+			<br><a target="_blank" class="big" href="https://www.youtube.com/watch?v=fRroyd8sVsE"> Bootloader </a> Methode 1 Video von Anfang an bis 4:20 Minuten
 			</p>
             <br><br>
             </div>
