@@ -3,7 +3,7 @@
 *.html_
 
 # Backup-Dateien
-*~
+~*
 *.bak
 
 # Temporäre Dateien/Verzeichnisse
