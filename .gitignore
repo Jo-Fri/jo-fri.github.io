@@ -1,6 +1,8 @@
 # meine Sicherungen
 *.css_
 *.html_
+*.py_
+*.ino_
 
 # Backup-Dateien
 ~*
