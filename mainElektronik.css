@@ -1,0 +1,6 @@
+navi {
+  grid-area: navi;
+  background-color: hsl(120, 40%, 68%);
+  /* border: solid 1px black; */
+}
+

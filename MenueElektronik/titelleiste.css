@@ -1,0 +1,36 @@
+.center {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.brInfo {
+  color: red;
+  font-size: 30px;
+}
+
+.titelleistenbody {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: hsl(90, 0%, 0%);
+  background-color: hsl(147, 93%, 24%);
+  overflow: hidden;
+}
+
+.maintitle {
+  font-size: 150%;
+  text-align: left;
+  margin: 0.3rem;
+  padding: 1.3rem;
+}
+
+/* Menue Handy */
+@media screen and (max-width: 450px) {
+  .titelbilder {
+    display: none;
+  }
+}

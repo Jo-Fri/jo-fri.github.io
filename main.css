@@ -37,11 +37,13 @@ body {
     display: flex;
     height: 70px;
   }
+
   .menuelistUl {
     display: flex;
     margin: 5px;
     height: 9px;
   }
+
   .menueentry {
     margin-right: 10px;
     height: 62px;
@@ -49,6 +51,7 @@ body {
     width: 200px;
     font-family: serif;
   }
+
   .pagecontent {
     font-family: serif;
   }
@@ -59,6 +62,7 @@ body {
   .navilist {
     display: inline;
   }
+
   .menueentry {
     margin-top: -10px;
   }
@@ -239,4 +243,26 @@ div.image img {
   vertical-align: middle;
   margin-top: 0.5em;
   /* text-decoration: none */
+}
+
+.btnElektronik {
+  background-color: green !important;
+  margin-right: 10px;
+  /* entspr. 3 Zeilen Text */
+  font-family: serif;
+  border-radius: 15px;
+  border: solid 1px black;
+  text-align: center;
+  padding: 5px;
+}
+
+.btnEisenbahn {
+  background-color: rgb(231, 227, 2) !important;
+  margin-right: 10px;
+  /* entspr. 3 Zeilen Text */
+  font-family: serif;
+  border-radius: 15px;
+  border: solid 1px black;
+  text-align: center;
+  padding: 5px;
 }

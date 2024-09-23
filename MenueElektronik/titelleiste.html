@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="Eisenbahn, Steuerung, s88-N, z21, DCC, Decoder, Zentrale, Nachbau, ATtiny85, Arduino">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="titelleiste.css">
+    </head>
+    <body class="titelleistenbody">
+        <div class="center">
+            <img class="titelbilder" alt="Titelbild 1" src="BR80.png">
+            <h1 class="maintitle">MenueElektronik</h1>
+            <span class="brInfo" id="brtest"></span>
+            <img class="titelbilder" alt="Titelbild 2" src="ICE2.png">
+        </div>
+        <script>
+        if (/MSIE 10/i.test(navigator.userAgent)) {
+            // This is internet explorer 10
+            document.getElementById('brtest').innerHTML = "You are using a old internet explorer 10 browser! - Menue Darstellungsfehler - Bitte aktuellen Chrome, Firefox oder Edge verwenden."
+                // window.alert('isIE10');
+        } else if (/MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+            // This is internet explorer 9 or 11
+            document.getElementById('brtest').innerHTML = "You are using a old internet explorer 11 browser! - Menue Darstellungsfehler - Bitte aktuellen Chrome, Firefox oder Edge verwenden."
+                // window.location = 'ie.htm';
+        } else if (/Edge\/\d./i.test(navigator.userAgent)) {
+            // This is Microsoft Edge
+            // document.getElementById('brtest').innerHTML = "You are using a old Edge browser! - Bitte auf neuen Edge aktualisieren" 
+            document.getElementById('brtest').innerHTML = ""
+                // window.alert('Microsoft Edge');
+        } else {
+            document.getElementById('brtest').innerHTML = ""
+        }
+        </script>
+    </body>
+</html>

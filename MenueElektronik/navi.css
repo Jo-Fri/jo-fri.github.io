@@ -1,0 +1,48 @@
+.navilist {
+  margin-right: 10px;
+}
+
+.menuelistUl {
+  list-style-type: none;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menueentry:hover {
+  background: #e7e2d3;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -ms-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+  transform: translateY(2px);
+}
+.menueentry:active {
+  transform: translateY(4px);
+}
+
+.menueentry {
+  padding: 5px;
+  border-radius: 15px;
+  border: solid 1px black;
+  background-color: rgb(192, 192, 192);
+  background: #fffaeb;
+  background-image: -webkit-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -moz-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -ms-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -o-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
+  text-align: center;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+  height: 9px;
+}
+
+.menueNavi {
+  margin-top: 10px;
+  margin-bottom: -30px;
+  text-align: center;
+}
