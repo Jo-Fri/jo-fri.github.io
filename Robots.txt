@@ -1,5 +1,5 @@
 # robots.txt  Info: https://www.ionos.de/digitalguide/hosting/hosting-technik/indexierungsmanagement-mit-der-robotstxt/
 User-agent: *
 Allow: /
-Disallow: /Tmp/    # Verzeichnis, ohne / am Schluss ist eine Datei
+Disallow: /Bilder/ # Verzeichnis, ohne / am Schluss ist eine Datei
 Disallow: /Daten/  # Verzeichnis

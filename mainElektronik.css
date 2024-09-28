@@ -1,0 +1,16 @@
+navi {
+  grid-area: navi;
+  background-color: hsl(120, 40%, 68%);
+}
+
+.pagecontent {
+  background-color: hsl(147, 93%, 24%);
+}
+
+.layout {
+  background-color: hsl(120, 100%, 90%);
+}
+
+.titel {
+  background-color: hsl(120, 40%, 68%);
+}
