@@ -5,12 +5,12 @@ body {
 }
 
 /* Handy */
-
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 800px) {
   main {
     height: 100vh;
     display: grid;
-    grid-template-rows: 13% 86%;
+    grid-auto-rows: 13% 86%;
+    /*grid-template-rows: 13% 86%;*/
     grid-template-areas: "navi" "article";
   }
 
@@ -20,12 +20,11 @@ body {
 }
 
 /* Normal */
-
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 800px) {
   main {
     height: 100vh;
     display: grid;
-    grid-template-rows: 10% 89%;
+    grid-auto-rows: 10% 89%;
     grid-template-columns: 17% 83%;
     grid-template-areas: "header header" "navi article";
   }
@@ -232,8 +231,9 @@ div.image img {
 .titel {
   font-size: 150%;
   text-align: left;
-  margin: 0.3rem;
-  padding: 1.3rem;
+  margin: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: hsl(28, 40%, 68%);
 }
 
@@ -265,4 +265,55 @@ div.image img {
   border: solid 1px black;
   text-align: center;
   padding: 5px;
+}
+
+.menueentry:hover {
+  background: #e7e2d3;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -ms-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
+  background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+  transform: translateY(2px);
+}
+
+.menueentry:active {
+  transform: translateY(4px);
+}
+
+.menueentry {
+  padding: 5px;
+  border-radius: 15px;
+  border: solid 1px black;
+  background-color: rgb(192, 192, 192);
+  background: #fffaeb;
+  background-image: -webkit-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -moz-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -ms-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: -o-linear-gradient(top, #fffaeb, #dfd5b8);
+  background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
+  text-align: center;
+}
+
+.navilist {
+  margin-right: 10px;
+}
+
+.menuelistUl {
+  list-style-type: none;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menueNavi {
+  margin-top: 10px;
+  margin-bottom: -30px;
+  text-align: center;
+}
+
+.aTargetButton {
+  color: #000000;
+  text-decoration: none;
+  height: 9px;
 }
