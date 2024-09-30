@@ -10,7 +10,6 @@ body {
     height: 100vh;
     display: grid;
     grid-auto-rows: 13% 86%;
-    /*grid-template-rows: 13% 86%;*/
     grid-template-areas: "navi" "article";
   }
 
@@ -46,7 +45,6 @@ body {
   .menueentry {
     margin-right: 10px;
     height: 62px;
-    /* entspr. 3 Zeilen Text */
     width: 200px;
     font-family: serif;
   }
@@ -74,7 +72,6 @@ header {
 navi {
   grid-area: navi;
   background-color: hsl(28, 40%, 68%);
-  /* border: solid 1px black; */
 }
 
 article {
