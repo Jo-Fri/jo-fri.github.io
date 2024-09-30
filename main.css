@@ -246,9 +246,8 @@ div.image img {
 }
 
 .btnElektronik {
-  background-color: rgb(0, 128, 0);
+  background-image: linear-gradient(to bottom, rgb(0, 128, 0), rgb(2, 95, 2));
   margin-right: 10px;
-  /* entspr. 3 Zeilen Text */
   font-family: serif;
   border-radius: 15px;
   border: solid 1px black;
@@ -257,9 +256,8 @@ div.image img {
 }
 
 .btnEisenbahn {
-  background-color: hsl(28, 50%, 38%);
+  background-image: linear-gradient(to bottom, hsl(28, 50%, 39%), hsl(28, 51%, 33%));
   margin-right: 10px;
-  /* entspr. 3 Zeilen Text */
   font-family: serif;
   border-radius: 15px;
   border: solid 1px black;
@@ -267,30 +265,25 @@ div.image img {
   padding: 5px;
 }
 
-.menueentry:hover {
-  background: #e7e2d3;
-  background-image: -webkit-linear-gradient(top, #f0f0f0, #d3d3d3);
-  background-image: -moz-linear-gradient(top, #f0f0f0, #d3d3d3);
-  background-image: -ms-linear-gradient(top, #f0f0f0, #d3d3d3);
-  background-image: -o-linear-gradient(top, #f0f0f0, #d3d3d3);
-  background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+.btnElektronik:hover {
   transform: translateY(2px);
 }
 
-.menueentry:active {
-  transform: translateY(4px);
+.btnEisenbahn:hover {
+  transform: translateY(2px);
+}
+
+.menueentry:hover {
+  background: #e7e2d3;
+  background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+  transform: translateY(2px);
 }
 
 .menueentry {
   padding: 5px;
   border-radius: 15px;
   border: solid 1px black;
-  background-color: rgb(192, 192, 192);
   background: #fffaeb;
-  background-image: -webkit-linear-gradient(top, #fffaeb, #dfd5b8);
-  background-image: -moz-linear-gradient(top, #fffaeb, #dfd5b8);
-  background-image: -ms-linear-gradient(top, #fffaeb, #dfd5b8);
-  background-image: -o-linear-gradient(top, #fffaeb, #dfd5b8);
   background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
   text-align: center;
 }
