@@ -3,3 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /Bilder/ # Verzeichnis, ohne / am Schluss ist eine Datei
 Disallow: /Daten/  # Verzeichnis
+Disallow: /Tmp/
