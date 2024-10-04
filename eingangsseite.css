@@ -17,5 +17,10 @@ body {
 }
 
 .eingangseitetitle {
-  font-size: 150%;
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
 }

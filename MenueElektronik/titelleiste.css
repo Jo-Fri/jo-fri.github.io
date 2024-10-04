@@ -14,7 +14,7 @@
 
 .titelleistenbody {
   font-family: sans-serif;
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: lighter;
   color: hsl(90, 0%, 0%);
   background-color: hsl(147, 93%, 24%);
@@ -22,10 +22,12 @@
 }
 
 .maintitle {
-  font-size: 150%;
+  font-size: 140%;
   text-align: left;
-  margin: 0.3rem;
-  padding: 1.3rem;
+  margin: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 22px;
 }
 
 .titelbilder {
