@@ -14,3 +14,13 @@ navi {
 .titel {
   background-color: hsl(120, 40%, 68%);
 }
+
+.menueentry:hover {
+  background: #dde7d3;
+  background-image: linear-gradient(to bottom, #f0f0f0, #b9fdb9);
+}
+
+.menueentry {
+  background: #ebffee;
+  background-image: linear-gradient(to bottom, #ebffeb, #bddfb8);
+}
