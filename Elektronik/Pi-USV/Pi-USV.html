@@ -19,7 +19,7 @@
                 <br> Ein "Step Down Regler Modul" erzeugt Ausgangsseitig eine Spannung von 5.1V, welche nun über die GPOI Steckerleiste den Pi versorgt.
                 </p>
                 <p> 
-                <br> Bei Netzspannungsausfall wird der Status über einen Optokoppler an den Raspberry Pi gemeldet (GPIO18 = wiringpi Pin1),
+                <br> Bei Netzspannungsausfall wird die Statusänderung über einen Optokoppler an den Raspberry Pi gemeldet (GPIO18 = wiringpi Pin1),
                 <br> ein Shell Script <a href="Pi_USV.sh" target="_blank" title="Pi_USV.sh">Pi_USV.sh</a> löst nach 2 Minuten, falls die Netzspannung nicht wieder kommt einen <em>shutdown</em> das Pi aus. 
                 <br> Mit den Schalter kann der Pi aus- und wieder eingeschalten werden.
                 </p>
