@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 # 
-# Pi_USV.sh                                                                                                     2024-08-30 JoFri
+# Pi_USV.sh      
+# Raspberry Pi USV selber bauen                                                                                                 2024-08-30 JoFri
 # Der Status wird über einen Optokoppler an den Raspberry Pi gemeldet (GPIO18 = wiringpi Pin1), auf LOW,  
 # nach eine Wartezeit und falls das Stromnetz nicht wieder kommt, wird der Pi herunter gefahren.   
 # 
