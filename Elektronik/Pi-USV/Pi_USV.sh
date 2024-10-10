@@ -17,19 +17,31 @@
     echo "" 
     echo $(date +"%Y-%m-%d %T") "Starte Script: $0 "
 
-    gpio mode 1 in      # Eingang
-    gpio mode 1 up      # pull up Wiederstand
+    gpio mode 1 'in'
+    if [ $? -eq 0 ]; then
+        echo $(date +"%Y-%m-%d %T") "goio mode Eingang ok"
+    else
+        echo $(date +"%Y-%m-%d %T") "goio mode fail"	
+        exit 1
+    fi
+    gpio mode 1 up
+    if [ $? -eq 0 ]; then
+        echo $(date +"%Y-%m-%d %T") "goio mode pull up Widerstand ok"
+    else
+        echo $(date +"%Y-%m-%d %T") "goio mode fail"
+        exit 1
+    fi
 	
     while true
     do
-	result="$( gpio read 1 )"                    # Status von Pin 1  0 ist Netz Betrieb normal, 1 ist Akku Betrieb
+	result="$( gpio read 1 )"        # Status von Pin 1,  0 ist Netz Betrieb normal, 1 ist Akku-USV Betrieb
 	if [ "$result" = "1" ]; then
-	    echo $(date +"%Y-%m-%d %T") "Stromausfall, USV ist nun aktiv, warte 2 Minuten und prüfe erneut"
+	    echo $(date +"%Y-%m-%d %T") "Stromausfall, Akku-USV ist nun aktiv, warte 2 Minuten und prüfe erneut"
 	    sleep 120
 
 	    result="$( gpio read 1 )"
 	    if [ "$result" = "1" ]; then
-	        echo $(date +"%Y-%m-%d %T") "shutdown -h 1   in 1 Minute, 0 sofort herunterfahren"
+	        echo $(date +"%Y-%m-%d %T") "shutdown -h 0  , 0 sofort herunterfahren"
 			sudo shutdown -h 0
 	        exit 0
 	    else 
@@ -38,4 +50,5 @@
 	fi
     sleep 2
     done	
+
 
