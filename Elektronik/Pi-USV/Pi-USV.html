@@ -13,14 +13,13 @@
         <div class="layout">
             <h1 class="titel">Raspberry Pi - USV</h1>
             <div>
-                <h2>Eine unterbrechungsfreie Stromversorgung USV für einen Raspberry Pi3 oder Pi4</h2>
+                <h2>Eine unterbrechungsfreie Stromversorgung USV für einen Raspberry Pi</h2>
                 <p>  Raspberry Pi USV zum selber bauen, der Pi wird von 2 Stromquellen gleichzeitig versorgt. 
 				<br> für die primäre Strom Versorgung nutze ich ein altes Notebook Netzteil (Ausgangsspannung 12V - 20V),
-                <br> für den USV - Akkubetrieb, nutze ich den Akku (7,2V) eines alten Notebooks, es könnte auch ein kleiner 12V Blei Akku sein.
+                <br> für die secondere Versorgung, den USV - Akkubetrieb, nutze ich den Akku (7,2V) eines alten Notebooks, es könnte auch ein kleiner 12V Blei Akku sein.
                 <br> Ein "Step Down Regler Modul" erzeugt Ausgangsseitig eine Spannung von 5.1V, welches nun den Pi über die GPOI Steckerleiste mit Spannung versorgt.
                 </p>
-                <p> 
-                <br> Bei Netzspannungsausfall wird die Statusänderung über einen Optokoppler an den Raspberry Pi gemeldet (GPIO18 = wiringpi Pin1),
+                <p>  Bei Netzspannungsausfall wird die Statusänderung über einen Optokoppler an den Raspberry Pi (GPIO18 = wiringpi Pin1) gemeldet,
                 <br> ein Shell Script <a href="Pi_USV.sh" target="_blank" title="Pi_USV.sh">Pi_USV.sh</a> löst nach 2 Minuten, falls die Netzspannung nicht wieder kommt einen <em>shutdown</em> das Pi aus. 
                 <br> Mit den Schalter kann der Pi aus- und wieder eingeschalten werden.
                 </p>
@@ -28,7 +27,7 @@
                 <a class="bild45" href="Pi_USV_Plan.png" target="_blank" title="Pi_USV_Plan.png"><img src="Pi_USV_Plan.png" class="bild45"  alt="Pi_USV_Plan.png"></a>
                 <a class="bild45" href="Pi_USV_OptoKoppler.jpg" target="_blank" title="Pi_USV_OptoKoppler.jpg"><img src="Pi_USV_OptoKoppler.jpg" class="bild45"  alt="Pi_USV_OptoKoppler.jpg"></a>
                 </p>
-                <p>  Voraussetzung für die Funktion des Script <a href="Pi_USV.sh" target="_blank" title="Pi_USV.sh">Pi_USV.sh</a> ist die Installation von WiringPi    
+                <p>  Voraussetzung für die Funktion des Script <a href="Pi_USV.sh" target="_blank" title="Pi_USV.sh">Pi_USV.sh</a> ist die Installation von <em>WiringPi</em>    
                 <br> Siehe:  WiringPi installieren & Pinbelegung (Raspberry Pi) wiringpi <a target="_blank" class="big" href="https://tutorials-raspberrypi.de/wiringpi-installieren-pinbelegung/">  https://tutorials-raspberrypi.de/wiringpi-installieren-pinbelegung</a> <span style="font-size:7pt">(externer Link)</span>
                 <br> oder: <a target="_blank" class="big" href="https://github.com/wiringpi/wiringpi"> https://github.com/wiringpi/wiringpi </a> <span style="font-size:7pt"> (externer Link)</span>
                 </p>
