@@ -21,15 +21,13 @@
 			<br> Werkzeug Board Auswahl: <em>Digispark (Default - 16.5mhz)</em>
 			</span>
 			<br><br> Voraussetzung: 
-			<br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:  <em> https://drazzy.com/package_drazzy.com_index.json </em>	
-			<br> Werkzeug Board Auswahl: <em>"ATTinyCore - ATtiny85 (Micronucleus / DigiSpark)" </em>
+			<br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:  <em> https://drazzy.com/package_drazzy.com_index.json</em>	
+            <br> Board-Verwaltung: suche nach ATTiny85 und installiere:  <em>ATTinycore</em> von Spence Konde V1.5.2 
+            <br> Bibliotheksverwaltung: suche nach NMRA und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
+            <br> Board Auswahl: <em>"ATTinyCore - ATtiny85 (Micronucleus / DigiSpark)" </em>
 			</p>
-			<p>	<em>Aktualisierung:</em> 
-            <br>(alt: Benötigt wird auch die Bibliothek:  
-			<a target="_blank" href="https://reference.arduino.cc/reference/en/libraries/nmradcc/"><em>DCC_Decoder.h</em> </a> in der Version 1.4.2, neuere Versionen funktionieren nicht mehr.
-			<span style="font-size:7pt">(externer Link)</span>
-			<br> Den Inhalt von <em>NmraDcc-1.4.2.zip</em> nach <em>C:\Users\username\Documents\Arduino\libraries\ </em> kopieren und durch die IDE <em>nicht</em> aktualisieren lassen. :alt)
-            <br> <em>Aktualisierung:</em> es funktioniert nun auch die aktuelle <em>DCC_Decoder.h</em> </a> in der Version 2.0.17
+			<p>	Hinweis: ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
+            <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen.
 			</p>
 			<p>            
 			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
