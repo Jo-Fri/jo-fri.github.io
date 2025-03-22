@@ -15,21 +15,20 @@
                 <br>auf Basis von Arduino Mega, Z21, für jene die gerne löten und die Steuerung selbst nachbauen.
 				<br>Diese z21 Nachbau Dokumentation habe ursprünglich nur für mich erstellt und nachträglich für interessierte als Info bereitgestellt.
             </p>
-            <h2>Original Infos Quelle:</h2>
+            <h2>Quelle der Original Informationen:</h2>
             <div>
-                <p>
-                    <a href="http://pgahtow.de/wiki/index.php?title=Zentrale" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">
+                <p> <a href="http://pgahtow.de/wiki/index.php?title=Zentrale" target="_blank" title="Link zu pgahtow.de by Philipp Gahtow">
                         z21_Arduino_Zentrale_(Atmega2560) Nachbau
                     </a> <span style="font-size: 7pt">(externer Link)</span>
                 </p>
                 <p>
-                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:Arduino_MEGA_Zentrale.png" target="_blank" title="Link zum Internet-Angebot von Philipp Gahtow">
+                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:Arduino_MEGA_Zentrale.png" target="_blank" title="Link zu pgahtow.de by Philipp Gahtow">
                         orginal z21 Arduino Mega (Atmega2560) Nachbau Zentrale Schaltplan   
                     </a> <span style="font-size: 7pt">(externer Link)</span>
                 </p>
             </div>
             <div>
-                <h2>mein abgeänderter z21 Nachbau Plan (Quelle V4.80) und in KiCad funktionsgleich nachgezeichnet und aktualisiert:</h2>
+                <h2>mein abgeänderter z21 Nachbau Schaltplan (Quelle V4.80) und in KiCad nachgezeichnet und aktualisiert:</h2>
                 <a
                     class="bild45"
                     href="My_Arduino_MEGA_Zentrale.png"
@@ -66,7 +65,7 @@
                     class="bild45"
                     href="Foto_Z21_Ardruino2.jpg"
                     target="_blank"
-                    title="Foto z21 Arduino Mega Nachbau"
+                    title="Foto z21 Arduino Mega Nachbau Steuerung 1"
                 >
                     <img src="Foto_Z21_Ardruino2.jpg" class="bild45" alt="Foto z21 Arduino Mega Nachbau ">
                 </a>
@@ -74,7 +73,7 @@
                     class="bild45"
                     href="Foto_Z21_Ardruino4_.jpg"
                     target="_blank"
-                    title="Foto z21 Arduino Mega Nachbau"
+                    title="Foto z21 Arduino Mega Nachbau Steuerung 2 "
                 >
                     <img src="Foto_Z21_Ardruino4_.jpg" class="bild45" alt="Foto z21 Arduino Mega Nachbau">
                 </a>
@@ -86,7 +85,7 @@
                     <li>XpressNet Bus zur Steuerung mit mehreren Roco Lokmäusen gleichzeitig.</li>
                     <li>s88-N Rückmeldung Bus, Rückmelder und Steuerung der Weichen.</li>
                     <li>Durch Verwendung dieser Rückmeldetechnik, sind <em>keine Unterbrechungen in den Gleisen</em> notwendig.</li>
-                    <li>interner Booster (TLE5206) zum Programmiergleis, zum Lesen und Schreiben der Lokdecoder CV's.</li>
+                    <li>interner Booster (TLE5206) zum Programmiergleis, zum Testen, Lesen und Schreiben der Lokdecoder CV's.</li>
                     <li>LAN-Interface (W5100) zur Steuerung der z21 über LAN, von PC mit Rocrail.</li>
                     <li>externe Roco Booster 10761 und/oder 10764 zum Fahren der Lokomotiven.</li>
                     <li>(Temperaturanzeige mit Sensor Dallas DS18B20)</li>
@@ -94,22 +93,27 @@
                     <li>externer Not-Halt Taster.</li>
                </ul>
             </div>
-            <h2>in meiner Variante nicht verwendete Funkionen:</h2>
+            <h2>in meiner Variante nicht verwendete Funkionen gegenüber original Plan:</h2>
             <div>
                 <ul class="normal">
                     <li>kein LocoNet Bus</li>
                     <li>kein WLAN Modul, ich bevorzuge LAN Anschluss zum PC - Steuerung mit Rocrail</li>
-                    <li>kein Relais für das Programmiergleis, den TLE5206 verwende ich ausschließlich nur für das Programmiergleis, zum Testen, Lesen und Schreiben von Lok CV's</li>
+                    <li>kein Relais für das Programmiergleis, den TLE5206 verwende ich direkt für das Programmiergleis, zum Testen, Lesen und Schreiben von Lok CV's</li>
                     <li>RailCom Detektor Rückmeldung verwende ich nicht, die meisten meiner DCC Lokdecoder sind zu alt.</li>
 					<li>Temperaturanzeige mit Sensor Dallas DS18B20, (nicht mehr verwendet, "One-Wire Bus" verursacht Fehlmeldungen der S88 Rückmelder)</li>
                 </ul>
             </div>
+            <h2>Dokumentation:</h2>
             <div>
                 <p>
-                    <br>
+                    <a href="z21_Mega_TLE5206.svg" target="_blank" title="My z21 Schaltplan KiCad"> z21 Schaltplan in KiCad</a>
+                    mein aktueller z21 gesamt Schaltplan (als .svg) Datei
+                    <span style="font-size: 7pt">(aktualisiert 07.2024)</span>
+                </p>
+                <p>
                     <a href="My_Arduino_MEGA_Zentrale.png" target="_blank" title="My z21 Schaltplan">
                     z21 Schaltplan
-                    </a> mein abgeänderter z21 gesamt Schaltplan 
+                    </a> mein abgeänderter z21 Schaltplan 
                     <span style="font-size: 7pt">(aktualisiert 08.2020)</span>
                 </p>
                 <p>
@@ -117,11 +121,6 @@
                     z21 Schaltplan Booster
                     </a> Stromversorgung und Booster (grün Teilschaltplan)
                     <span style="font-size: 7pt">(aktualisiert 07.2021)</span>
-                </p>
-                <p>
-                    <a href="z21_Mega_TLE5206.svg" target="_blank" title="My z21 Schaltplan KiCad"> z21 Schaltplan in KiCad</a>
-                    mein aktueller z21 gesamt Schaltplan (als .svg) Datei
-                    <span style="font-size: 7pt">(aktualisiert 07.2024)</span>
                 </p>
                 <p>
                     <a href="My_Z21_Arduino_Zentrale.docx" target="_blank" title="My z21 Arduino Zentrale"> z21 Arduino Mega Zentrale (.doc)</a>
@@ -133,8 +132,7 @@
                     <span style="font-size: 7pt">(aktualisiert 06.2024)</span>
                 </p>
                 <p>
-                    <a href="z21_L6203_Teil.jpg" target="_blank" title="Ersatz Plan"> Ersatz Teilplan mit L6203</a> da der TLE5206 schwer erhältlich ist,
-                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:L6203_Booster.jpg" target="_blank" title="Link zu  pgahtow.de by Philipp Gahtow"> Infos unter: </a> 
+                    <a href="http://pgahtow.de/wiki/index.php?title=Datei:L6203_Booster.jpg" target="_blank" title="Link zu  pgahtow.de by Philipp Gahtow"> Booster IC Ersatz Teilplan mit L6203</a> da der TLE5206 schwer erhältlich ist
                     <span style="font-size: 7pt">(externer Link)</span>
                 </p>
             </div>
@@ -145,10 +143,8 @@
             <div class="impress">
                 <ul>
                     <li>JoFri</li>
-                    <li>
-                        <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a>
-                    </li>
-                    <li>Stand: 12.2023</li>
+                    <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a></li>
+                    <li>Stand: 03.2025</li>
                 </ul>
         </div>
     </body>
