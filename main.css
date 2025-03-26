@@ -306,3 +306,9 @@ div.image img {
   text-decoration: none;
   height: 9px;
 }
+.ulist {
+    list-style-type: disc;
+}
+.big {
+    font-size: 20px;
+}
