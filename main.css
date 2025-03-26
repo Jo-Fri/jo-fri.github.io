@@ -1,4 +1,4 @@
-/* Eisenbahn main.css */
+/* main.css */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +19,7 @@ body {
   }
 }
 
-/* Normal */
+/* Menue Normal */
 @media screen and (min-width: 800px) {
   main {
     height: 100vh;
