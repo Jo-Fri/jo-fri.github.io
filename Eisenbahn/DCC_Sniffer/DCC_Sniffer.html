@@ -12,11 +12,13 @@
         <div class="layout">
             <h1 class="titel">Arduino DCC Sniffer</h1>
             <div>
-                <h2>DCC Sniffer zum Mitlesen der DCC Befehle "RailData" auf dem s88-N Bus oder direkt vom Gleis</h2>
-                für den DCC Sniffer verwende ich einen Arduino Nano, welcher die DCC-Daten über USB zum Mitlesen mittels PuTTY (oder den Arduino-IDE Monitor) auf dem PC bereitstellt, 
-                <br>einfach an das letzte s88-N Modul anstecken <em>oder </em>auf dem Gleis anschließen.
-				<br>
-                <br>Verschiedene DCC Sniffer Mitleseprogramme, Sketch's, je für die gleiche Hardware.				
+                <h2>DCC Sniffer zum Mitlesen der DCC Befehle "RailData" direkt vom Gleis oder auf dem s88-N Bus</h2>
+				<p> für den DCC Sniffer verwende ich einen Arduino Nano, 
+                <br> welcher die DCC-Daten über USB zum Mitlesen bevorzugt mittels <em>PuTTY</em> (oder den Arduino-IDE Monitor) auf dem Windows PC oder Linux Mint zur Anzeige bringt, einfach an das letzte s88-N Modul anstecken <em>oder </em>auf dem Gleis anschließen.
+				<br> PuTTY Konfiguration: Serial Telnet comx 115200
+                </p>
+                <br> Verschiedene DCC Sniffer Mitleseprogramme, Sketch's, je für die gleiche Hardware.				
+
 				<p>
                     - RB_DCC_Sniffer.ino,
                 <br>- RB_DCC_Sniffer_V2.ino
@@ -26,7 +28,7 @@
                 </p>
                 <p>
                     - DCC_Sniffer.ino, 
-				<br>-<em> DCC_Sniffer2.ino, </em> eine meiner bevorzugten Varianten.   
+				<br>- DCC_Sniffer2.ino, war eine meiner bevorzugten Varianten.   
                 <br>Quelle:
                 <a target="_blank" class="big" href="http://pgahtow.de/wiki/index.php?title=DCC_Dekoder"> Philipp Gahtow</a> - DCC Sniffer
                 <span style="font-size:7pt">(externer Link)</span>
@@ -35,14 +37,11 @@
 				mit dieser älteren "TimerOne" Libary funktionieren das Mitlesen auf einen Arduino Nano.
                 </p>
                 <p>				
-                <em> - DCC_Monitor_V1.4_Stummi.ino, die von mir bevorzugte Variante,</em>  mit guter Statistik, verwendet NmraDCC 2.0.17             
-                <br>Quelle: <a target="_blank" class="big" href="https://www.stummiforum.de/viewtopic.php?f=5&t=176550&p=2208635#p2208635">Stummi Forum</a> - für Stummi Forum Benutzer
+                <em> - dcc_monitor_v1.4_stummi.ino.zip,</em> die von mir bevorzugte Variante,  mit guter Statistik, verwendet die Bibliothek NmraDCC 2.0.17             
+                <br>Quelle: <a target="_blank" class="big" href="https://www.stummiforum.de/viewtopic.php?f=5&t=176550&p=2208635#p2208635">Stummi Modellbahnforum</a> - für Stummi Forum Benutzer
                 <span style="font-size:7pt">(externer Link)</span>
-				<br> die DCC Monitor Version 1.5 funktioniert leider nicht mehr, mit PuTTY als Monitor. 
+				<br> die DCC Monitor Version 1.5 funktioniert leider nicht mehr, mit PuTTY als Monitor, nur mit Arduino-IDE 
                 <br>  
-                </p>
-                <p>				
-				
                 </p>
                 <br>
                 <a
