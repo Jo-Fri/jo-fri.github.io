@@ -26,7 +26,19 @@
             <br> Bibliotheksverwaltung: suche nach NMRA und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
             <br> Board Auswahl: <em>"ATTinyCore - ATtiny85 (Micronucleus / DigiSpark)" </em>
 			</p>
-			<p>	Hinweis: ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
+            <p>	<em>Workaround: </em>  
+            <br> Da die URL <em>http://digistump.com/package-digistp.index.json </em> und  <em>https://drazzy.com/package_drazzy.com_index.json </em> schon längere Zeit nicht mehr erreichbar sind, eine manuelle Installation. 
+            <br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL: <em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
+            <br>  im Boardverwalter nach „digistump“ suchen, Digistump AVR Boards (1.7.5) installieren.
+            <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und in der IDE bereitstellen.
+            <br> unter Windows nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
+            <br> unter Linux Mint nach  /home/user/.arduino15/packages/ATTinyCore-1.5.2 kopieren
+            <br> Nach dem IDE Neustart ist das Board: "ATtiny85 (Micronucleus / DigiSpark)" auswählbar.
+
+			</p>
+            
+			<p>	Hinweis: 
+            <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen.
 			</p>
 			<p>            
@@ -67,7 +79,7 @@
                 <ul>
                     <li>JoFri</li>
                     <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a> </li>
-                    <li>Stand: 08.2025</li>
+                    <li>Stand: 02.2026</li>
                 </ul>
         </div>
     </body>
