@@ -36,12 +36,18 @@
             <br> unter Linux Mint nach  /home/xxx/.arduino15/packages/ATTinyCore-1.5.2 kopieren
             <br> Nach dem IDE Neustart ist das Board: "ATtiny85 (Micronucleus / DigiSpark)" auswählbar.
             <br> nun noch in die Bibliotheksverwaltung: suche nach NMRA und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
-			</p>
-            
-			<p>	Hinweis: 
+			</p>            
+			<p>	<span style="font-size:10pt">Hinweis alt zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen.
-			</p>
+			</span></p>
+            <p>	Hinweis zu Windows 11:    
+            <br> Bei mir war beim hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
+            <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen
+            <br> und kopieren aller Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) 
+            <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
+            <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"\
+            </p>
 			<p>            
 			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
 			<a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
@@ -81,7 +87,7 @@
                 <ul>
                     <li>JoFri</li>
                     <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a> </li>
-                    <li>Stand: 02.2026</li>
+                    <li>Stand: 03.2026</li>
                 </ul>
         </div>
     </body>
