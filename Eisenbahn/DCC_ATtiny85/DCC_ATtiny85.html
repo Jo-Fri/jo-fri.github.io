@@ -13,7 +13,8 @@
             <h1 class="titel">DCC Funktionsdecoder mit ATtiny85</h1>
             <div>
             <h2>mit den Digispark ATtiny85 steuere ich die Beleuchtungen von Wagons</h2>
-			<p>	für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 (-F12) die LED's ansteuert, es werden nur sehr wenige Bauteile dafür benötigt.
+			<p>	für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 (-F12) die LED's ansteuert,
+            <br> es werden nur sehr wenige Bauteile dafür benötigt, kostengünstig.
 			</p>
 			<p>
 			<span style="font-size:10pt">Voraussetzung alt: 
@@ -34,7 +35,7 @@
             <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und den Inhalt für die IDE bereitstellen.
             <br> unter Windows nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
             <br> unter Linux Mint nach  /home/xxx/.arduino15/packages/ATTinyCore-1.5.2 kopieren
-            <br> Nach dem IDE Neustart ist das Board: "ATtiny85 (Micronucleus / DigiSpark)" auswählbar.
+            <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
             <br> nun noch in die Bibliotheksverwaltung: suche nach NMRA und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
 			</p>            
 			<p>	<span style="font-size:10pt">Hinweis alt zu Windows 10: 
@@ -51,18 +52,12 @@
 			<p>            
 			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
 			<a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
-			<br> der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
 			</p>
-			<p>darum Optional <em>Update der ATiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
-			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken. <span style="font-size:7pt">(externer Link)</span>
-            <br> In das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen, 
-			<br> nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
-			<br> dann wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
-			<br> 
+			<p>   
             <br> nun mein <em>Sketch für den ATtiny85 DCC Funktionsdecoder</em>  <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
 			<br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten). 
 			</p>
-            <p>Sketch für den ATtiny85 DCC Funktionsdecoder <em>mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
+            <p>oder Sketch für den ATtiny85 DCC Funktionsdecoder <em>mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
              (2 x Schalten und 2x Schalten fahrtrichtungsabhängig)
             </p>
 			<p>	getestet mit diesen Digispark ATtiny85 Varianten: 
@@ -70,6 +65,14 @@
 			<a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
 			<a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
 			</p>
+            <p>            
+			<br> der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
+			<br> darum Optional, aber sinnvoll, nur einmalig pro ATtiny85 <em>Update der ATiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
+			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken. <span style="font-size:7pt">(externer Link)</span>
+            <br> In das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen, 
+			<br> nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
+			<br> dann wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
+            </p>
 			<p> Hier weitere Information zu Digispark ATtiny85 <span style="font-size:7pt">(externe Links)</span></p>
             <ul class="ulist">
               <li><a target="_blank" href="https://wolles-elektronikkiste.de/attiny-mit-arduino-code-programmieren ">Wolles-Elektronikkiste.de </a> ATtiny mit Arduino Code programmieren</li>
