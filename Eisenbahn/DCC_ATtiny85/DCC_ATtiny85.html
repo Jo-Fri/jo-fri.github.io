@@ -28,7 +28,7 @@
 			</span>
             </p>
             <p><span style="font-size:10pt"> Da die URL <em>http://digistump.com/package-digistp.index.json </em> und  <em>https://drazzy.com/package_drazzy.com_index.json </em> schon längere Zeit nicht mehr erreichbar sind, eine manuelle Installation. </span>
-            <br><em>Voraussetzung: </em> 
+            <br><br><em>Voraussetzung: </em> 
             <br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
             <br>  im Boardverwalter nach „digistump“ suchen, Digistump AVR Boards (1.7.5) installieren.
@@ -43,9 +43,9 @@
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen.
 			</span></p>
             <p>	Hinweis zu Windows 11:    
-            <br> Bei mir war beim hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
+            <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen
-            <br> und kopieren aller Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) 
+            <br> und kopieren die Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) 
             <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
             <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"\
             </p>
@@ -57,7 +57,7 @@
             <br> nun mein <em>Sketch für den ATtiny85 DCC Funktionsdecoder</em>  <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
 			<br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten). 
 			</p>
-            <p>oder Sketch für den ATtiny85 DCC Funktionsdecoder <em>mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
+            <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
              (2 x Schalten und 2x Schalten fahrtrichtungsabhängig)
             </p>
 			<p>	getestet mit diesen Digispark ATtiny85 Varianten: 
@@ -67,12 +67,11 @@
 			</p>
             <p>            
 			<br> der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
-			<br> darum Optional, aber sinnvoll, in Windows, ohne IDE, 
-			<br> nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
-			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken. <span style="font-size:7pt">(externer Link)</span>
-            <br> In das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen, 
-			<br> nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
-			<br> dann wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
+			<br> darum Optional, aber sinnvoll, in Windows, ohne IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
+			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken, <span style="font-size:7pt">(externer Link)</span>
+            <br> in das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen. 
+			<br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
+			<br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
             <br>
             </p>
 			<p> Hier weitere Information zu Digispark ATtiny85 <span style="font-size:7pt">(externe Links)</span></p>
