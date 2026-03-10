@@ -18,12 +18,12 @@
 			</p>
 			<p>
 			<span style="font-size:10pt">Voraussetzung alt: 
-			<br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL: <em> http://digistump.com/package_digistump_index.json</em> (alt, offline, Stand: 03.2024)
+			<br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL: <em> http://digistump.com/package_digistump_index.json</em> (alt, offline, Stand: 03.2024)
 			<br> Werkzeug Board Auswahl: <em>Digispark (Default - 16.5mhz)</em>
 			</span>
             <br><br><span style="font-size:10pt">Voraussetzung alt:  
 			<br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL:  <em> https://drazzy.com/package_drazzy.com_index.json</em>	
-            <br> Board-Verwaltung: suche nach ATTiny85 und installiere:  <em>ATTinycore</em> von Spence Konde V1.5.2 
+            <br> Board-Verwaltung: suche nach "ATTiny85" und installiere:  <em>ATTinycore</em> von Spence Konde V1.5.2 
             <br> Board Auswahl: <em>"ATTinyCore - ATtiny85 (Micronucleus / DigiSpark)" </em>
 			</span>
             </p>
@@ -31,12 +31,12 @@
             <br><br><em>Voraussetzung: </em> 
             <br> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
-            <br>  im Boardverwalter nach „digistump“ suchen, Digistump AVR Boards (1.7.5) installieren.
+            <br>  im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
             <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und den Inhalt für die IDE bereitstellen.
             <br> unter Windows nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
-            <br> unter Linux Mint nach  /home/xxx/.arduino15/packages/ATTinyCore-1.5.2 kopieren
+            <br> unter Linux Mint nach /home/xxx/.arduino15/packages/ATTinyCore-1.5.2 kopieren.
             <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
-            <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "NMRA" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
+            <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
 			</p>            
 			<p>	<span style="font-size:10pt">Hinweis alt zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
@@ -46,7 +46,7 @@
             <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
             <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
-            <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"\
+            <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
             </p>
 			<p>            
 			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
@@ -57,7 +57,7 @@
 			<br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten). 
 			</p>
             <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
-             (2 x Schalten und 2x Schalten fahrt-richtungsabhängig)
+             (2 x Schalten und 2x Schalten Fahrt-richtungsabhängig)
             </p>
 			<p>	getestet mit diesen Digispark ATtiny85 Varianten: 
 			<br><br>
@@ -66,7 +66,7 @@
 			</p>
             <p>            
 			<br> der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
-			<br> darum Optional, aber sinnvoll, in Windows, ohne IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
+			<br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
 			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken, <span style="font-size:7pt">(externer Link)</span>
             <br> in das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen. 
 			<br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
