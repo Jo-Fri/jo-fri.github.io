@@ -33,9 +33,11 @@
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
             <br>  im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
             <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und den Inhalt für die IDE bereitstellen.
-            <br> unter Windows nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
-            <br> unter Linux Mint nach /home/xxx/.arduino15/packages/ATTinyCore-1.5.2 kopieren.
-            <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
+            <br> <br> <em>Windows</em> nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
+            <br>           
+            <br> <em>Linux Mint</em> dem Ordner /home/xxx/Arduino/<em>hardware</em> anlegen
+            <br> den Inhalt von für ATTinyCore-1.5.2.zip nach /home/xxx/Arduino/hardware/ATTinyCore-1.5.2 kopieren.
+            <br> <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
 			</p>            
 			<p>	<span style="font-size:10pt">Hinweis alt zu Windows 10: 
@@ -47,6 +49,12 @@
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
             <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
             <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
+            </p>
+			<p>  Hinweis zu Linux Mint:                       
+            <br> nach der Aufforderung zum Anstecken des ATtiny85, war kein Zugriff auf das Device möglich:
+            <!-- <br>     Fehlermeldung: xxxx -->
+            <br>    Lösung war: cd /etc/udev/rules.d 
+            <br>     sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
             </p>
 			<p>            
 			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
@@ -64,6 +72,7 @@
 			<br><br>
 			<a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
 			<a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
+			<a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
 			<br></p> # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
             <p>            
 			<br> der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
@@ -113,7 +122,7 @@
                 <ul>
                     <li>JoFri</li>
                     <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a> </li>
-                    <li>Stand: 03.2026</li>
+                    <li>Stand: 04.2026</li>
                 </ul>
         </div>
     </body>
