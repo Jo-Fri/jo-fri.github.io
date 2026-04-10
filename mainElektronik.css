@@ -1,27 +1,27 @@
 /* mainElektronik.css */
 navi {
   grid-area: navi;
-  background-color: hsl(120, 40%, 68%);
+  background-color: hsl(120, 30%, 82%);
 }
 
 .pagecontent {
-  background-color: hsl(147, 93%, 24%);
+  background-color: hsl(120, 20%, 90%);
 }
 
 .layout {
-  background-color: hsl(120, 100%, 90%);
+  background-color: hsl(120, 15%, 95%);
 }
 
 .titel {
-  background-color: hsl(120, 40%, 68%);
+  background-color: hsl(120, 30%, 82%);
 }
 
 .menueentry:hover {
-  background: #dde7d3;
-  background-image: linear-gradient(to bottom, #f0f0f0, #b9fdb9);
+  background: hsl(120, 40%, 85%);
+  background-image: linear-gradient(to bottom, hsl(120, 35%, 95%), hsl(120, 35%, 75%));
 }
 
 .menueentry {
-  background: #ebffee;
-  background-image: linear-gradient(to bottom, #ebffeb, #bddfb8);
+  background: hsl(120, 25%, 88%);
+  background-image: linear-gradient(to bottom, hsl(120, 25%, 95%), hsl(120, 25%, 80%));
 }

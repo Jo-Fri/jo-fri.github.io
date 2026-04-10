@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* Menue  Normal*/
+/* Menue Normal*/
 @media screen and (max-width: 355px) {
   .navilist {
     display: inline;
@@ -72,7 +72,7 @@ header {
 
 navi {
   grid-area: navi;
-  background-color: hsl(28, 40%, 68%);
+  background-color: hsl(30, 30%, 75%);
 }
 
 article {
@@ -89,20 +89,20 @@ iframe {
 .pagecontent {
   font-size: large;
   font-weight: lighter;
-  color: hsl(90, 0%, 0%);
-  background-color: hsl(28, 50%, 38%);
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(30, 20%, 88%);
 }
 
 a {
   font-weight: lighter;
   padding-left: 5px;
   padding-right: 5px;
-  color: hsl(90, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   text-decoration: underline;
 }
 
 a:hover {
-  color: hsl(0, 0%, 25%);
+  color: hsl(30, 50%, 30%);
 }
 
 h1 {
@@ -154,7 +154,7 @@ div.impress ul li {
   margin: 0 1px;
   padding: 3px;
   background-clip: padding-box;
-  background-color: hsl(46, 10%, 75%);
+  background-color: hsl(30, 15%, 82%);
 }
 
 ul.normal {
@@ -162,7 +162,6 @@ ul.normal {
 }
 
 div.image {
-  /* column-span: 2;                     ???  */
   max-width: 100%;
   display: -webkit-flex;
   display: flex;
@@ -173,7 +172,7 @@ div.image {
 div.image img {
   flex: 0 0 auto;
   margin: 8px;
-  border: 1px solid hsl(90, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 0%);
   max-width: 100%;
 }
 
@@ -220,7 +219,7 @@ div.image img {
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  background-color: hsl(46, 100%, 96%);
+  background-color: hsl(30, 25%, 96%);
   padding: 8px 13px;
 }
 
@@ -230,7 +229,7 @@ div.image img {
   margin: 3px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: hsl(28, 40%, 68%);
+  background-color: hsl(30, 30%, 75%);
 }
 
 .uplink {
@@ -238,7 +237,6 @@ div.image img {
   text-align: right;
   vertical-align: middle;
   margin-top: 8px;
-  /* text-decoration: none */
 }
 
 .btnElektronik {
@@ -252,7 +250,7 @@ div.image img {
 }
 
 .btnEisenbahn {
-  background-image: linear-gradient(to bottom, hsl(28, 50%, 39%), hsl(28, 51%, 33%));
+  background-image: linear-gradient(to bottom, hsl(30, 40%, 55%), hsl(30, 45%, 45%));
   margin-right: 10px;
   font-family: serif;
   border-radius: 15px;
@@ -270,8 +268,8 @@ div.image img {
 }
 
 .menueentry:hover {
-  background: #e7e2d3;
-  background-image: linear-gradient(to bottom, #f0f0f0, #d3d3d3);
+  background: hsl(30, 30%, 88%);
+  background-image: linear-gradient(to bottom, hsl(30, 20%, 95%), hsl(30, 30%, 80%));
   transform: translateY(2px);
 }
 
@@ -279,8 +277,8 @@ div.image img {
   padding: 5px;
   border-radius: 15px;
   border: solid 1px black;
-  background: #fffaeb;
-  background-image: linear-gradient(to bottom, #fffaeb, #dfd5b8);
+  background: hsl(30, 30%, 93%);
+  background-image: linear-gradient(to bottom, hsl(30, 35%, 98%), hsl(30, 30%, 85%));
   text-align: center;
 }
 
