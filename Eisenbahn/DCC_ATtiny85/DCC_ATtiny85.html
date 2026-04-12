@@ -27,124 +27,123 @@
             <div>
             <h2>mit den Digispark ATtiny85 steuere ich die Beleuchtungen von Wagons</h2>
             
-			<p>	für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 ( - F12) die LED's ansteuert, es werden nur sehr wenige Bauteile benötigt, kostengünstig.
-			</p>
-			<p>
-			<span style="font-size:10pt">Voraussetzung alt: 
-			<br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL: <em> http://digistump.com/package_digistump_index.json</em> (alt, offline, Stand: 03.2024)
-			<br> Werkzeug Board Auswahl: <em>Digispark (Default - 16.5mhz)</em>
-			</span>
+            <p> für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 ( - F12) die LED's ansteuert, es werden nur sehr wenige Bauteile benötigt, kostengünstig.
+            </p>
+            <p>
+            <span style="font-size:10pt">Voraussetzung alt: 
+            <br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL: <em> http://digistump.com/package_digistump_index.json</em> (alt, offline, Stand: 03.2024)
+            <br> Werkzeug Board Auswahl: <em>Digispark (Default - 16.5mhz)</em>
+            </span>
             <br><br><span style="font-size:10pt">Voraussetzung alt:  
-			<br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL:  <em> https://drazzy.com/package_drazzy.com_index.json</em>	
+            <br> Erweiterung der Arduino IDE Einstellungen um zusätzliche Boardverwalter-URL:  <em> https://drazzy.com/package_drazzy.com_index.json</em>    
             <br> Board-Verwaltung: suche nach "ATTiny85" und installiere:  <em>ATTinycore</em> von Spence Konde V1.5.2 
             <br> Board Auswahl: <em>"ATTinyCore - ATtiny85 (Micronucleus / DigiSpark)" </em>
-			</span>
+            </span>
             </p>
             <p><span style="font-size:10pt"> Da die URL <em>http://digistump.com/package-digistp.index.json </em> und  <em>https://drazzy.com/package_drazzy.com_index.json </em> schon längere Zeit nicht mehr erreichbar sind, hier eine manuelle Installation. </span>
-            </p>            
+            </p> 
             <h3 id="voraussetzungen">Voraussetzung:</h3> 
             <p> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
             <br>  im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
             <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und den Inhalt für die IDE bereitstellen.
             <br> <br> <em>Windows</em> nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
-            <br>           
+            <br> 
             <br> <em>Linux Mint</em> dem Ordner /home/xxx/Arduino/<em>hardware</em> anlegen
             <br> den Inhalt von für ATTinyCore-1.5.2.zip nach /home/xxx/Arduino/hardware/ATTinyCore-1.5.2 kopieren.
             <br> <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
-			</p> 
+            </p> 
 
 
-            <h3 id="fehlerbehebung">Fehlerbehebung (Windows & Linux):</h3>            
-			<p>	<span style="font-size:10pt">Hinweis zu Windows 10: 
+            <h3 id="fehlerbehebung">Fehlerbehebung (Windows & Linux):</h3>
+            <p><span style="font-size:10pt">Hinweis zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
-            <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen.
-			</span></p>
+            <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
             
-            <p>	Hinweis zu Windows 11:    
+            <p>  Hinweis zu Windows 11:    
             <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
             <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
             <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
             </p>
-			<p>  Hinweis zu Linux Mint:                       
+            <p>  Hinweis zu Linux Mint:                       
             <br> nach der Aufforderung zum Anstecken des ATtiny85, war kein Zugriff auf das Device möglich:
-            <br>    Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
-            <br>    Lösung war: cd /etc/udev/rules.d 
-            <br>     sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
+            <br> Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
+            <br> Lösung war: cd /etc/udev/rules.d 
+            <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
             </p>
             
 
-            <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse, mit 4 Ausgängen:</h3>            
-			<p> <a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
-			    <a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
-			</p>
-			<p>   
+            <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen:</h3>            
+            <p> <a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
+                <a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
+            </p>
+            <p>
             <br> nun mein <em>Sketch für den ATtiny85 DCC Funktionsdecoder</em>  <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
-			<br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten).
+            <br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten).
             <br> Mit der F1 Taste wird auch die on Board LED geschaltet. 
             <br> F7 Taste lässt die Beleuchtung flackern
-			</p>
+            </p>
             <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
             <br> 2 x Schalten und 2x Schalten Fahrt richtungsabhängig
             </p>
-			<p>	getestet mit diesen Digispark ATtiny85 Varianten: 
-			<br><br>
-			<a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
-			<a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
-			<a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
-			</p>
-            
+            <p>  getestet mit diesen Digispark ATtiny85 Varianten: 
+            <br><br>
+            <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
+            <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
+            <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
+            </p>
 
-            <h3 id="decoder3"> DCC Funktionsdecoder mit CV-Programmierung, mit 3 Ausgängen:</h3>             
-            <p>            
-			<a class="bild45" href="ATtiny85_DCC_Decoder_schematic_ACK.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic_ACK.jpg"><img src="ATtiny85_DCC_Decoder_schematic_ACK.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic_ACK.jpg"></a>
-			</p>
-            <p>   ein Sketch für den <em>ATtiny85 DCC Funktionsdecoder mit CV Programmierung</em> auf dem Programmiergleis (PT)<a href="DCC_FunctionDecoder_3Port-ACK.zip" target="_blank" title="DCC_FunctionDecoder_3Port-ACK.zip">DCC_FunctionDecoder_3Port-ACK.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
-			<br>  (3 x Schalten, Fahrt richtungsabhängig).
-            <br> Dieses Sketch wurde von Michael Hochmuth um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:digital ">"Michaels Wiki-Seite"</a>
-			</p>            
-            <p>            
+
+            <h3 id="decoder3"> DCC Funktionsdecoder mit CV-Programmierung und 3 Ausgängen:</h3>
+            <p>
+            <a class="bild45" href="ATtiny85_DCC_Decoder_schematic_ACK.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic_ACK.jpg"><img src="ATtiny85_DCC_Decoder_schematic_ACK.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic_ACK.jpg"></a>
+            </p>
+            <p>  ein Sketch für den <em>ATtiny85 DCC Funktionsdecoder mit CV Programmierung</em> auf dem Programmiergleis (PT)<a href="DCC_FunctionDecoder_3Port-ACK.zip" target="_blank" title="DCC_FunctionDecoder_3Port-ACK.zip">DCC_FunctionDecoder_3Port-ACK.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
+            <br> (3 x Schalten, Fahrt richtungsabhängig).
+            <br> Dieses Sketch wurde von Michael Hochmuth um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder ">"Michaels Wiki-Seite"</a>
+            </p>
+            <p>
             <br>  CV1 - DCC Adresse, default 3
-            <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen  
+            <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
             <br>  CV21 - Lichtkonfiguration, default 0
             <br>  CV21-Bit0 Wert 1 unterdrückt F0-Funktion, LED an dieser Funktion immer aus
             <br>  CV21-Bit3 Wert 8  unterdrückt F3-Funktion, LED an dieser Funktion immer aus
-            <br>  CV21-Bit7 Wert 128 Richtungserkennung deaktivieren, LED's immer an           
+            <br>  CV21-Bit7 Wert 128 Richtungserkennung deaktivieren, LED's immer an
             <br>  CV29-Bit0 Wert 0 Fahrtrichtung "Standard"
             <br>  CV29-Bit0 Wert 1 dreht die Richtungsinformation des Wagens um
-            <br>  CV29-Bit1 Wert 2 28/128 Fahrstufen (default)             
+            <br>  CV29-Bit1 Wert 2 28/128 Fahrstufen (default)
             <br>  
             <br> F0 Taste schaltet richtungsabhängig die Front LED
             <br> F1 Taste schaltet Wagenbeleuchtung und auch die on Board LED
             <br> F3 Taste schaltet richtungsabhängig die Rückfahrt LED
- 			</p>        
-                        
+             </p>
+                
             <h3 id="bootloader">Bootloader update Optional:</h3> 
-            <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit. 
-			<br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
-			<br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken, <span style="font-size:7pt">(externer Link)</span>
+            <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit.
+            <br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
+            <br> Download von <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/releases/tag/v2.6.0"> Source code (zip) </a> den Inhalt der Datei: <em>micronucleus-firmware-2.6.0.zip</em> entpacken, <span style="font-size:7pt">(externer Link)</span>
             <br> in das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen. 
-			<br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
-			<br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
+            <br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
+            <br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
             <br>
- 			</p> 
-                        
+             </p> 
+                  
             <h3 id="links">Hier weiterführende Information zu Digispark ATtiny85</h3>
             <ul class="ulist">
               <li><a target="_blank" href="https://wolles-elektronikkiste.de/attiny-mit-arduino-code-programmieren ">Wolles-Elektronikkiste.de </a> ATtiny mit Arduino Code programmieren</li>
               <li><a target="_blank" href="https://wolles-elektronikkiste.de/digispark-die-bequeme-attiny85-alternative ">Wolles-Elektronikkiste.de </a> Digispark – die bequeme ATtiny85 Alternative</li>
-			  <li><a target="_blank" href="https://github.com/ArminJo/DigistumpArduino">"https://github.com/ArminJo/DigistumpArduino</a> Bootloader Infos</li>
-			  <li><a target="_blank" href="https://github.com/ArminJo/micronucleus-firmware">"https://github.com/ArminJo/micronucleus-firmware</a> Micronucleus USB Bootloader for ATtinies / Digisparks</li>
-			  <li><a target="_blank" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader releases</a> aktuelle micronucleus-firmware Bootloader Versionen</li>
-			  <li><a target="_blank" href="https://www.youtube.com/watch?v=fRroyd8sVsE"> Bootloader </a> Methode 1 Video von Anfang an bis 4:20 Minuten</li>
-			</ul>
+              <li><a target="_blank" href="https://github.com/ArminJo/DigistumpArduino">"https://github.com/ArminJo/DigistumpArduino</a> Bootloader Infos</li>
+              <li><a target="_blank" href="https://github.com/ArminJo/micronucleus-firmware">"https://github.com/ArminJo/micronucleus-firmware</a> Micronucleus USB Bootloader for ATtinies / Digisparks</li>
+              <li><a target="_blank" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader releases</a> aktuelle micronucleus-firmware Bootloader Versionen</li>
+              <li><a target="_blank" href="https://www.youtube.com/watch?v=fRroyd8sVsE"> Bootloader </a> Methode 1 Video von Anfang an bis 4:20 Minuten</li>
+            </ul>
             <br><br>
             </div>
-			<div class="uplink"><a href="#top" class="uplink" title="zum Seitenanfang">nach oben ...</a></div>  			
+            <div class="uplink"><a href="#top" class="uplink" title="zum Seitenanfang">nach oben ...</a></div>
         </div>
- 		<div class="impress">
+         <div class="impress">
                 <ul>
                     <li>JoFri</li>
                     <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a> </li>
