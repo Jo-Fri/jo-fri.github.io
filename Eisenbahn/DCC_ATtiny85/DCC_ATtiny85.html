@@ -18,7 +18,9 @@
                     <li><a href="#voraussetzungen">Voraussetzungen</a></li>
                     <li><a href="#fehlerbehebung">Fehlerbehebungen (Windows & Linux)</a></li>
                     <li><a href="#decoder1">DCC Funktionsdecoder mit fester DCC Adresse</a></li>
-                    <li><a href="#decoder3"> DCC Funktionsdecoder mit CV-Programmierung</a></li>
+                    <li><a href="#decoder2">DCC Funktionsdecoder mit fester DCC Adresse LED Fahrt richtungsabhängig</a></li>
+                    <li><a href="#decoder4"> DCC Funktionsdecoder 4 Port mit CV Schreiben</a></li>
+                    <li><a href="#decoder3"> DCC Funktionsdecoder 3 Port mit CV Schreiben und Lesen</a></li>
                     <li><a href="#bootloader"> Bootloader Update (Optional)</a></li>
                     <li><a href="#links"> Weiterführende Links</a></li>
                 </ul>
@@ -55,8 +57,7 @@
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
             </p> 
 
-
-            <h3 id="fehlerbehebung">Fehlerbehebung (Windows & Linux):</h3>
+            <h3 id="fehlerbehebung">Problem - Fehlerbehebung (Windows & Linux):</h3>
             <p><span style="font-size:10pt">Hinweis zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
@@ -72,7 +73,7 @@
             <br> Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
             <br> Lösung war: cd /etc/udev/rules.d 
             <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
-            </p>
+            <br> <br></p>
             
 
             <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen:</h3>            
@@ -80,21 +81,39 @@
                 <a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
             </p>
             <p>
-            <br> nun mein <em>Sketch für den ATtiny85 DCC Funktionsdecoder</em>  <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
-            <br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen (4 x Schalten).
-            <br> Mit der F1 Taste wird auch die on Board LED geschaltet. 
-            <br> F7 Taste lässt die Beleuchtung flackern
-            </p>
+            <br> nun ein <em>Sketch für den ATtiny85 DCC Funktionsdecoder</em>  <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
+            <br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen
+            <br> 4 x LED's Schalten mit F0, F1, F2, F3 
+            <br> mit der F1 Taste wird auch die on Board LED geschaltet, F7 Taste lässt die Beleuchtung flackern.
+            <br> <br></p>
+            
+            <h3 id="decoder2">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen und Fahrtrichtungserkennung:</h3>    
             <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
-            <br> 2 x Schalten und 2x Schalten Fahrt richtungsabhängig
-            </p>
-            <p>  getestet mit diesen Digispark ATtiny85 Varianten: 
-            <br><br>
-            <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
-            <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
-            <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
+            <br> 2 x Schalten und 2x Schalten Fahrt richtungsabhängig<br><br>
             </p>
 
+            
+            <h3 id="decoder4"> DCC Funktionsdecoder mit CV-Schreiben und 4 Ausgängen:</h3>            
+            <p> oder ein Sketch von Michael Hochmuth für den ATtiny85 DCC Funktionsdecoder um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder ">"Michaels Wiki-Seite"</a>
+            
+            <br> CV's blind auf dem Programmiergleis (PT) schreiben <a href="DCC_FunctionDecoder_4Port.zip" target="_blank" title="DCC_FunctionDecoder_4Port.zip">DCC_FunctionDecoder_4Port.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
+            </p>           
+            <p>   CV1 - DCC Adresse, default 3
+            <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
+            <br>  CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
+            <br>  CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
+            <br>  CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
+            <br>  CV50 - Lichtkonfiguration, default 0
+            <br>  CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
+            <br>  CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
+            <br>  CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
+            <br>  
+            <br>  F0 Taste schaltet die Front LED (richtungsabhängig)
+            <br>  F1 Taste schaltet Wagenbeleuchtung LED1 und auch die on Board LED
+            <br>  F2 Taste schaltet Wagenbeleuchtung LED2
+            <br>  F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
+            <br><br> </p>
+           
 
             <h3 id="decoder3"> DCC Funktionsdecoder mit CV-Programmierung und 3 Ausgängen:</h3>
             <p>
@@ -104,22 +123,29 @@
             <br> (3 x Schalten, Fahrt richtungsabhängig).
             <br> Dieses Sketch wurde von Michael Hochmuth um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder ">"Michaels Wiki-Seite"</a>
             </p>
-            <p>
-            <br>  CV1 - DCC Adresse, default 3
+            <p>   CV1 - DCC Adresse, default 3
             <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
-            <br>  CV21 - Lichtkonfiguration, default 0
-            <br>  CV21-Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
-            <br>  CV21-Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
-            <br>  CV21-Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
-            <br>  CV29-Bit0 Wert 0 Fahrtrichtung "Standard"
-            <br>  CV29-Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
-            <br>  CV29-Bit1 Wert 2 28/128 Fahrstufen (default)
+            <br>  CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
+            <br>  CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
+            <br>  CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
+            <br>  CV50 - Lichtkonfiguration, default 0
+            <br>  CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
+            <br>  CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
+            <br>  CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
             <br>  
             <br>  F0 Taste schaltet die Front LED (richtungsabhängig)
             <br>  F1 Taste schaltet Wagenbeleuchtung und auch die on Board LED
             <br>  F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
-                
+                       
+            <p> alle Versionen getestet mit diesen Digispark ATtiny85 Varianten: 
+            <br><br>
+            <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
+            <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
+            <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
+            </p>
+
+             
             <h3 id="bootloader">Bootloader update Optional:</h3> 
             <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit.
             <br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
@@ -127,7 +153,7 @@
             <br> in das Verzeichnis nach ...<em>\micronucleus-firmware-2.6.0\utils\ </em> wechseln und  <em> 1_Upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.cmd</em> ausführen. 
             <br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
             <br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
-            <br>><br> </p> 
+            <br> <br> </p> 
                   
             <h3 id="links">Hier weiterführende Information zu Digispark ATtiny85</h3>
             <ul class="ulist">
