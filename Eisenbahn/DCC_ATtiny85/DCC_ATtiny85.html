@@ -143,13 +143,13 @@
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
             
-            <p>  Hinweis zu Windows 11:    
+            <p>  Hinweis zu <em>Windows 11:</em>    
             <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
             <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
             <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
             </p>
-            <p>  Hinweis zu Linux Mint:                       
+            <p>  Hinweis zu <em>Linux Mint:</em>                       
             <br> nach der Aufforderung zum Anstecken des ATtiny85, war kein Zugriff auf das Device möglich:
             <br> Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
             <br> Lösung war: cd /etc/udev/rules.d 
