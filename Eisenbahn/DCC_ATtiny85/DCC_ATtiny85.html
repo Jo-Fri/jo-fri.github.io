@@ -16,12 +16,12 @@
                 <strong>Inhalt:</strong>
                 <ul>
                     <li><a href="#voraussetzungen">Voraussetzungen</a></li>
-                    <li><a href="#fehlerbehebung">Fehlerbehebungen (Windows & Linux)</a></li>
                     <li><a href="#decoder1">DCC Funktionsdecoder mit fester DCC Adresse</a></li>
                     <li><a href="#decoder2">DCC Funktionsdecoder mit fester DCC Adresse LED Fahrt richtungsabhängig</a></li>
                     <li><a href="#decoder4"> DCC Funktionsdecoder 4 Port mit CV Schreiben</a></li>
                     <li><a href="#decoder3"> DCC Funktionsdecoder 3 Port mit CV Schreiben und Lesen</a></li>
                     <li><a href="#bootloader"> Bootloader Update (Optional)</a></li>
+                    <li><a href="#fehlerbehebung">Fehlerbehebungen (Windows & Linux)</a></li>
                     <li><a href="#links"> Weiterführende Links</a></li>
                 </ul>
             </div>
@@ -57,23 +57,6 @@
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
             </p> 
 
-            <h3 id="fehlerbehebung">Problem - Fehlerbehebung (Windows & Linux):</h3>
-            <p><span style="font-size:10pt">Hinweis zu Windows 10: 
-            <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
-            <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
-            
-            <p>  Hinweis zu Windows 11:    
-            <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
-            <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
-            <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
-            <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
-            </p>
-            <p>  Hinweis zu Linux Mint:                       
-            <br> nach der Aufforderung zum Anstecken des ATtiny85, war kein Zugriff auf das Device möglich:
-            <br> Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
-            <br> Lösung war: cd /etc/udev/rules.d 
-            <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
-            <br> <br></p>
             
 
             <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen:</h3>            
@@ -154,6 +137,26 @@
             <br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
             <br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
             <br> <br> </p> 
+                  
+            <h3 id="fehlerbehebung">Probleme - Fehlerbehebung (Windows & Linux):</h3>
+            <p><span style="font-size:10pt">Hinweis zu Windows 10: 
+            <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
+            <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
+            
+            <p>  Hinweis zu Windows 11:    
+            <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
+            <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
+            <br> von  "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\amd64\*"
+            <br> nach "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\"
+            </p>
+            <p>  Hinweis zu Linux Mint:                       
+            <br> nach der Aufforderung zum Anstecken des ATtiny85, war kein Zugriff auf das Device möglich:
+            <br> Fehlermeldung: usb_open(): Permission denied. For Linux, copy file https://github.com/micronucleus/micronucleus/blob/master/commandline/49-micronucleus.rules to /etc/udev/rules.d.
+            <br> Lösung war: cd /etc/udev/rules.d 
+            <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
+            <br> <br></p>
+                  
+                 
                   
             <h3 id="links">Hier weiterführende Information zu Digispark ATtiny85</h3>
             <ul class="ulist">
