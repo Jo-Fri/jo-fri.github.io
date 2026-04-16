@@ -47,17 +47,16 @@
             <h3 id="voraussetzungen">Voraussetzung:</h3> 
             <p> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
-            <br>  im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
+            <br> im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
             <br> Von GitHub <em>https://github.com/SpenceKonde/ATTinyCore/archive/refs/tags/1.5.2.zip </em> Datei downloaden und den Inhalt für die IDE bereitstellen.
             <br> <br> <em>Windows</em> nach C:\Users\xxx\AppData\Local\Arduino15\packages\ATTinyCore-1.5.2 kopieren
             <br> 
             <br> <em>Linux Mint</em> dem Ordner /home/xxx/Arduino/<em>hardware</em> anlegen
             <br> den Inhalt von für ATTinyCore-1.5.2.zip nach /home/xxx/Arduino/hardware/ATTinyCore-1.5.2 kopieren.
-            <br> <br> Nach dem Neustart der IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
+            <br> <br> Nach dem Neustart der Arduino IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
             </p> 
 
-            
 
             <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen:</h3>            
             <p> <a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
@@ -75,28 +74,28 @@
             <br> 2 x Schalten und 2x Schalten Fahrt richtungsabhängig<br><br>
             </p>
 
-            
+
             <h3 id="decoder4"> DCC Funktionsdecoder mit CV-Schreiben und 4 Ausgängen:</h3>            
             <p> oder ein Sketch von Michael Hochmuth für den ATtiny85 DCC Funktionsdecoder um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder ">"Michaels Wiki-Seite"</a>
             
             <br> CV's blind auf dem Programmiergleis (PT) schreiben <a href="DCC_FunctionDecoder_4Port.zip" target="_blank" title="DCC_FunctionDecoder_4Port.zip">DCC_FunctionDecoder_4Port.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
-            </p>           
-            <p>   CV1 - DCC Adresse, default 3
-            <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
-            <br>  CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
-            <br>  CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
-            <br>  CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
-            <br>  CV50 - Lichtkonfiguration, default 0
-            <br>  CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
-            <br>  CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
-            <br>  CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
-            <br>  
-            <br>  F0 Taste schaltet die Front LED (richtungsabhängig)
-            <br>  F1 Taste schaltet Wagenbeleuchtung LED1 und auch die on Board LED
-            <br>  F2 Taste schaltet Wagenbeleuchtung LED2
-            <br>  F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
+            </p>
+            <p>  CV1 - DCC Adresse, default 3
+            <br> CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
+            <br> CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
+            <br> CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
+            <br> CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
+            <br> CV50 - Lichtkonfiguration, default 0
+            <br> CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
+            <br> CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
+            <br> CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
+            <br> 
+            <br> F0 Taste schaltet die Front LED (richtungsabhängig)
+            <br> F1 Taste schaltet Wagenbeleuchtung LED1 und auch die on Board LED
+            <br> F2 Taste schaltet Wagenbeleuchtung LED2
+            <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
-           
+
 
             <h3 id="decoder3"> DCC Funktionsdecoder mit CV-Programmierung und 3 Ausgängen:</h3>
             <p>
@@ -106,21 +105,21 @@
             <br> (3 x Schalten, Fahrt richtungsabhängig).
             <br> Dieses Sketch wurde von Michael Hochmuth um die CV Programmierung erweitert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder ">"Michaels Wiki-Seite"</a>
             </p>
-            <p>   CV1 - DCC Adresse, default 3
-            <br>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
-            <br>  CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
-            <br>  CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
-            <br>  CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
-            <br>  CV50 - Lichtkonfiguration, default 0
-            <br>  CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
-            <br>  CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
-            <br>  CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
-            <br>  
-            <br>  F0 Taste schaltet die Front LED (richtungsabhängig)
-            <br>  F1 Taste schaltet Wagenbeleuchtung und auch die on Board LED
-            <br>  F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
+            <p>  CV1 - DCC Adresse, default 3
+            <br> CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
+            <br> CV29 - Bit0 Wert 0 Fahrtrichtung "Standard"
+            <br> CV29 - Bit0 Wert 1 dreht die Richtungserkennung des Wagens um
+            <br> CV29 - Bit1 Wert 2 28/128 Fahrstufen (default)
+            <br> CV50 - Lichtkonfiguration, default 0
+            <br> CV50 - Bit0 Wert 1 unterdrückt F0-Funktion, LED immer aus
+            <br> CV50 - Bit3 Wert 8 unterdrückt F3-Funktion, LED immer aus
+            <br> CV50 - Bit7 Wert 128 Richtungserkennung deaktivieren, alle LED's immer schaltbar
+            <br> 
+            <br> F0 Taste schaltet die Front LED (richtungsabhängig)
+            <br> F1 Taste schaltet Wagenbeleuchtung und auch die on Board LED
+            <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
-                       
+
             <p> alle Versionen getestet mit diesen Digispark ATtiny85 Varianten: 
             <br><br>
             <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
@@ -137,12 +136,12 @@
             <br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
             <br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
             <br> <br> </p> 
-                  
+
             <h3 id="fehlerbehebung">Probleme - Fehlerbehebung (Windows & Linux):</h3>
             <p><span style="font-size:10pt">Hinweis zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
             <br> Abhilfe war C:\Users\username\AppData\Local\Arduino15\packages\ATTinyCore\tools\micronucleus\2.5-azd1b\Drivers\DPinst64.exe als Administrator ausführen. </span></p>
-            
+
             <p>  Hinweis zu <em>Windows 11:</em>    
             <br> Bei mir war beim Hochladen zum ATtiny85 folgende Fehlermeldung: Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135  (libusb0.dll nicht gefunden)
             <br> Abhilfe war "C:\Users\username\AppData\Local\Arduino15\packages\digistump\tools\micronucleus\2.6\Digistump_Drivers\DPinst64.exe" als Administrator ausführen und folgende Dateien (libusb0.dll, libusb0.sys, libusbK.dll, lowcdc.sys) kopieren 
@@ -155,9 +154,8 @@
             <br> Lösung war: cd /etc/udev/rules.d 
             <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
             <br> <br></p>
-                  
-                 
-                  
+
+
             <h3 id="links">Hier weiterführende Information zu Digispark ATtiny85</h3>
             <ul class="ulist">
               <li><a target="_blank" href="https://wolles-elektronikkiste.de/attiny-mit-arduino-code-programmieren ">Wolles-Elektronikkiste.de </a> ATtiny mit Arduino Code programmieren</li>
