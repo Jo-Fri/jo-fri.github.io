@@ -29,7 +29,8 @@
             <div>
             <h2>mit den Digispark ATtiny85 steuere ich die Beleuchtungen von Wagons</h2>
             
-            <p> für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 ( - F12) die LED's ansteuert, es werden nur sehr wenige Bauteile benötigt, kostengünstig.
+            <p> für die Wagenbeleuchtung verwende ich einen Digispark ATtiny85 als DCC Decoder, welcher mit einer Lok Adresse und den Funktionstasten F0, F1 - F3 ( - F12) die LED's ansteuert.
+            <br> Mein Ziel war es, mit nur sehr wenigen Bauteilen einen kostengünstigen DCC Decoder zu bauen.
             </p>
             <p>
             <span style="font-size:10pt">Voraussetzung alt: 
@@ -165,7 +166,7 @@
             <br> Lösung war: cd /etc/udev/rules.d 
             <br> sudo wget https://raw.githubusercontent.com/micronucleus/micronucleus/refs/heads/master/commandline/49-micronucleus.rules           
             </p>
-            <p> Hinweis zum <em>ATtiny85 mit USB-C</em>, mit optionalen Bootloader, der Ausgang P3 kann für die 4 Port Variante nur eingeschränkt verwendet werden!  
+            <p> Hinweis zum <em>ATtiny85 mit USB-C</em>, am Ausgang P3 muss für die 4 Port Variante mindestens ein 1.5K Widerstand verwendet werden, sonst leuchtet diese LED leicht und der Decoder kann nicht gesteuert werden!  
             <br> <br></p>
 
 
