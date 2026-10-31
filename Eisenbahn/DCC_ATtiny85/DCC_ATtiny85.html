@@ -20,6 +20,8 @@
                     <li><a href="#decoder2">DCC Funktionsdecoder mit fester DCC Adresse LED Fahrt richtungsabhängig</a></li>
                     <li><a href="#decoder4"> DCC Funktionsdecoder 4 Port mit CV Schreiben</a></li>
                     <li><a href="#decoder3"> DCC Funktionsdecoder 3 Port mit CV Schreiben und Lesen</a></li>
+                    <li><a href="#weichendecoder"> DCC Weichendecoder mit Rückmelder</a></li>
+                    <li><a href="#varianten"> ATtiny85 Varianten</a></li>                    
                     <li><a href="#bootloader"> Bootloader Update (Optional)</a></li>
                     <li><a href="#fehlerbehebung">Fehlerbehebungen (Windows & Linux)</a></li>
                     <li><a href="#links"> Weiterführende Links</a></li>
@@ -131,15 +133,39 @@
             <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
 
-            <p> alle Versionen getestet mit diesen Digispark ATtiny85 Varianten: 
+
+            <h3 id="weichendecoder"> DCC Weichendecoder mit Rückmelder :</h3>
+            <p> auch manuelles Verstellen der Weiche wird erkannt und die Weichenstellung über den S88-N Bus an Rocrail gemeldet und im Gleisplan angezeigt</p>
+            <p>             
+            <a class="bild45" href="ATtiny85_Weichendecoder_schematic.jpg" target="_blank" title="ATtiny85_Weichendecoder_schematic.jpg"><img src="ATtiny85_Weichendecoder_schematic.jpg" class="bild45"  alt="ATtiny85_Weichendecoder_schematic.jpg"></a>
+            <a class="bild45" href="ATtiny85_Weichendecoder_.jpg" target="_blank" title="ATtiny85_Weichendecoder_.jpg"><img src="ATtiny85_Weichendecoder.jpg" class="bild45"  alt="ATtiny85_Weichendecoder_.jpg"></a>
+            </p>
+            <p>  ein Sketch für den <em>ATtiny85 DCC Weichendecoder,</em>
+            <br> CV's werden blind auf dem Programmiergleis (PT) geschrieben<a href="DCC_AccDecoder_4Ports.zip" target="_blank" title="DCC_AccDecoder_4Ports.zip">DCC_AccDecoder_4Ports.zip</a> <span style="font-size:7pt">(aktualisiert 07.2026)</span>
+            <br> Dieses Sketch wurde von Michael Hochmuth bereit gestellt, 
+            <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
+                 und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Accessory-Decoder">"Michaels GitHub-Seite"</a>
+            
+            </p>
+            <p>  CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
+            <br> CV1 - DCC Adresse, default 1
+            <br> CV3 - Wert 2 für 512 ms
+            <br> CV4 - Wert 2 für 512 ms
+            <br> CV33 auf 1 bewirkt einen kurzen Impuls auf dem jeweiligen wechselnden Port.
+            <br> 
+            <br> Konfiguration des ATtiny85 Weichendecoder in Rocrail siehe ab Seite 45:  
+			<br><a href="../Rocrail/My_Rocrail_Z21_Konfig.pdf" target="_blank" title="My Rocrail Z21 Konfiguration">Rocrail Z21 Konfiguration.pdf</a>          
+            <br><br> </p>
+            
+            <h3 id="varianten"> ATtiny85 Varianten:</h3>
+            <p> Mit diesen Varianten des Digispark ATtiny85 habe ich getestet: 
             <br><br>
             <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
             <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
             <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
-          
             </p>
 
-             
+
             <h3 id="bootloader">Bootloader update Optional:</h3> 
             <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit.
             <br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
@@ -188,7 +214,7 @@
                 <ul>
                     <li>JoFri</li>
                     <li> <a class="icon-mail" href="mailto:jofri.bahn@web.de">e-Mail</a> </li>
-                    <li>Stand: 05.2026</li>
+                    <li>Stand: 11.2026</li>
                 </ul>
         </div>
     </body>
