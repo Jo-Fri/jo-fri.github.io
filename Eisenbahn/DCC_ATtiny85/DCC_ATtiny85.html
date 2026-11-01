@@ -21,12 +21,19 @@
                     <li><a href="#decoder4"> DCC Funktionsdecoder 4 Port mit CV Schreiben</a></li>
                     <li><a href="#decoder3"> DCC Funktionsdecoder 3 Port mit CV Schreiben und Lesen</a></li>
                     <li><a href="#weichendecoder"> DCC Weichendecoder mit Rückmelder</a></li>
-                    <li><a href="#varianten"> ATtiny85 Varianten</a></li>                    
                     <li><a href="#bootloader"> Bootloader Update (Optional)</a></li>
                     <li><a href="#fehlerbehebung">Fehlerbehebungen (Windows & Linux)</a></li>
                     <li><a href="#links"> Weiterführende Links</a></li>
                 </ul>
             </div>
+
+
+            <p> Mit diesen Varianten des Digispark ATtiny85 habe ich getestet: 
+            <br><br>
+            <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
+            <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
+            <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
+            </p>
 
             <div>
             <h2>mit den Digispark ATtiny85 steuere ich die Beleuchtungen von Wagons</h2>
@@ -47,7 +54,11 @@
             </p>
             <p><span style="font-size:10pt"> Da die URL <em>http://digistump.com/package-digistp.index.json </em> und  <em>https://drazzy.com/package_drazzy.com_index.json </em> schon längere Zeit nicht mehr erreichbar sind, hier eine manuelle Installation. </span>
             </p> 
-            <h3 id="voraussetzungen">Voraussetzung:</h3> 
+           
+
+
+
+           <h3 id="voraussetzungen">Voraussetzung:</h3> 
             <p> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
             <br> im Boardverwalter suche nach „digistump“ und installiere: Digistump AVR Boards (1.7.5).
@@ -115,8 +126,6 @@
             <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
                  und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Function-Decoder">"Michaels GitHub-Seite"</a>
             
-            
-            
             </p>
             <p>  CV1 - DCC Adresse, default 3
             <br> CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
@@ -141,7 +150,7 @@
             <a class="bild45" href="ATtiny85_Weichendecoder_.jpg" target="_blank" title="ATtiny85_Weichendecoder_.jpg"><img src="ATtiny85_Weichendecoder.jpg" class="bild45"  alt="ATtiny85_Weichendecoder_.jpg"></a>
             </p>
             <p>  ein Sketch für den <em>ATtiny85 DCC Weichendecoder,</em>
-            <br> CV's werden blind auf dem Programmiergleis (PT) geschrieben<a href="DCC_AccDecoder_4Ports.zip" target="_blank" title="DCC_AccDecoder_4Ports.zip">DCC_AccDecoder_4Ports.zip</a> <span style="font-size:7pt">(aktualisiert 07.2026)</span>
+            <br> CV's werden blind auf dem Programmiergleis (PT) geschrieben<a href="DCC_AccDecoder_4Ports.zip" target="_blank" title="DCC_AccDecoder_4Ports.zip">DCC_AccDecoder_4Ports.zip</a> <span style="font-size:7pt">(aktualisiert 2026-07-08)</span>
             <br> Dieses Sketch wurde von Michael Hochmuth bereit gestellt, 
             <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
                  und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Accessory-Decoder">"Michaels GitHub-Seite"</a>
@@ -157,14 +166,6 @@
 			<br><a href="../Rocrail/My_Rocrail_Z21_Konfig.pdf" target="_blank" title="My Rocrail Z21 Konfiguration">Rocrail Z21 Konfiguration.pdf</a>          
             <br><br> </p>
             
-            <h3 id="varianten"> ATtiny85 Varianten:</h3>
-            <p> Mit diesen Varianten des Digispark ATtiny85 habe ich getestet: 
-            <br><br>
-            <a class="bild10" href="ATtiny85_USB-A.jpg" target="_blank" title="ATtiny85_USB-A.jpg"><img src="ATtiny85_USB-A.jpg" class="bild10"  alt="ATtiny85_USB-A.jpg"></a>
-            <a class="bild10" href="ATtiny85_mini.jpg" target="_blank" title="ATtiny85_mini.jpg"><img src="ATtiny85_mini.jpg" class="bild10"  alt="ATtiny85_mini.jpg"></a>
-            <a class="bild10" href="ATtiny85_USB-C.jpg" target="_blank" title="ATtiny85_USB-C.jpg"><img src="ATtiny85_USB-C.jpg" class="bild10"  alt="ATtiny85_USB-C.jpg"></a>
-            </p>
-
 
             <h3 id="bootloader">Bootloader update Optional:</h3> 
             <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit.
