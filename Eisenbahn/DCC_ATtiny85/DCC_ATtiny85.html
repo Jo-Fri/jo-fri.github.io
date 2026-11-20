@@ -57,7 +57,6 @@
            
 
 
-
            <h3 id="voraussetzungen">Voraussetzung:</h3> 
             <p> Erweiterung der Arduino IDE Einstellungen um Zusätzliche Boardverwalter-URL:
             <br><em> https://raw.githubusercontent.com/ArminJo/DigistumpArduino/master/package_digistump_index.json </em> 
@@ -70,7 +69,7 @@
             <br> <br> Nach dem Neustart der Arduino IDE ist das Board: <em>"ATtiny85 (Micronucleus / DigiSpark)"</em> auswählbar.
             <br><br> nun nur noch in die Bibliotheksverwaltung: suche nach "nmra" und installiere: <em>NmraDcc</em> von Alex Shepherd, Wolfgang Kuffer, ... V2.0.17
             </p> 
-
+<hr>
 
             <h3 id="decoder1">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen:</h3>            
             <p> <a class="bild45" href="ATtiny85_DCC_Decoder_schematic.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic.jpg"><img src="ATtiny85_DCC_Decoder_schematic.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic.jpg"></a>
@@ -82,7 +81,7 @@
             <br> Beleuchtung für ein Zug mit 3 Wagons: 
             <br> 1. Wagon 4 x LED's Schalten mit F0, F1, F2, F3<br> 2. Wagon 4 x LED's Schalten mit F0, F4, F5, F6<br> 3. Wagon 4 x LED's Schalten mit F0, F7, F8, F9
             <br> <br></p>
-            
+<hr>            
             <h3 id="decoder2">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen und Fahrtrichtungserkennung:</h3>    
             <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(Stand: 08.2025)</span>
             <br> F0 Taste schaltet die Front LED (richtungsabhängig)
@@ -91,7 +90,7 @@
             <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br> F7 Taste lässt die Beleuchtung flackern.
             </p>
-
+<hr>
             <h3 id="decoder4"> DCC Funktionsdecoder mit CV-Schreiben und 4 Ausgängen:</h3>            
             <p> oder ein Sketch von Michael Hochmuth für den ATtiny85 DCC Funktionsdecoder um die CV Programmierung erweitert, 
                 CV's blind auf dem Programmiergleis (PT) schreiben  
@@ -119,7 +118,7 @@
             <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
 
-
+<hr>
             <h3 id="decoder3"> DCC Funktionsdecoder mit CV-Programmierung und 3 Ausgängen:</h3>
             <p>
             <a class="bild45" href="ATtiny85_DCC_Decoder_schematic_ACK.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic_ACK.jpg"><img src="ATtiny85_DCC_Decoder_schematic_ACK.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic_ACK.jpg"></a>
@@ -147,7 +146,7 @@
             <br> F1 Taste schaltet Wagenbeleuchtung und auch die on Board LED
             <br> F3 Taste schaltet die Rückfahrt LED (richtungsabhängig)
             <br><br> </p>
-
+<hr>
 
             <h3 id="weichendecoder"> DCC Weichendecoder für zwei Weichen mit Rückmelder :</h3>
             <p> auch manuelles Verstellen der Weiche wird erkannt, die Weichenstellung über den S88-N Rückmelde Bus an Rocrail gemeldet und im Gleisplan angezeigt</p>
@@ -169,7 +168,7 @@
 			<br><a href="../Rocrail/My_Rocrail_Z21_Konfig.pdf" target="_blank" title="My Rocrail Z21 Konfiguration">Rocrail Z21 Konfiguration.pdf</a>          
             <br><br> </p>
             
-
+<hr>
             <h3 id="bootloader">Bootloader update Optional:</h3> 
             <p>  der Standard <a target="_blank" class="big" href="https://github.com/ArminJo/micronucleus-firmware/tree/master/firmware/releases"> Bootloader </a> <em>t85_default.hex</em> benötigt ca. 6 Sec. Bootloaderzeit.
             <br> darum Optional, aber sinnvoll, in Windows, ohne Arduino IDE, nur einmalig pro ATtiny85 <em>Update der ATtiny85 Bootloader Firmware über USB</em>, damit wird die Bootloaderzeit auf 300 mSec minimiert. 
@@ -178,7 +177,7 @@
             <br> Nun wird man aufgefordert den ATtiny85 an einen USB-Anschluss anzustecken, (auch im eingelöteten Zustand),
             <br> anschließend wird die Bootloader Firmware <em> upgrade-t85_entry_on_powerOn_activePullup_fastExit_noLED.hex </em> auf Version 2.6 aktualisiert.
             <br> <br> </p> 
-
+<hr>
             <h3 id="fehlerbehebung">Probleme - Fehlerbehebung (Windows & Linux):</h3>
             <p><span style="font-size:10pt">Hinweis zu Windows 10: 
             <br> ich hatte folgenden Fehlermeldung in Windows 10, beim hochladen zum ATtiny85: "Fehlgeschlagenes Hochladen: Hochladefehler: exit status 0xc0000135"  (libusb0.dll nicht gefunden)
@@ -198,7 +197,7 @@
             </p>
             <p> Hinweis zum <em>ATtiny85 mit USB-C</em>, am Ausgang P3 muss für die 4 Port Variante mindestens ein 1.5K Widerstand verwendet werden, sonst leuchtet diese LED leicht permanent und der Decoder kann nicht initialisiert, gesteuert werden!  
             <br> <br></p>
-
+<hr>
 
             <h3 id="links">Hier weiterführende Information zu Digispark ATtiny85</h3>
             <ul class="ulist">
