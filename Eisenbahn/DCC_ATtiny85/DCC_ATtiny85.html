@@ -77,14 +77,14 @@
                 <a class="bild45" href="Wagen_2.jpg" target="_blank" title="Wagen.jpg"><img src="Wagen.jpg" class="bild45"  alt="Wagen.jpg"></a>
             </p>
             <p>
-            <br> nun ein Sketch für den ATtiny85 DCC Funktionsdecoder <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(aktualisiert 01.2025)</span>
+            <br> nun ein Sketch für den ATtiny85 DCC Funktionsdecoder <a href="DCC_ATtiny85.zip" target="_blank" title="DCC_ATtiny85.zip">DCC_ATtiny85.zip</a> <span style="font-size:7pt">(Stand: 01.2025)</span>
             <br> nur die DCC-Adresse "This_Decoder_Address" anpassen und mit der Arduino IDE, auch im eingelöteten Zustand, zum ATtiny85 hochladen
             <br> Beleuchtung für ein Zug mit 3 Wagons: 
             <br> 1. Wagon 4 x LED's Schalten mit F0, F1, F2, F3<br> 2. Wagon 4 x LED's Schalten mit F0, F4, F5, F6<br> 3. Wagon 4 x LED's Schalten mit F0, F7, F8, F9
             <br> <br></p>
             
             <h3 id="decoder2">DCC Funktionsdecoder mit fester DCC Adresse und 4 Ausgängen und Fahrtrichtungserkennung:</h3>    
-            <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(aktualisiert 08.2025)</span>
+            <p> oder Sketch für den ATtiny85 DCC Funktionsdecoder <em> mit Fahrtrichtungserkennung </em>  <a href="DCC_DecoderRichtung.zip" target="_blank" title="DCC_DecoderRichtung.zip">DCC_DecoderRichtung.zip</a> <span style="font-size:7pt">(Stand: 08.2025)</span>
             <br> F0 Taste schaltet die Front LED (richtungsabhängig)
             <br> F1 Taste schaltet Wagenbeleuchtung LED1 und auch die on Board LED
             <br> F2 Taste schaltet Wagenbeleuchtung LED2
@@ -94,10 +94,14 @@
 
             <h3 id="decoder4"> DCC Funktionsdecoder mit CV-Schreiben und 4 Ausgängen:</h3>            
             <p> oder ein Sketch von Michael Hochmuth für den ATtiny85 DCC Funktionsdecoder um die CV Programmierung erweitert, 
-            <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
-                 und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Function-Decoder">"Michaels GitHub-Seite"</a>
+                CV's blind auf dem Programmiergleis (PT) schreiben  
+                <a href="DCC_FunctionDecoder_4Port.zip" target="_blank" title="DCC_FunctionDecoder_4Port.zip">DCC_FunctionDecoder_4Port.zip</a> <span style="font-size:7pt">(Stand 04.2026)</span>
+          
+            
+            
+            <br> Es wird auf seinen Seiten: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
+                 und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Function-Decoder">"Michaels GitHub-Seite"</a> aktualisiert.
                         
-            <br> CV's blind auf dem Programmiergleis (PT) schreiben <a href="DCC_FunctionDecoder_4Port.zip" target="_blank" title="DCC_FunctionDecoder_4Port.zip">DCC_FunctionDecoder_4Port.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
             </p>
             <p>  CV1 - DCC Adresse, default 3
             <br> CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
@@ -120,12 +124,14 @@
             <p>
             <a class="bild45" href="ATtiny85_DCC_Decoder_schematic_ACK.jpg" target="_blank" title="ATtiny85_DCC_Decoder_schematic_ACK.jpg"><img src="ATtiny85_DCC_Decoder_schematic_ACK.jpg" class="bild45"  alt="ATtiny85_DCC_Decoder_schematic_ACK.jpg"></a>
             </p>
-            <p>  ein Sketch für den <em>ATtiny85 DCC Funktionsdecoder mit CV Schreiben und Lesen</em> auf dem Programmiergleis (PT)<a href="DCC_FunctionDecoder_3Port-ACK.zip" target="_blank" title="DCC_FunctionDecoder_3Port-ACK.zip">DCC_FunctionDecoder_3Port-ACK.zip</a> <span style="font-size:7pt">(aktualisiert 04.2026)</span>
-            <br> (3 x Schalten, Fahrt richtungsabhängig).
+            <p>  ein Sketch für den <em>ATtiny85 DCC Funktionsdecoder mit CV Schreiben und Lesen</em> auf dem Programmiergleis (PT)<a href="DCC_FunctionDecoder_3Port-ACK.zip" target="_blank" title="DCC_FunctionDecoder_3Port-ACK.zip">DCC_FunctionDecoder_3Port-ACK.zip</a> <span style="font-size:7pt">(Stand: 04.2026)</span>
+           
+
+           <br> (3 x Schalten, Fahrt richtungsabhängig).
             <br> Dieses Sketch wurde von Michael Hochmuth um die CV Programmierung erweitert, 
             <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
                  und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Function-Decoder">"Michaels GitHub-Seite"</a>
-            
+                 dieses hat einen deutlich weiteren Stand z.B. mit Dimmen und Funktionsmapping. 
             </p>
             <p>  CV1 - DCC Adresse, default 3
             <br> CV8 - Schreiben darauf erzeugt ein Reset auf Default-Einstellungen
@@ -150,7 +156,7 @@
             <a class="bild45" href="ATtiny85_Weichendecoder2_.jpg" target="_blank" title="ATtiny85_Weichendecoder2_.jpg"><img src="ATtiny85_Weichendecoder2.jpg" class="bild45"  alt="ATtiny85_Weichendecoder2_.jpg"></a>
             </p>
             <p>  ein Sketch für den <em>ATtiny85 DCC Weichendecoder2,</em>
-            <br> CV's werden blind auf dem Programmiergleis (PT) geschrieben<a href="DCC_AccDecoder_2xSwitch.zip" target="_blank" title="DCC_AccDecoder_2xSwitch.zip">DCC_AccDecoder_2xSwitch.zip</a> <span style="font-size:7pt">(aktualisiert 2026-11-15)</span>
+            <br> CV's werden blind auf dem Programmiergleis (PT) geschrieben<a href="DCC_AccDecoder_2xSwitch.zip" target="_blank" title="DCC_AccDecoder_2xSwitch.zip">DCC_AccDecoder_2xSwitch.zip</a> <span style="font-size:7pt">(Stand: 2026-11-15)</span>
             <br> Dieses Sketch wurde von Michael Hochmuth bereit gestellt, 
             <br> es wird auf seinen Seiten aktualisiert: <a target="_blank" href="https://simandit.de/simwiki/doku.php?id=modellbahn:umbauten:dcc-dekoder">"Michaels Wiki-Seite"</a>
                  und <a target="_blank" href="https://github.com/Sim-59/ATtiny-DCC-Accessory-Decoder">"Michaels GitHub-Seite"</a>
