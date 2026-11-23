@@ -13,9 +13,16 @@
 <body class="pagecontent">
     <div class="layout">
         <h1 class="titel">Arduino DCC Relais Funktionsdecoder</h1>
+        
+        <div class="toc">
+           <strong>Inhalt:</strong>
+           <ul>
+               <li><a href="#relais">DCC Funktionsdecoder für 12 Relais</a></li>
+               <li><a href="#servo"> DCC Funktionsdecoder für 8 Relais und einen Servo</a></li>
+           </ul>
+        </div>       
         <div>
-            <br>
-            <h1>Arduino Nano als DCC Funktionsdecoder für 12 Relais</h1>
+            <h2 id="relais">Arduino Nano DCC Funktionsdecoder für 12 Relais:</h2>  
             <h2>über diese Relais werden die Beleuchtungen von Häusern und Straßenlaternen gesteuert</h2>
 			<p>	für die Relaisteuerung verwende ich einen Arduino Nano als DCC Decoder, welcher mit einer Lok Adresse über die Funktionstasten F0, F1 - F12 die Relais ansteuert.
 			</p>
@@ -23,9 +30,9 @@
 			<span style="font-size:10pt">
 			bis Z21PG V4.96 funktionierte dieses Sketch: "RB_DCC_Decoder_Function.ino" mit Bibliothek: <em> "DCC_Decoder.h"</em> aus der "Arduino_DCC_S88.zip" von 2016-08-14 problemlos.
             <br>Quelle:
-            <a target="_blank" class="big" href="https://rudysmodelrailway.wordpress.com/software/">rudysmodelrailway </a> - Arduino + ATtiny DCC Decoder / DCC Sniffer / S88 Software download (Oktober 2015) <span style="font-size:7pt">(externer Link)</span>
+            <a target="_blank"  href="https://rudysmodelrailway.wordpress.com/software/">rudysmodelrailway </a> - Arduino + ATtiny DCC Decoder / DCC Sniffer / S88 Software download (Oktober 2015) <span style="font-size:7pt">(externer Link)</span>
             <br> meine abgeändertes Sketch
-            <a href="RB_DCC_Decoder_Function.ino" target="_blank" title="RB_DCC_Decoder_Function.ino">RB_DCC_Decoder_Function.ino</a> <span style="font-size:7pt">(aktualisiert 10.2021)</span>, 
+            <a href="RB_DCC_Decoder_Function.ino" target="_blank" title="RB_DCC_Decoder_Function.ino">RB_DCC_Decoder_Function.ino</a> <span style="font-size:7pt">(Stand: 10.2021)</span>, 
 			Link zu der verwenden DCC_Decoder.h Library: 
 			<a target="_blank" href="https://github.com/MynaBay/DCC_Decoder">DCC_Decoder.h</a>
 			</span>
@@ -33,32 +40,28 @@
 			</p>
 			<p>	
 			ab Z21PG V4.98 wurde auf ein Decoder Sketch mit der <a target="_blank" href="https://github.com/mrrwa/NmraDcc"> NmraDcc.h</a>  Bibliothek gewechselt. <span style="font-size:7pt">(externer Link)</span>
-            <br> dieses Sketch funktioniert nun mit allen Z21PG Versionen.
-            <a href="Relais12_Dec_17LED_1Ftn.zip" target="_blank" title="Relais12_Dec_17LED_1Ftn.zip">Relais12_Dec_17LED_1Ftn.zip</a> <span style="font-size:7pt">(aktualisiert 11.2023)</span>
+            <br> dieses Sketch funktioniert nun mit alten und neuen Z21PG Versionen.
+            <a href="Relais12_Dec_17LED_1Ftn.zip" target="_blank" title="Relais12_Dec_17LED_1Ftn.zip">Relais12_Dec_17LED_1Ftn.zip</a> <span style="font-size:7pt">(Stand: 11.2023)</span>
 			</p>
             <a class="bild45" href="Arduino_DCC_FunktionsDekoder_12Relay_Plan.jpg" target="_blank" title="Arduino_DCC_FunktionsDekoder_12Relay_Plan.jpg"><img src="Arduino_DCC_FunktionsDekoder_12Relay_Plan.jpg" class="bild45" alt="Arduino_DCC_FunktionsDekoder_12Relay_Plan"></a>
             <a class="bild45" href="Arduino_DCC_FunktionsDekoder_12Relais.jpg" target="_blank" title="Arduino_DCC_FunktionsDekoder_12Relais.jpg"><img src="Arduino_DCC_FunktionsDekoder_12Relais.jpg" class="bild45" alt="Arduino_DCC_FunktionsDekoder_8Relay"></a>
             <br><br>
             <br><br>
         </div>
-        
-		 <div>
+		<div>
             <hr>           
-            <br>
-            <h1>Arduino Nano als DCC Funktionsdecoder für 8 Relais und einen Servo</h1>
-			<h2>die Stellung des Servo wird über den Geschwindigkeitsregler gesteuert</h2>
+            <h2 id="servo">Arduino Nano als DCC Funktionsdecoder für 8 Relais und einen Servo:</h2> 
+			<h2>die Stellung des Servo wird analog zur Stellung des Geschwindigkeitsregler gesteuert</h2>
 			<p>	die Relais welchen über eine Lok Adresse mit den Funktionstasten F1 - F8 gesteuert. 
 			</p>
 			<p>	Sketch für Nano DCC Decoder mit Servo.
-            <a href="My_DCC_Servo_Decoder.zip" target="_blank" title="My_DCC_Servo_Decoder.zip">My_DCC_Servo_Decoder.zip</a> <span style="font-size:7pt">(aktualisiert 07.2024)</span>
+            <a href="My_DCC_Servo_Decoder.zip" target="_blank" title="My_DCC_Servo_Decoder.zip">My_DCC_Servo_Decoder.zip</a> <span style="font-size:7pt">(Stand 07.2024)</span>
 			</p>
             <a class="bild45" href="Arduino_DCC_FunktionsDekoder_8Relay_Servo_Plan.jpg" target="_blank" title="Arduino_DCC_FunktionsDekoder_8Relay_Servo_Plan.jpg"><img src="Arduino_DCC_FunktionsDekoder_8Relay_Servo_Plan.jpg" class="bild45" alt="Arduino_DCC_FunktionsDekoder_8Relay_Servo_Plan"></a>
             <a class="bild25" href="Maus_mit_Servo_Pfeilen_.jpg" target="_blank" title="Maus_mit_Servo_Pfeilen_.jpg"><img src="Maus_mit_Servo_Pfeilen_.jpg" class="bild25" alt="Maus_mit_Servo_Pfeilen"></a>
             <br><br>
-
-            <br><br>
         </div>
-		</div>
+	</div>
         <p>
             <br>
         </p>
